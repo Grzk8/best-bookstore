@@ -1,0 +1,15 @@
+
+body {
+    /* scieżka musi być względem pliku /js/app.js */
+    background: url('../images/catApp.jpg');
+  }
+  
+  ::placeholder {
+    color: blue,
+  }
+  
+  body {
+    transition: 1s;
+    display: flex;
+    /* now */
+  }
