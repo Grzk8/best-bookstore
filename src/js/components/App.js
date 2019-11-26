@@ -9,9 +9,9 @@ import DeliveryCost from './DeliveryCost';
 import SelfPickup from './SelfPickup';
 import Contact from './Contact';
 import Bascet from './Bascet';
-import l1 from './l1';
-import l2 from './l2';
-import l3 from './l3';
+import Sf from './Sf';
+import PopularSience from './PopularSience';
+import Comic from './Comic';
 
 class App extends Component {
     render() {
@@ -24,9 +24,9 @@ class App extends Component {
                     <Route path='/selfPickup' component={SelfPickup} />
                     <Route path='/contact' component={Contact} />
                     <Route path='/bascet' component={Bascet} />
-                    <Route path='/l1' component={l1} />
-                    <Route path='/l2' component={l2} />
-                    <Route path='/l3' component={l3} />
+                    <Route path='/sf' component={Sf} />
+                    <Route path='/popularsience' component={PopularSience} />
+                    <Route path='/comic' component={Comic} />
 
                 </>
             </HashRouter>

@@ -32,9 +32,9 @@ class Nav extends React.Component {
                             <div className="containerAside">
                                 <ul className="asideList">
                                     <li className="asideItem bascet"><NavLink to="/bascet" activeClassName="active">Koszyk<p>0 produktów</p><p>0 zł</p></NavLink></li>
-                                    <li className="asideItem"><NavLink to="/l1" activeClassName="active">sekcja 1</NavLink></li>
-                                    <li className="asideItem"><NavLink to="/l2" activeClassName="active">sekcja 2</NavLink></li>
-                                    <li className="asideItem"><NavLink to="/l3" activeClassName="active">sekcja 3</NavLink></li>
+                                    <li className="asideItem"><NavLink to="/sf" activeClassName="active">Sience - fiction</NavLink></li>
+                                    <li className="asideItem"><NavLink to="/popularSience" activeClassName="active">Popularnonaukowe</NavLink></li>
+                                    <li className="asideItem"><NavLink to="/comic" activeClassName="active">Komiksy</NavLink></li>
                                 </ul>
                             </div>
                         </aside>
