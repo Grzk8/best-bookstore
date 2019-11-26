@@ -1,0 +1,68 @@
+
+
+a{
+  text-decoration: none;
+}
+//header
+.headerMain{
+  background-color: burlywood;
+  height: 5em;
+}
+.logo{
+  float: left;
+}
+.menu{
+  float: right;
+}
+.menuItem{
+  font-size: 1em;
+  display: inline-block;
+  padding: 10px;
+}
+
+//main
+.container{
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+}
+.containerAside{
+  width: 15em;
+  height: 50em;
+  background-color: burlywood;
+
+}
+.aside{
+
+}
+.asadeList{
+  width: 100%;
+}
+.asideItem {
+  text-decoration: none;
+  list-style-type: none;
+  height: 5em;
+  border: 1px solid black;
+}
+.bascet{
+  height: 10em;
+}
+
+article{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  height: 5em;
+  background-color: burlywood;
+}
