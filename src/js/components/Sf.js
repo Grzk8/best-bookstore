@@ -1,12 +1,5 @@
 import React, {Component} from 'react';
 import Nav from './Nav';
-import {
-    HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink,
-} from 'react-router-dom';
 
 class Sf extends Component {
     state = {
@@ -38,12 +31,16 @@ class Sf extends Component {
             <Nav>
                 {
                     this.state.books.map(b=>
-                        <div className="book">
-                            <div className="cover"></div>
-                            <img src={b.image} height="120px" width="120px"></img>
-                            <p>{b.title}</p>
-                            <p>{b.author}</p>
-                        </div>
+                        <>
+                            <div className="books">
+                                <div className="book">
+                            <img className="cover" src={b.image} height="120px" width="120px"></img>
+                            <p className="title"><strong>{b.title}</strong></p>
+                            <p className="author">{b.author}</p>
+                                    <button className="btn">kup</button>
+                                </div>
+                            </div>
+                        </>
                     )
                 }
             </Nav>

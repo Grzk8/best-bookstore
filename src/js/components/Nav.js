@@ -13,7 +13,7 @@ class Nav extends React.Component {
 
                 <header>
                     <div className='headerMain'>
-                        <div className='logo'><li className="menuItem"><NavLink to="/" activeClassName="active">LOGO</NavLink></li></div>
+                        <div className='logo'><li className="menuItem"><NavLink to="/" activeClassName="active">BooKStore</NavLink></li></div>
                         <div className='menu'>
                             <ul className='menuList'>
                                 <li className="menuItem"><NavLink to="/aboutUs" activeClassName="active">O nas</NavLink></li>
@@ -31,10 +31,10 @@ class Nav extends React.Component {
                         <aside>
                             <div className="containerAside">
                                 <ul className="asideList">
-                                    <li className="asideItem bascet"><NavLink to="/bascet" activeClassName="active">Koszyk<p>0 produktów</p><p>0 zł</p></NavLink></li>
-                                    <li className="asideItem"><NavLink to="/sf" activeClassName="active">Sience - fiction</NavLink></li>
-                                    <li className="asideItem"><NavLink to="/popularSience" activeClassName="active">Popularnonaukowe</NavLink></li>
-                                    <li className="asideItem"><NavLink to="/comic" activeClassName="active">Komiksy</NavLink></li>
+                                    <li className="asideItem bascet"><NavLink to="/bascet" activeClassName="active">Koszyk<div className="basketLogo"></div><p>0 produktów</p><p>0 zł</p></NavLink></li>
+                                    <li className="asideItem itemList"><NavLink to="/sf" activeClassName="active">Sience - fiction</NavLink></li>
+                                    <li className="asideItem itemList"><NavLink to="/popularSience" activeClassName="active">Popularnonaukowe</NavLink></li>
+                                    <li className="asideItem itemList"><NavLink to="/comic" activeClassName="active">Komiksy</NavLink></li>
                                 </ul>
                             </div>
                         </aside>

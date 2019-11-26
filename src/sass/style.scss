@@ -1,15 +1,36 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'ralewayregular', Arial, sans-serif;
+}
+@font-face {
+  font-family: 'ralewayregular';
+  src: url('../fonts/raleway-regular.woff2') format('woff2'), url('../fonts/raleway-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 a{
+  color: azure;
   text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.active{
+  color: black;
 }
 //header
 .headerMain{
+  margin: 0 auto;
+  width: 1350px;
   background-color: burlywood;
-  height: 5em;
+  min-height: 5em;
 }
 .logo{
   float: left;
+  font-size: 2.6em;
+  font-weight: bolder;
 }
 .menu{
   float: right;
@@ -20,11 +41,15 @@ a{
   padding: 10px;
 }
 
+NavLink{
+  color: aliceblue;
+}
 //main
 .container{
   margin: 0 auto;
-  width: 1200px;
+  width: 1350px;
   display: flex;
+  border: 1px solid burlywood;
 }
 .containerAside{
   width: 15em;
@@ -37,25 +62,50 @@ a{
 }
 .asadeList{
   width: 100%;
+
 }
 .asideItem {
   text-decoration: none;
   list-style-type: none;
-  height: 5em;
-  border: 1px solid black;
+  height: 7em;
+  text-align: center;
 }
-.bascet{
-  height: 10em;
+.itemList{
+  background-image: url(".././images/pap.png");
+  background-size: cover;
+  padding-top: 3em;
+}
+.bascet {
+  height: 8em;
+}
+ .basketLogo{
+   width: 3em;
+   height: 3em;
+   background-image: url(".././images/basket.png");
+   background-size: contain;
+   position: relative;
+   left: 5em;
+   background-repeat: no-repeat;
+ }
+
+.Nav{
+border: 1px solid burlywood;
+}
+.books{
+ // border: 1px solid black;
+  display: block;
+}
+.book{
+  width: 200px;
+  display: block;
 }
 
-article{
-
+.title, .author{
+  text-align: center
 }
 .cover{
+;
 }
-
-
-
 
 
 
@@ -64,6 +114,8 @@ article{
 
 
 footer{
+  margin: 0 auto;
+  width: 1350px;
   height: 5em;
   background-color: burlywood;
 }
