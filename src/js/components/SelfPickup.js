@@ -14,7 +14,13 @@ class SelfPickup extends Component {
     ) {
         return <>
             <Nav basket={this.props.basket}>
-                <p>odbiór</p>
+                <h1>Odbiór osobisty Księgarnia  oprócz sprzedaży wysyłkowej oferuje również możliwość bezpłatnego odbioru zamówień we własnych Punktach odbioru zamówień (płatność tylko gotówką): </h1>
+                <ul>
+                    <li>Warszawa ul. Słoneczna 2</li>
+                    <li>Kraków ul. Długa 76A</li>
+                    <li>Wrocław ul. Piękna 14/58</li>
+                    <li>Gdańsk ul. Portowa 4</li>
+                </ul>
             </Nav>
         </>;
     }

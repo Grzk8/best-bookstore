@@ -39,6 +39,10 @@ header{
   float: left;
   font-size: 2.6em;
   font-weight: bolder;
+  color: sienna;
+}
+span{
+  color: darkslateblue;
 }
 .menu{
   float: right;
@@ -85,6 +89,11 @@ header{
 .bascet {
   height: 8em;
 }
+table {
+  border: 1px solid #d6d5d5;
+  width: 600px;
+  height: 50px;
+}
 
  .basketLogo{
    width: 3em;
@@ -120,10 +129,17 @@ header{
 }
 .btn{
   position: relative;
-  left: 4em;
-  background-color: brown;
-  color: #d6d5d5;
-  font-weight: bold;
+  font-size: 0.8em;
+  left: 2em;
+  background-color: sienna;
+  width: 10em;
+  height: 3em;
+  border-radius: 20%;
+  color: white;
+  font-weight: bolder;
+}
+.btn2{
+  left: 30em;
 }
 
 
@@ -136,4 +152,22 @@ footer{
   width: 1300px;
   height: 5em;
   background-color: burlywood;
+}
+.footerMain{
+  margin: 0 auto;
+  width: 1200px;
+}
+.rights{
+  display: flex;
+  flex-direction: column;
+}
+.logosmall{
+  font-size: 2em;
+}
+.bestbookstoreRights{
+  color: sienna;
+  font-size: 0.7em;
+}
+.media{
+  float: right;
 }

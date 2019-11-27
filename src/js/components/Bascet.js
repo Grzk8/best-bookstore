@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Nav from './Nav';
+import Form from './Form';
 
 import {
     HashRouter,
@@ -23,11 +24,7 @@ class Bascet extends Component {
                     this.props.basket.map(b=>
 
                         <table>
-                            <tr>
-                                <th>Autor</th>
-                                <th>Tytuł</th>
-                                <th>Cena</th>
-                            </tr>
+
                             <tr>
                                 <td>{b.title}</td>
                                 <td>{b.author}</td>
@@ -35,8 +32,11 @@ class Bascet extends Component {
                             </tr>
                         </table>
                     )
-
                 }
+                <button className="btn btn2">KUPUJĘ</button>
+
+                {this.props.children}
+
             </Nav>
         </>;
     }

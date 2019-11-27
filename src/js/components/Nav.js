@@ -13,7 +13,7 @@ class Nav extends React.Component {
 
                 <header>
                     <div className='headerMain'>
-                        <div className='logo'><li className="menuItem"><NavLink to="/" activeClassName="active">BooKStore</NavLink></li></div>
+                        <div className='logo'><li className="menuItem"><NavLink to="/" activeClassName="active">Best<span>BooK</span>Store</NavLink></li></div>
                         <div className='menu'>
                             <ul className='menuList'>
                                 <li className="menuItem"><NavLink to="/aboutUs" activeClassName="active">O nas</NavLink></li>
@@ -48,8 +48,14 @@ class Nav extends React.Component {
 
                 <footer>
                     <div className="footerMain">
-                        <div className="rights"></div>
-                        <div className="media"></div>
+                        <div className="rights">
+                            <div className="logo logosmall">Best<span>BooK</span>Store</div>
+                            <div className="bestbookstoreRights">2019 BestBooKStore sp z o.o. All rights reserved</div>
+                        </div>
+                        <div className="media">
+                            <a href="https://twitter.com"><img src="../../images/Twitter.svg"></img></a>
+                            <a href="https://facebook.com"><img src="../../images/Facebook.svg"></img></a>
+                        </div>
 
                     </div>
                 </footer>

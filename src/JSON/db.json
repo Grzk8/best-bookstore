@@ -179,6 +179,114 @@
       "description": "\"Bez wątpienia wszyscy znacie księcia Hamleta i jego słynne zdanie:\n»8yć albo nie być«. Znacie również zapewne historię nieszczęśliwej miłości Romea i Julii, nieszczęśliwej za sprawą konfliktu pomiędzy ich rodzinami. To tylko kilka z postaci, które stworzyłem w swoich dramatach, potrafiłem bowiem kreować takich bohaterów i bohaterki, którzy przeżywali namiętności, toczyli walki, do czegoś dążyli i czegoś pragnęli, zupełnie jakby byli ludźmi z krwi i kości\". ",
       "price": 14.25,
       "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/A5B/42336501350KS.jpg"
+    },
+    {
+      "id": 21 ,
+      "category": "thiller",
+      "title":  "Mock. Golem",
+      "author": "Marek Krajewski",
+      "description": "\"Mock. Golem\" to dziewiąty już tom serii kryminałów o Eberhardzie Mocku. Jest rok 1920, a w Breslau dzieje się coraz gorzej. Miasto nawiedza niespodziewanie prawdziwa sekta \"mesjaszy\". Choć z pozoru jej członkowie nie wydają się groźni, umiejętnie podsycają wśród mieszkańców antysemickie nastroje. Za tym wszystkim kryje się coś znacznie poważniejszego - coś, co może zaważyć na losach całego miasta.",
+      "price": 26.25,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/176/9788324059119.jpg"
+    },
+    {
+      "id": 22 ,
+      "category": "thiller",
+      "title":  "Florystka",
+      "author": "Katarzyna Bonda",
+      "description": "yrt",
+      "price": 8.27,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/CAF/9788377589618.jpg"
+    },
+    {
+      "id": 23 ,
+      "category": "thiller",
+      "title":  "Ta która musi umrzeć",
+      "author": "David Lagercrantz",
+      "description": "“Ta, które musi umrzeć” to szósta, a zarazem ostatnia część serii “Millenium”. Wszystko zaczyna się od tego, że w centrum Sztokholmu policja natrafia na ciało mężczyzny. Wydaje się, że to bezdomny, który zmarł tragiczną śmiercią, ale nie ma pewności co do tożsamości ofiary. Fredrika Nyman, lekarka sądowa, pełna nowych podejrzeń, odzywa się do Mikaela Blomkvista.",
+      "price": 25.49,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/D4B/9788381432399.jpg"
+    },
+    {
+      "id": 24 ,
+      "category": "thiller",
+      "title":  "Dom czwarty",
+      "author": "Katarzyna Puzyńska",
+      "description": "\"Dom czwarty\" to siódma część sagi kryminalnej o Lipowie - fikcyjnej wsi położonej w północnej części kraju. Główna bohaterka - Klementyna Kopp, będąca byłym komisarzem Policji, po ponad 40 latach nieobecności postanawia wrócić w swoje rodzinne strony za sprawą matki, która poprosiła ją o pomoc w rozwiązaniu pewnego morderstwa. Klementyna nigdy nie dociera jednak do miasteczka w którym się wychowała. Nikt nie potrafi odpowiedzieć na pytanie: co się stało? Mieszkańcy uparcie twierdzą, że nie wiedzą nic o jej aktualnym pobycie. Aspirant Policji - Daniel Podgórski nie wierzy w zapewnienia sąsiadów, szybko odkrywa, że żaden z nich nie mówi prawdy. Podejmuje się więc rozwiązać zagadkę tajemniczego zniknięcia kobiety.",
+      "price": 23.60,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/4E1/9788380970144.jpg"
+    },
+    {
+      "id": 25 ,
+      "category": "thiller",
+      "title":  "Morderstwo w Orient Expressie",
+      "author": "Agatha Christie",
+      "description": "Poirot planuje podróż powrotną po zakończeniu śledztwa na wschodnim kontynencie, jednak słynny pociąg, którym miał wracać jest oblężony, a wszystkie przedziały zarezerwowane. Dzięki znajomości słynnego inspektora z poważanym pracownikiem kolei udaje się znaleźć jedno miejsce. Jak się okazuje Poirot ląduje w przedziale z przeróżnymi osobowościami, a w dodatku narzuca mu się gburowaty jegomość, który w dość mało wyrafinowany sposób prosi o pomoc. Po pewnym czasie w Orient Expressie zostają znalezione zasztyletowane zwłoki.",
+      "price": 14.59,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/813/64390401144KS.jpg"
+    },
+    {
+      "id": 26 ,
+      "category": "thiller",
+      "title":  "Na gorącym uczynku",
+      "author": "Harlan Coben",
+      "description": "“Na gorącym uczynku” to kolejny kryminał autorstwa mistrza tego gatunku - Harlana Cobena. Historia osnuta jest tym razem wokół tajemniczego zaginięcia siedemnastoletniej Haley McWaid, nastoletniej wzorowej uczennicy. Pewnego dnia dziewczyna niespodziewanie nie wraca ze szkoły, a jej rodzina rozpoczyna rozpaczliwe poszukiwania. Gdy przez kolejne trzy miesiące śledztwo nie przynosi żadnych rezultatów, wszyscy powoli przygotowują się na najgorsze.",
+      "price": 28.12,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/A86/9788381256834.jpg"
+    },
+    {
+      "id": 27 ,
+      "category": "Komiksy",
+      "title":  "Marvel Classic Strażnicy Galaktyki. Tom 1",
+      "author": "Dan Abnett Andy, Lanning Wes Craig  ",
+      "description": "“Uniwersum Marvela to jeden z najbogatszych światów superbohaterów, jaki kiedykolwiek powstał. Komiksowe początki szybko znalazły odzwierciedlenie w kreskówkach. W kolejnym kroku ewolucji niesamowitego wszechświata narodziła się w epicka seria zawierająca dziesiątki pełnometrażowych filmów opowiadających o przygodach Avengersów.",
+      "price": 71.99,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/F8C/9788328141803.jpg"
+    },
+    {
+      "id": 28 ,
+      "category": "Komiksy",
+      "title":  "Tajfun. Nowe przygody. Antologia",
+      "author": "Marcin Nowakowski, Mariusz Zabdyr ",
+      "description": "Agenci NINO wracają do akcji! Nowe przygody Tajfuna, Kriss i Maar!\nDość już wakacji na marsjańskich plażach. Trójka niestrudzonych agentów znowu bierze się do roboty! Mrożące krew w żyłach niebezpieczeństwo, postapokaliptyczne wizje, bezlitosna kosmiczna próżnia, a także Piękne kobiety, ryczące buldożery, zakręcony humor, dzikie pościgi, walki kung-fu, nieprawdopodobne wynalazki nauki przyszłości oraz solidna, nieskrępowana prawami fizyki dawka przygody. Po prostu Tajfun w całej okazałości, przemawiający przez nowe pokolenie twórców. Jeszcze nie pora golić wąsa! Do boju!",
+      "price": 82.92,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/BFB/9788395505928.jpg"
+    },
+    {
+      "id": 29 ,
+      "category": "Komiksy",
+      "title":  "Astonishing X-Men. Tom 3",
+      "author": "John Cassaday, Warren Ellis ",
+      "description": "Warren Ellis, brytyjski scenarzysta komiksowy i telewizyjny znany z takich serii, jak The Authority, Planetary, Detektyw Fell, Transmetropolitan czy Hellblazer przedstawia swoją wizję przygód X-Men. W jej urzeczywistnieniu pomagają mu rysownicy Simone Bianchi (Thanos powstaje) oraz Phil Jimenez (Nieskończony kryzys) oraz cała rzesza innych znanych artystów tworzących kilkustronicowe epizody.\nX-Men wracają do działania. Mają nową bazę, nowe kostiumy i tajemnicę, której rozwiązanie będzie wymagało podróży na nieznane tereny. Czym są widmowe skrzynki? Gdzie umierają statki kosmiczne? Co kryje się za pojawieniem się na Ziemi nowego mutanta? Czy X-Men zdążą uratować Abigail Brand? Kto stoi za zamachami na mutantów? Szaleni genetycy, inne wymiary, przybysze z kosmosu i Krakoa, Żyjąca Wyspa to wszystko w najnowszym tomie przygód zadziwiających X-Men.\nW albumie umieszczono materiały pierwotnie opublikowane w formie zeszytowej w serii Astonishing X-Men #25-35 oraz miniserii Astonishing X-Men: Ghost Boxes #1-2.",
+      "price": 93.50,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/A2C/9788365938596.jpg"
+    },
+    {
+      "id":  30,
+      "category": "Komiksy",
+      "title":  "Komiks wiedźmin Wiedźmin. Tom 4. Córka płomienia",
+      "author": "Marianna Strychowska, Aleksandra Motyka ",
+      "description": "Stary znajomy Geralta z Rivii prosi go o pomoc w pewnej bardzo delikatnej sprawie. Obawia się ON mianowicie o swoją córkę, która w tajemnicy spotyka się z jakimś nieznajomym mężczyzną. Gdy Biały Wilk zaczyna badać sprawę, okazuje się, że zamieszany jest w nią jego przyjaciel, bard imieniem Jaskier. Ten niefrasobliwy lekkoduch ma wyjątkowy talent do pakowania się w najrozmaitsze kłopoty. Tym razem - jak zwykle zresztą - wciąga w nie również Wiedźmina.",
+      "price": 31.99,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/A03/9788328135628.jpg"
+    },
+    {
+      "id": 31 ,
+      "category": "Komiksy",
+      "title":  "Marvel Now 2.0 Śmierć X",
+      "author": "Jeff Lemire, Charles Soule ",
+      "description": " Terrigen, święta substancja Inhumans, która daje im życie, stanowi śmiertelnie zagrożenie dla mutantów. Przedstawiciele obu ras ścigają się z czasem, aby znaleźć pokojowe rozwiązanie tego problemu, ale mogą nie zdążyć, szczególnie że Scott Summers i Emma Frost realizują już własny plan. Przyparci do muru, nie cofną się przed niczym, żeby ocalić swój gatunek... nawet przed wydaniem wojny najpotężniejszym istotom na Ziemi. ",
+      "price": 31.99,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/814/9788328141933.jpg"
+    },
+    {
+      "id": 32 ,
+      "category": "Komiksy",
+      "title":  "Liga Niezwykłych Dżentelmenów. Burza",
+      "author": "Alan Moore ",
+      "description": "Kolejny tom rewelacyjnej opowieści o najsłynniejszych postaciach z dawnych powieści i filmów przygodowych, które w ujęciu mistrza komiksu Alana Moore’a stały się superbohaterami o niezwykłych mocach! Pani Night, mocno postarzała szefowa brytyjskiej agencji MI5, wraz z dwiema przyjaciółkami z bardzo dawnych czasów – nawróconą wampirzycą Miną Murray i zmiennopłciową Orlando – jedzie do zapomnianego zakątka Afryki, nad starożytny staw Aiszy. ",
+      "price": 71.99,
+      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/047/9788328197138.jpg"
     }
   ]
 }

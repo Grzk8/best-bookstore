@@ -24,10 +24,7 @@ class App extends Component {
             basket: [...this.state.basket, book]
 
         })
-
-            let sum = 0;
-            sum = sum + this.props.price;
-            console.log(sum);
+        
 
     }
     render() {

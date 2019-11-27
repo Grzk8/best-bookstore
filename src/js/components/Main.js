@@ -11,7 +11,8 @@ class Main extends Component {
     render() {
         return <>
             <Nav basket={this.props.basket}>
-                <p>main</p>
+                <h1> Witaj na stronie naszej księgarni BooKStore</h1>
+                <p> </p>
             </Nav>
         </>;
     }
