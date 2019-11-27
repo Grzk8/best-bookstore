@@ -13,8 +13,8 @@ class SelfPickup extends Component {
 
     ) {
         return <>
-            <Nav>
-
+            <Nav basket={this.props.basket}>
+                <p>odbiór</p>
             </Nav>
         </>;
     }

@@ -12,21 +12,38 @@ import Bascet from './Bascet';
 import Sf from './Sf';
 import PopularSience from './PopularSience';
 import Comic from './Comic';
+import Thiller from './Thiller';
 
 class App extends Component {
+    state = {
+        basket: []
+    }
+
+    addBook = (book) =>{
+        this.setState({
+            basket: [...this.state.basket, book]
+
+        })
+
+            let sum = 0;
+            sum = sum + this.props.price;
+            console.log(sum);
+
+    }
     render() {
         return (
             <HashRouter>
                 <>
-                    <Route exact path='/' component={Main} />
-                    <Route path='/aboutUs' component={AboutUs} />
-                    <Route path='/deliveryCost' component={DeliveryCost} />
-                    <Route path='/selfPickup' component={SelfPickup} />
-                    <Route path='/contact' component={Contact} />
-                    <Route path='/bascet' component={Bascet} />
-                    <Route path='/sf' component={Sf} />
-                    <Route path='/popularsience' component={PopularSience} />
-                    <Route path='/comic' component={Comic} />
+                    <Route exact path='/' render={props=><Main {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                    <Route path='/aboutUs' render={props=><AboutUs {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                    <Route path='/deliveryCost' render={props=><DeliveryCost {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                    <Route path='/selfPickup' render={props=><SelfPickup {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                    <Route path='/contact' render={props=><Contact {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                    <Route path='/bascet' render={props=><Bascet {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                    <Route path='/sf' render={props=><Sf {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                    <Route path='/popularsience' render={props=><PopularSience {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                    <Route path='/comic' render={props=><Comic {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                    <Route path='/thiller' render={props=><Thiller {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
 
                 </>
             </HashRouter>

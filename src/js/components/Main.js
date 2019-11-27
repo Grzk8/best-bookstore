@@ -10,7 +10,9 @@ import {
 class Main extends Component {
     render() {
         return <>
-            <Nav/>
+            <Nav basket={this.props.basket}>
+                <p>main</p>
+            </Nav>
         </>;
     }
 }

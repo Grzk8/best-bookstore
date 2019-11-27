@@ -13,8 +13,8 @@ class DeliveryCost extends Component {
 
     ) {
         return <>
-            <Nav>
-
+            <Nav basket={this.props.basket}>
+                <p>koszty dostawy</p>
             </Nav>
         </>;
     }

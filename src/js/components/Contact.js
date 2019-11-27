@@ -13,8 +13,8 @@ class Contact extends Component {
 
     ) {
         return <>
-            <Nav>
-
+            <Nav basket={this.props.basket}>
+                <p>kontakt</p>
             </Nav>
         </>;
     }

@@ -31,10 +31,11 @@ class Nav extends React.Component {
                         <aside>
                             <div className="containerAside">
                                 <ul className="asideList">
-                                    <li className="asideItem bascet"><NavLink to="/bascet" activeClassName="active">Koszyk<div className="basketLogo"></div><p>0 produktów</p><p>0 zł</p></NavLink></li>
+                                    <li className="asideItem bascet"><NavLink to="/bascet" activeClassName="active">Koszyk<div className="basketLogo"></div><p>{this.props.basket? this.props.basket.length : 0} produktów</p><p> 0 zł</p></NavLink></li>
                                     <li className="asideItem itemList"><NavLink to="/sf" activeClassName="active">Sience - fiction</NavLink></li>
                                     <li className="asideItem itemList"><NavLink to="/popularSience" activeClassName="active">Popularnonaukowe</NavLink></li>
                                     <li className="asideItem itemList"><NavLink to="/comic" activeClassName="active">Komiksy</NavLink></li>
+                                    <li className="asideItem itemList"><NavLink to="/thiller" activeClassName="active">Kryminał</NavLink></li>
                                 </ul>
                             </div>
                         </aside>

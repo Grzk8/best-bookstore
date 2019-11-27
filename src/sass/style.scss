@@ -10,7 +10,11 @@
   font-weight: normal;
   font-style: normal;
 }
+html, body {
+  height: 100%;
+  margin: 0px;
 
+}
 a{
   color: azure;
   text-decoration: none;
@@ -21,11 +25,15 @@ a{
   color: black;
 }
 //header
-.headerMain{
+header{
   margin: 0 auto;
-  width: 1350px;
+  width: 1300px;
   background-color: burlywood;
   min-height: 5em;
+}
+.headerMain{
+  margin: 0 auto;
+  width: 1200px;
 }
 .logo{
   float: left;
@@ -41,19 +49,18 @@ a{
   padding: 10px;
 }
 
-NavLink{
-  color: aliceblue;
-}
+
 //main
 .container{
   margin: 0 auto;
-  width: 1350px;
+  width: 1300px;
+  height: 100%;
   display: flex;
-  border: 1px solid burlywood;
+  border-right: 20px solid burlywood;
 }
 .containerAside{
   width: 15em;
-  height: 50em;
+  height: 100%;
   background-color: burlywood;
 
 }
@@ -78,6 +85,7 @@ NavLink{
 .bascet {
   height: 8em;
 }
+
  .basketLogo{
    width: 3em;
    height: 3em;
@@ -88,14 +96,17 @@ NavLink{
    background-repeat: no-repeat;
  }
 
-.Nav{
-border: 1px solid burlywood;
-}
+
 .books{
- // border: 1px solid black;
-  display: block;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
 .book{
+  border: 1px solid #d6d5d5;
+  padding: 0.5em;
   width: 200px;
   display: block;
 }
@@ -104,9 +115,16 @@ border: 1px solid burlywood;
   text-align: center
 }
 .cover{
-;
+  position: relative;
+  left: 2.3em;
 }
-
+.btn{
+  position: relative;
+  left: 4em;
+  background-color: brown;
+  color: #d6d5d5;
+  font-weight: bold;
+}
 
 
 
@@ -115,7 +133,7 @@ border: 1px solid burlywood;
 
 footer{
   margin: 0 auto;
-  width: 1350px;
+  width: 1300px;
   height: 5em;
   background-color: burlywood;
 }

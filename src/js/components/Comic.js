@@ -23,27 +23,31 @@ class Comic extends Component {
                 })
             })
     }
+    handleClick = book=>{
+        this.props.addBook(book)
+    }
     render(
 
     ) {
         console.log(this.state.books)
         return <>
-            <Nav>
+            <Nav basket={this.props.basket}><div className="books">
                 {
                     this.state.books.map(b=>
                         <>
-                        <div className="books">
-                            <div className="book">
+
+                            <div className="book" key={b.id}>
                                 <img className="cover" src={b.image} height="120px" width="120px"></img>
                                 <p className="title"><strong>{b.title}</strong></p>
                                 <p className="author">{b.author}</p>
-                                <button className="btn">kup</button>
+                                <p className="author">{b.price}</p>
+                                <button className="btn" onClick={()=>this.handleClick(b)}>DO KOSZYKA</button>
                             </div>
-                        </div>
+
                         </>
                     )
-                }
-            </Nav>
+                }</div>
+                </Nav>
         </>;
     }
 }

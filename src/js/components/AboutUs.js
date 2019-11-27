@@ -13,8 +13,8 @@ class AboutUs extends Component {
 
     ) {
         return <>
-            <Nav>
-
+            <Nav basket={this.props.basket}>
+                <p>o nas</p>
             </Nav>
         </>;
     }
