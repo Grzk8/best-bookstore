@@ -41,8 +41,7 @@ class Form extends Component {
 
     render() {
         return (
-            <Nav>
-                {
+
                 <>
                     <form onSubmit={this.handleSubmitForm}>
                         <h1>Wpisz swoje dane</h1>
@@ -55,8 +54,7 @@ class Form extends Component {
                         <input type="submit"/>
                     </form>
                 </>
-            }
-            </Nav>
+
         );
     }
 }

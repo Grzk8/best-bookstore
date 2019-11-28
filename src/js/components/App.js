@@ -13,6 +13,7 @@ import Sf from './Sf';
 import PopularSience from './PopularSience';
 import Comic from './Comic';
 import Thiller from './Thiller';
+import Form from './Form';
 
 class App extends Component {
     state = {
@@ -41,7 +42,6 @@ class App extends Component {
                     <Route path='/popularsience' render={props=><PopularSience {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                     <Route path='/comic' render={props=><Comic {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                     <Route path='/thiller' render={props=><Thiller {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
-
                 </>
             </HashRouter>
         )
