@@ -17,6 +17,7 @@ class Bascet extends Component {
     };
 
     showForm = () =>{
+
         this.setState({
                 showform: this.state.showform ? false : true
     }
@@ -41,7 +42,7 @@ class Bascet extends Component {
                     )
                 }
                 <p className="totalprice">Łącznie do zapłaty : {this.props.basket ? this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2):0} zł</p>
-                <button onClic={this.showForm} className="btn btn2">KUPUJĘ</button>
+                <button onClick={this.showForm} className="btn btn2">KUPUJĘ</button>
 
                 {this.state.showform && <Form></Form> }
 

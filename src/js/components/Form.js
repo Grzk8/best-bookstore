@@ -12,9 +12,13 @@ class Form extends Component {
     state = {
         name: "",
         surname: "",
-        adress: "",
+        street: "",
+        postalCode: "",
+        city: "",
         mail: "",
+        pickup:"Przesyłka",
         errorMsg: ""
+
     }
 
     handleChange = (e) => {
@@ -33,6 +37,7 @@ class Form extends Component {
             this.setState({
                 errorMsg: "Błędny adres email"
             });
+
             return false;
         }
 
@@ -46,12 +51,28 @@ class Form extends Component {
                     <form onSubmit={this.handleSubmitForm}>
                         <h1>Wpisz swoje dane</h1>
                         <span>{this.state.errorMsg}</span>
-                        <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
-                        <input type="text" name="surname" value={this.state.surname} onChange={this.handleChange}/>
-                        <input type="text" name="adress" value={this.state.adress} onChange={this.handleChange}/>
-                        <input type="text" name="mail" value={this.state.mail} onChange={this.handleChange}/>
+                        <label>Imię</label>
+                        <input type="text" name="name" value={this.state.name} placeholder="imię" onChange={this.handleChange}/>
+                        <label>Nazwisko</label>
+                        <input type="text" name="surname" value={this.state.surname} placeholder="nazwisko" onChange={this.handleChange}/>
+                        <label>Adres:</label>
+                        <input type="text" name="street" value={this.state.street} placeholder="ulica i nr" onChange={this.handleChange}/>
+                        <input type="text" name="postCode" value={this.state.postalCode} placeholder="kod pocztowy" onChange={this.handleChange}/>
+                        <input type="text" name="city" value={this.state.city} placeholder="miejscowość" onChange={this.handleChange}/>
+                        <label>Email</label>
+                        <input type="text" name="mail" value={this.state.mail} placeholder="Email" onChange={this.handleChange}/>
+
+                        <select
+                            value={this.state.pickup}
+                            onChange={this.handleChange}>
+                            <option value="ms">Odbiór osobisty</option>
+                            <option value="mrs">Przesyłka</option>
+                        </select>
+
+
+                        <label>Uwagi</label>
                         <textarea name="description" value={this.state.description} onChange={this.handleChange}/>
-                        <input type="submit"/>
+                        <input className="btn btn3" type="submit" value="Wyślij"/>
                     </form>
                 </>
 
