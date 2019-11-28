@@ -64,7 +64,7 @@ class Form extends Component {
         return (
 
                 <>
-                    <form onSubmit={this.handleSubmitForm}>
+                    <form className="tableContainer" onSubmit={this.handleSubmitForm}>
                         <h1>Wpisz swoje dane</h1>
                         <span>{this.state.errorMsg}</span>
                         <label>Imię</label>

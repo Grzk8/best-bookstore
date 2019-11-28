@@ -32,7 +32,7 @@ class Nav extends React.Component {
                         <aside>
                             <div className="containerAside">
                                 <ul className="asideList">
-                                    <li className="asideItem bascet"><NavLink to="/bascet" activeClassName="active">Koszyk<div className="basketLogo"></div><p>{this.props.basket? this.props.basket.length : 0} produktów</p><p> {this.props.basket ? this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2):0} zł</p></NavLink></li>
+                                    <li className="asideItem bascet"><NavLink to="/bascet" activeClassName="active">Koszyk<div className="basketLogo"></div><p className="inBasket">{this.props.basket? this.props.basket.length : 0} produktów</p><p className="inBasket"> {this.props.basket ? this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2):0} zł</p></NavLink></li>
                                     <li className="asideItem itemList"><NavLink to="/sf" activeClassName="active">Sience - fiction</NavLink></li>
                                     <li className="asideItem itemList"><NavLink to="/popularSience" activeClassName="active">Popularnonaukowe</NavLink></li>
                                     <li className="asideItem itemList"><NavLink to="/comic" activeClassName="active">Komiksy</NavLink></li>
@@ -54,8 +54,8 @@ class Nav extends React.Component {
                             <div className="bestbookstoreRights">2019 BestBooKStore sp z o.o. All rights reserved</div>
                         </div>
                         <div className="media">
-                            <a href="https://twitter.com"><img src="../../images/Twitter.svg"></img></a>
-                            <a href="https://facebook.com"><img src="../../images/Facebook.svg"></img></a>
+                            <a className="mediaLogo facebook" href="https://twitter.com"></a>
+                            <a className="mediaLogo tweeter" href="https://facebook.com"></a>
                         </div>
 
                     </div>

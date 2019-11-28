@@ -28,20 +28,21 @@ class Bascet extends Component {
     ) {
         return <>
             <Nav basket={this.props.basket}>
+                <h1 className="headerStyle">KOSZYK</h1>
                 {
+
                     this.props.basket.map(b=>
+                            <table className="tableContainer">
 
-                        <table>
-
-                            <tr>
-                                <td>{b.title}</td>
-                                <td>{b.author}</td>
-                                <td>{b.price}</td>
-                            </tr>
-                        </table>
+                                <tr>
+                                    <td>{b.title}</td>
+                                    <td>{b.author}</td>
+                                    <td>{b.price}</td>
+                                </tr>
+                            </table>
                     )
                 }
-                <p className="totalprice">Łącznie do zapłaty : {this.props.basket ? this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2):0} zł</p>
+                <p className="totalprice">Łącznie do zapłaty :<span> {this.props.basket ? this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2):0} zł</span></p>
                 <button onClick={this.showForm} className="btn btn2">KUPUJĘ</button>
 
                 {this.state.showform && <Form></Form> }

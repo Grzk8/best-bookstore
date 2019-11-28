@@ -26,6 +26,7 @@ class Thiller extends Component {
     handleClick = book=>{
         this.props.addBook(book)
     }
+
     render(
 
     ) {
@@ -41,6 +42,7 @@ class Thiller extends Component {
                             <p className="title"><strong>{b.title}</strong></p>
                             <p className="author">{b.author}</p>
                             <p className="author">{b.price}</p>
+                            <button className="btn" >WIĘCEJ</button>
                             <button className="btn" onClick={()=>this.handleClick(b)}>DO KOSZYKA</button>
                         </div>
 

@@ -31,6 +31,11 @@ header{
   background-color: burlywood;
   min-height: 5em;
 }
+.headerStyle{
+  text-align: center;
+  padding: 1.2em;
+  color: sienna;
+}
 .headerMain{
   margin: 0 auto;
   width: 1200px;
@@ -50,6 +55,9 @@ span{
 .menu{
   float: right;
 }
+.menuList{
+  width: 100%;
+}
 .menuItem{
   font-size: 1em;
   display: inline-block;
@@ -57,6 +65,11 @@ span{
 }
 
 
+.mapouter{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4em;
+}
 //main
 .container{
   margin: 0 auto;
@@ -65,14 +78,30 @@ span{
   display: flex;
   border-right: 20px solid burlywood;
 }
+.tableContainer{
+  padding-top: 2em;
+  width: 550px;
+  margin: 0 auto;
+}
 .containerAside{
   width: 15em;
   height: 100%;
   background-color: burlywood;
-
 }
-.aside{
-
+section{
+  width: 1300px;
+}
+.mainSide{
+  background-image: url("../images/books.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 2px 2px sienna;
 }
 .asadeList{
   width: 100%;
@@ -91,23 +120,26 @@ span{
 }
 .bascet {
   height: 8em;
+  color: sienna;
+}
+.inBasket{
+  padding: 0;
 }
 table {
-
   width: 500px;
   height: 50px;
-  display: flow;
-  left: 30px;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 4px hsla(0, 0%, 15%, 0.59);
 }
+
 td{
   max-width: 30px;
   text-align: center;
 }
 .totalprice{
   text-align: center;
-  display: block;
+  font-size: 2em;
+  color: sienna;
 }
  .basketLogo{
    width: 3em;
@@ -186,7 +218,20 @@ footer{
 .media{
   float: right;
 }
+.mediaLogo{
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+}
+.facebook{
+  background-image: url("../images/facebook.png");
+  background-size: cover;
+}
 
+.tweeter{
+  background-image: url("../images/tweeter.jpg");
+  background-size: cover;
+}
 input[type="text"],
 textarea {
   padding: 15px;

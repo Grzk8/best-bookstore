@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Nav from './Nav';
+import DeliveryCost from "./DeliveryCost";
 import {
     HashRouter,
     Route,
@@ -7,17 +8,20 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-class Main extends Component {
-    render() {
+
+class OrderCompleted extends Component {
+    render(
+
+    ) {
         return <>
             <Nav basket={this.props.basket}>
-
-                <div className="mainSide">
-                    <h1 className="mainSide">Witamy na stronie <br></br>naszej księgarni</h1>
-                </div>
+                <h1 className="headerStyle">Zamówienie zostało przyjęte</h1>
             </Nav>
         </>;
     }
 }
 
-export default Main;
+
+
+
+export default OrderCompleted;
