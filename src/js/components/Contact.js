@@ -15,6 +15,10 @@ class Contact extends Component {
         return <>
             <Nav basket={this.props.basket}>
                 <p>kontakt</p>
+
+
+
+
             </Nav>
         </>;
     }

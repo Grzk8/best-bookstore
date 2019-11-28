@@ -1,295 +1,295 @@
 {
   "books": [
     {
-      "id": 1 ,
+      "id": 1,
       "category": "s-f",
-      "title": "Metro 2033" ,
+      "title": "Metro 2033",
       "author": "Dmitry Glukhovsky",
       "description": "Głównym bohaterem powieści jest młody człowiek o imieniu Artem - to w jego ręce trafiają losy ostatnich ludzi na Ziemi. Ludzie, organizując świat na nowo, stworzyli w podziemiach tzw. stacje-państwa, konfederacje oraz organizacje handlowe. Wraz z Artemem podróżujemy przez nową rzeczywistość i razem z nim ją poznajemy. W publikacji nie brakuje dramatu i tajemnic, które sprawią, że nie oderwiemy się od lektury. Ludzie, którzy pozostali na ziemi, stają się w książce odbiciem całego współczesnego społeczeństwa, a sama treść publikacji bezlitośnie ukazuje naszą naturę.",
       "price": 35.99,
       "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/C44/9788365315014.jpg"
     },
     {
-      "id":  2,
+      "id": 2,
       "category": "s-f",
-      "title": "Solaris" ,
+      "title": "Solaris",
       "author": "Stanisław Lem",
       "description": "“Solaris” to prawdziwa gratka dla wszystkich wielbicieli fantasy, ale nawet w kosmicznych odmętach jest mały pierwiastek miłości, który będzie towarzyszył w tej podróży po obcej planecie. Stanisław Lem stworzył kreację obcego, która zaskakuje i odbiega od wszelkich schematów. Na Solarisie spoczywa galaretowaty twór, który w żadnym stopniu nie przypomina żadnego organizmu, ale z całą pewnością jest żywym stworzeniem. Ludzkość staje przed ogromnym wyzwaniem, ponieważ poddawany badaniom nie daje najmniejszych szans na jakiekolwiek porozumienie się z człowiekiem. Czyżby umysł ludzki uznawany dotychczas za doskonały twór tym razem zawiódł? Czy jest ktoś we Wszechświecie, kto potęgą przerasta nasz gatunek?",
-      "price": 42.50,
+      "price": 42.5,
       "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/247/56114100153KS.jpg"
     },
     {
-      "id":  3,
+      "id": 3,
       "category": "Popularnonaukowe",
-      "title":  "Krótka historia czasu",
+      "title": "Krótka historia czasu",
       "author": "Stephen Hawking",
       "description": "Hawking, mimo spowodowanego stwardnieniem zanikowym bocznym paraliżu większości ciała, potrafi mówić o fizyce w sposób jasny, prosty i pełen pasji. Dowodem na to jest choćby ta oto książka, która od momentu pierwszego wydania, a więc od roku 1988, jest jednym z największych bestsellerów literatury popularnonaukowej. \"Krótka historia czasu” to zdumiewająca podróż od narodzin naszego wszechświata (tzw. Wielki Wybuch) aż po jego zagładę, do której na szczęście sporo czasu nam jeszcze zostało. W trakcie tego pasjonującego wykładu Hawking w sposób przejrzysty i w pełni zrozumiały nawet dla laika wyjaśnia, na czym polegają najważniejsze dokonania fizyki teoretycznej. Siłą rzeczy i tradycji sporo miejsca poświęca Newtonowi. Świadom jest jednak tego, że jego poglądy nie pozwalają wyjaśnić wszystkich zachodzących we wszechświecie zjawisk. Dlatego też, aby mieć o tym jako takie pojęcie, trzeba zgłębić nieco zarówno teorię względności Einsteina, jak i teorię kwantową czy teorię strun.",
       "price": 28.55,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/8B7/9788377857670.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/8B7/9788377857670.jpg"
     },
     {
-      "id":  4,
+      "id": 4,
       "category": "Popularnonaukowe",
-      "title":  "Siła nawyku. Dlaczego robimy to, co robimy...",
+      "title": "Siła nawyku. Dlaczego robimy to, co robimy...",
       "author": "Charles Duhigg",
       "description": "Choć Charles Duhigg w swojej publikacji \"Siła nawyku\" opowiada o tym, w jaki sposób nawyki rządzą naszym życiem oraz co zrobić, by poradzić sobie z niewłaściwymi nawykami i przekuwać je w dobre, prowadzące nas wprost do sukcesu, to nie jest to typowy poradnik. Zasadniczą cechą tej książki, odróżniającą ją od wielu innych pozycji tego typu, jest język, jakim operuje autor. Jego przemyślenia czyta się jak felieton, są one proste w odbiorze, a przykłady tak przejrzyste i obrazowe, że będą zrozumiałe dla każdego.\n",
-      "price": 25.00,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/130/60724402470KS.jpg"
+      "price": 25,
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/130/60724402470KS.jpg"
     },
     {
-      "id":  5,
+      "id": 5,
       "category": "Komiksy",
-      "title":  "Kajko i Kokosz. Szkoła latania",
+      "title": "Kajko i Kokosz. Szkoła latania",
       "author": "Janusz Christa ",
       "description": "Kajko i Kokosz. Szkoła latania to pierwszy wydany w formie albumu komiks o przygodach słowiańskich wojowników. W tej części komiksu nie zabraknie Łamignata, który narzeka na brak sił. Z pomocą rusza jego małżonka, czarownica Jaga. Łamignat otrzymuje od niej czarodziejską fujarkę, kora ma zapewnić mu nadludzkie moce. Podczas, gdy Łamignat sprawdza, czy podarunek od żony rzeczywiście ma jakieś magiczne moce, w lesie pojawia się Mirmił wracający z polowania, razem ze swoimi dzielnymi wojami. Kajko i Kokosz strzegą grodu, z którego wyganiają intruzów. Wkrótce Mirmił postanawia opanować sztukę latania na miotle. Pełna humoru opowieść wyróżniająca się barwną oprawą graficzną, to wspaniały sposób na udaną rozrywkę.",
-      "price": 22.50,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/F81/53496901075KS.jpg"
+      "price": 22.5,
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/F81/53496901075KS.jpg"
     },
     {
-      "id":  6,
+      "id": 6,
       "category": "Komiksy",
-      "title":  "Asteriks. Album 1. Przygody Gala Asteriksa",
+      "title": "Asteriks. Album 1. Przygody Gala Asteriksa",
       "author": "Albert Uderzo, Rene Goscinny  ",
       "description": "Jest rok 50. przed naszą erą. Cała Galia została podbita przez Rzymian... Cała? Nie! Jedna, jedyna osada, zamieszkała przez nieugiętych Galów, wciąż stawia opór najeźdźcom i uprzykrza życie legionom rzymskim stacjonującym w obozach Rabarbarum, Akwarium, Relanium i Delirium... Tak rozpoczyna się pierwszy tom najsławniejszej w Europie serii humorystycznych komiksów, której bohaterami są dwaj niezwyciężeni galijscy wojownicy - obdarzony wrodzonym sprytem Asteriks i jego uwielbiający dziki przyjaciel Obeliks. Dzięki właściwościom magicznego napoju udaje im się odpierać ataki Rzymian i bronić rodzinnej wioski. W tym tomie poznajemy wszystkich głównych bohaterów cyklu: Panoramiksa, który sporządza magiczne wywary, Asparanoiksa, wodza plemienia, panicznie bojącego się tego, iż niebo runie mu na głowę, Kakofoniksa - wioskowego barda, którego wątpliwy talent muzyczny jest w stanie wyprowadzić z równowagi najspokojniejszego Gala oraz wiele innych przezabawnych postaci. Klasyka komiksu, którą każdy, bez względu na to, ile ma lat, powinien mieć na półce. ",
       "price": 24.99,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/0B4/50700701075KS.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/0B4/50700701075KS.jpg"
     },
     {
-      "id":  7,
+      "id": 7,
       "category": "s-f",
-      "title":  "Rok 1984",
+      "title": "Rok 1984",
       "author": "George Orwell",
       "description": "Wielki brat patrzy - to właśnie napisy tej treści, w antyutopii Orwella krzyczące z plakatów rozlepionych po całym Londynie, natchnęły twórców telewizyjnego show \"Big Brother\". Czyżby wraz z upadkiem komunizmu wielka, oskarżycielska powieść straciła swoją rację bytu, stając się zaledwie inspiracją programu rozrywkowego? Nie. Bo ukazuje świat, który zawsze może powrócić. Świat pustych sklepów, permanentnej wojny, jednej wiary. ",
       "price": 23.69,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/E4F/9788328708419.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/E4F/9788328708419.jpg"
     },
     {
-      "id":  8,
+      "id": 8,
       "category": "s-f",
-      "title":  "451 stopni Fahrenheita",
+      "title": "451 stopni Fahrenheita",
       "author": "Ray Bradbury",
       "description": "\"451 stopni Fahrenheita\" to bestsellerowa, powieść science-fiction. Poznajemy w niej antyutopijny świat, w którym książki są zakazane i palone. Czy znajdzie się ktoś, kto zdobędzie się na odwagę by zmierzyć się z bezwzględnym systemem? Jak wyglądałby świat, w którym zakazane jest czytanie? Gdzie nie byłoby książek, możliwości pójścia do biblioteki, ani księgarni? Właśnie taką rzeczywistość zobaczymy, sięgając po powieść \"451 stopni Fahrenheita\".",
       "price": 21.17,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/A7D/9788374809221.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/A7D/9788374809221.jpg"
     },
     {
-      "id": 9 ,
+      "id": 9,
       "category": "s-f",
-      "title":  "Zabójcze maszyny",
+      "title": "Zabójcze maszyny",
       "author": "Philip Reeve",
       "description": "Peter Jackson przenosi na ekran Zabójcze maszyny – przetłumaczony na 30 języków, obsypany nagrodami światowy bestseller.Pierwszy tom czterotomowego cyklu Zabójcze maszyny, w którym Philip Reeve stworzył jeden z najwspanialszych fantastycznych światów, jakie kiedykolwiek wykreowano.\n\"Połączenie emocji i oszałamiających efektów wizualnych\".",
       "price": 17.01,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/B60/978832416838533.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/B60/978832416838533.jpg"
     },
     {
-      "id":  10,
+      "id": 10,
       "category": "s-f",
-      "title":  "Doktor Jekyll i Pan Hyde",
+      "title": "Doktor Jekyll i Pan Hyde",
       "author": "Robert Louis Stevenson",
       "description": "Dwoistość natury ludzkiej stanowi obecnie bardzo często pojawiający się motyw w literaturze. Zacieranie się granic między dobrem, a złem od lat jednak zastanawiało twórców. Jak to działa i na czym polega? Pewnego dnia doktor Jekyll postanawia sporządzić miksturę, która całkowicie odmieni jego życie. Oto z dobrodusznego, statecznego obywatela przemienia się w złoczyńcę. Tłumaczy się sam przed sobą tym, że w końcu nastał dla niego czas, aby poznać inny świat od tego, który zna. Swoje dwie odmienne natury rozdziela i co jakiś czas naprzemiennie dopuszcza do głosu. Nastaje jednak moment, kiedy jego misterny plan zaczyna się psuć. Stworzona postać Pana Hyde'a, zła i pełna nienawiści strona, postanawia wziąć górę i przezwyciężyć dobro. Nastaje moment wewnętrznej walki, która skończyć się może tragicznie.",
       "price": 10.12,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/4EA/44184701184KS.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/4EA/44184701184KS.jpg"
     },
     {
-      "id": 11 ,
+      "id": 11,
       "category": "s-f",
-      "title":  "FUTU.RE",
+      "title": "FUTU.RE",
       "author": "Dmitry Glukhovsky",
       "description": "Cywilizacja rozwija się w tempie wykładniczym, a postęp nauki jest tak ogromny, że z wielu faktów nawet nie zdajemy sobie sprawy. Jednym z nich jest to, że prawdopodobnie już za naszego życia ludzie staną się nieśmiertelni. Przeszczepy tkanek, sztuczna krew, drukowanie nowych organów. Wszystko to sprawi, że nasze dzieci być może nigdy nie umrą. Świat zaludniać więc będą wiecznie młodzi ludzie, którzy zmuszeni będą wyzbyć się swoich zwierzęcych instynktów i żyć jak przystało istotom wiecznym. W związku z tym powstaje pytanie, kto będzie czuwać nad tym nowym, wspaniałym światem? Kto nauczy ludzi, jak żyć godnie w nowych warunkach biologicznych? Kto będzie odpowiedzialny za regulację liczebności populacji? ",
       "price": 33.99,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/811/9788363944483.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/811/9788363944483.jpg"
     },
     {
-      "id": 12 ,
+      "id": 12,
       "category": "s-f",
-      "title":  "Nasi przyjaciele z Frolixa 8",
+      "title": "Nasi przyjaciele z Frolixa 8",
       "author": "Philip K. Dick",
       "description": "“Nasi przyjaciele z Forlixa 8” to intrygująca książka z gatunku science fiction, która przedstawia potworną dystopię. Nick Appleton jest zwykłym, szarym człowiekiem należącym do grupy Starych. W związku z tym pełni funkcję słabo wykwalifikowanego robotnika. Jego życie wcale nie jest usłane różami. Wciąż spotykają go tylko niepowodzenia, dlatego też trudno mówić, by pamiętał i rozumiał, co to szczęście.",
       "price": 27.16,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/D0B/9788380626065.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/D0B/9788380626065.jpg"
     },
     {
-      "id": 13 ,
+      "id": 13,
       "category": "s-f",
-      "title":  "Marsjanin",
+      "title": "Marsjanin",
       "author": "Andy Weir",
       "description": "Pierwsza eskapada na Marsa kończy się burzą piaskową i natychmiastową ewakuacją załogi. Podczas pośpiesznego powrotu  na czerwonej planecie pozostaje jeden z członków zespołu, uznany przez kolegów i resztę świata za zmarłego. Mark Watney jednak żyje i rozpoczyna swoją heroiczną walkę o przetrwanie, z minimalnymi zapasami powietrza, żywności i bez żadnej łączności z Ziemią. Czy niezłomna determinacja, silna psychika i naukowa wiedza wystarczą, by przeżyć na Marsie i wyjść cało z beznadziejnego położenia?  Czy człowiek w sytuacji bez wyjścia może zdobyć się na dystans do siebie oraz tego, co go czeka?",
       "price": 28.79,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/71A/9788328702226.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/71A/9788328702226.jpg"
     },
     {
-      "id":  14,
+      "id": 14,
       "category": "s-f",
-      "title":  "Gra Endera",
+      "title": "Gra Endera",
       "author": "Orson Scott Card",
       "description": "Wobec śmiertelnego zagrożenia nadciągającego z kosmosu Ziemia przygotowuje swoją broń ostatniej nadziei. Jest nią chłopiec, w którym odkryto zalążki niezwykłego geniuszu wojskowego. Czas nagli, a przyszłość dwóch cywilizacji spoczywa w rękach dziecka...",
-      "price": 24.00,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/FF5/9788378396321.jpg"
+      "price": 24,
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/FF5/9788378396321.jpg"
     },
     {
-      "id": 15 ,
+      "id": 15,
       "category": "s-f",
-      "title":  "Wehikuł czasu",
+      "title": "Wehikuł czasu",
       "author": "Herbert George Wells",
       "description": "Herbert George Wells (1866-1946), brytyjski pisarz i publicysta, z wykształcenia biolog. Uznawany jest za jednego z pionierów gatunku science fiction. Mimo że jest autorem ponad sześćdziesięciu książek, literacką sławę zapewniła mu już pierwsza powieść: Wehikuł czasu (1895). Dzisiaj, dzięki tytułowi tejże powieści, określenie \"wehikuł czasu\" weszło do powszechnego użycia i posługują się nim zarówno dzieci, jak i dorośli w całym cywilizowanym świecie. Natomiast miłośnicy literatury fantastycznonaukowej uważają wręcz za punkt honoru, aby posiadać w swojej biblioteczce powieść Wehikuł czasu. Wychodząc temu zapotrzebowaniu Zenon Gołaszewski, pisarz i tłumacz, dokonał nowego przekładu tego klasycznego dzieła. ",
       "price": 12.35,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/699/9788394807986.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/699/9788394807986.jpg"
     },
     {
-      "id":  16,
+      "id": 16,
       "category": "s-f",
-      "title":  "Star Wars: Koniec i Początek",
+      "title": "Star Wars: Koniec i Początek",
       "author": "Chuck Wendig, Chuck Wending  ",
       "description": "Wydarzenia w książce koncentrują się na peryferyjnej planecie Akiva, gdzie rozpoczyna się tajny zjazd niedobitków Imperium służący przegrupowaniu sił i wyłonieniu nowych przywódców. Przypadkiem dowiaduje się o tym kosmiczny zwiadowca, kapitan Wedge Antilles, lecz zostaje pojmany, zanim zdąży zawiadomić dowództwo Sojuszu. Na ratunek rusza mu dawna towarzyszka broni, weteranka Norra Wexley, która powróciła na rodzinną planetę, aby wyrwać stamtąd syna. Nieoczekiwanie pod samym nosem Imperium zawiązuje się barwny sojusz dziwnych postaci – Norry, jej syna Temmina, technicznego geniusza, łowczyni nagród, snajperki Jas Amari oraz Sinjira Ratha Vellusa, nawróconego imperialnego tajnego agenta. Wszystkich łączy jeden cel – raz na zawsze wyzwolić się spod władzy Imperium.",
       "price": 25.89,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/129/9788328026995.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/129/9788328026995.jpg"
     },
     {
-      "id": 17 ,
+      "id": 17,
       "category": "Popularnonaukowe",
-      "title":  "Potęga teraźniejszości",
+      "title": "Potęga teraźniejszości",
       "author": "Eckhart Tolle",
       "description": "We współczesnym świecie ogromne tempo życia wiąże się nierozerwalnie ze stresem i licznymi przypadkami depresji. Czy tak musi być? Otóż niekoniecznie. W książce \"Potęga teraźniejszości\" Eckhart Tolle, słynny nauczyciel duchowy, pokazuje nam, jak żyć szczęśliwie i w zgodzie z samym sobą. Bo osiągnięcie wewnętrznego spokoju i harmonii jest w zasięgu każdego z nas i wcale nie musi być rzeczą trudną. Należy tylko odejść od utartych schematów myślenia, które niepotrzebnie pogłębiają obawy i lęki oraz, ogólnie rzecz ujmując, psychiczny dyskomfort człowieka.",
       "price": 25.13,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/D38/51933901284KS.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/D38/51933901284KS.jpg"
     },
     {
-      "id": 18 ,
+      "id": 18,
       "category": "Popularnonaukowe",
-      "title":  "Człowiek w poszukiwaniu sensu",
+      "title": "Człowiek w poszukiwaniu sensu",
       "author": "Viktor Emil Frankl",
       "description": "\nKsiążka po raz pierwszy ukazała się już w 1946 roku. Teraz przedstawiamy ją naszym Czytelnikom w znakomitym przekładzie Aleksandry Wolnickiej. Bez wątpienia pozycji tej nie może zabraknąć na półce każdego, kto interesuje się psychiatrią lub psychologią, kto zgłębia swoją wiedzę z zakresu metod psychoterapii albo też związał z nią swoją działalność naukową czy zawodową. Jest to bowiem dzieło na miarę \"Wstępu do psychoanalizy\" Zygmunta Freuda i z pewnością równie ważne.",
       "price": 21.26,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/248/52988801041KS.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/248/52988801041KS.jpg"
     },
     {
-      "id": 19 ,
+      "id": 19,
       "category": "Popularnonaukowe",
-      "title":  "Tajemnice podświadomości",
+      "title": "Tajemnice podświadomości",
       "author": "Sinielnikow Walerij",
       "description": "To niezwykła książka. Pokazuje jak uwolnić tkwiącą w każdym z nas ogromną wewnętrzną siłę. Podpowiada, w jaki sposób z niej skorzystać, by osiągnąć harmonię, radość życia i zdrowie. Przystępnie opisuje technikę pracy z podświadomością dla rozwiązywania indywidualnych problemów. Unikatową wiedzę można wykorzystywać nie tylko do leczenia szerokiego zakresu chorób, ale również dla normalizacji takich dziedzin życia osobistego jak: praca, relacje międzyludzkie, rodzina i finanse. Zaprezentowany model jest prosty i dostępny dla każdego, kto tylko zechce go opanować.",
-      "price": 28.20,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/A88/47256002062KS.jpg"
+      "price": 28.2,
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/A88/47256002062KS.jpg"
     },
     {
-      "id": 20 ,
+      "id": 20,
       "category": "Popularnonaukowe",
-      "title":  "Nazywam się William Szekspir",
+      "title": "Nazywam się William Szekspir",
       "author": "Alexandri Ferran Monreal Violeta  ",
       "description": "\"Bez wątpienia wszyscy znacie księcia Hamleta i jego słynne zdanie:\n»8yć albo nie być«. Znacie również zapewne historię nieszczęśliwej miłości Romea i Julii, nieszczęśliwej za sprawą konfliktu pomiędzy ich rodzinami. To tylko kilka z postaci, które stworzyłem w swoich dramatach, potrafiłem bowiem kreować takich bohaterów i bohaterki, którzy przeżywali namiętności, toczyli walki, do czegoś dążyli i czegoś pragnęli, zupełnie jakby byli ludźmi z krwi i kości\". ",
       "price": 14.25,
-      "image":"https://cf1-taniaksiazka.statiki.pl/images/popups/A5B/42336501350KS.jpg"
+      "image": "https://cf1-taniaksiazka.statiki.pl/images/popups/A5B/42336501350KS.jpg"
     },
     {
-      "id": 21 ,
+      "id": 21,
       "category": "thiller",
-      "title":  "Mock. Golem",
+      "title": "Mock. Golem",
       "author": "Marek Krajewski",
       "description": "\"Mock. Golem\" to dziewiąty już tom serii kryminałów o Eberhardzie Mocku. Jest rok 1920, a w Breslau dzieje się coraz gorzej. Miasto nawiedza niespodziewanie prawdziwa sekta \"mesjaszy\". Choć z pozoru jej członkowie nie wydają się groźni, umiejętnie podsycają wśród mieszkańców antysemickie nastroje. Za tym wszystkim kryje się coś znacznie poważniejszego - coś, co może zaważyć na losach całego miasta.",
       "price": 26.25,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/176/9788324059119.jpg"
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/176/9788324059119.jpg"
     },
     {
-      "id": 22 ,
+      "id": 22,
       "category": "thiller",
-      "title":  "Florystka",
+      "title": "Florystka",
       "author": "Katarzyna Bonda",
       "description": "yrt",
-      "price": 8.27,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/CAF/9788377589618.jpg"
+      "price": 10.27,
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/CAF/9788377589618.jpg"
     },
     {
-      "id": 23 ,
+      "id": 23,
       "category": "thiller",
-      "title":  "Ta która musi umrzeć",
+      "title": "Ta która musi umrzeć",
       "author": "David Lagercrantz",
       "description": "“Ta, które musi umrzeć” to szósta, a zarazem ostatnia część serii “Millenium”. Wszystko zaczyna się od tego, że w centrum Sztokholmu policja natrafia na ciało mężczyzny. Wydaje się, że to bezdomny, który zmarł tragiczną śmiercią, ale nie ma pewności co do tożsamości ofiary. Fredrika Nyman, lekarka sądowa, pełna nowych podejrzeń, odzywa się do Mikaela Blomkvista.",
       "price": 25.49,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/D4B/9788381432399.jpg"
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/D4B/9788381432399.jpg"
     },
     {
-      "id": 24 ,
+      "id": 24,
       "category": "thiller",
-      "title":  "Dom czwarty",
+      "title": "Dom czwarty",
       "author": "Katarzyna Puzyńska",
       "description": "\"Dom czwarty\" to siódma część sagi kryminalnej o Lipowie - fikcyjnej wsi położonej w północnej części kraju. Główna bohaterka - Klementyna Kopp, będąca byłym komisarzem Policji, po ponad 40 latach nieobecności postanawia wrócić w swoje rodzinne strony za sprawą matki, która poprosiła ją o pomoc w rozwiązaniu pewnego morderstwa. Klementyna nigdy nie dociera jednak do miasteczka w którym się wychowała. Nikt nie potrafi odpowiedzieć na pytanie: co się stało? Mieszkańcy uparcie twierdzą, że nie wiedzą nic o jej aktualnym pobycie. Aspirant Policji - Daniel Podgórski nie wierzy w zapewnienia sąsiadów, szybko odkrywa, że żaden z nich nie mówi prawdy. Podejmuje się więc rozwiązać zagadkę tajemniczego zniknięcia kobiety.",
-      "price": 23.60,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/4E1/9788380970144.jpg"
+      "price": 23.6,
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/4E1/9788380970144.jpg"
     },
     {
-      "id": 25 ,
+      "id": 25,
       "category": "thiller",
-      "title":  "Morderstwo w Orient Expressie",
+      "title": "Morderstwo w Orient Expressie",
       "author": "Agatha Christie",
       "description": "Poirot planuje podróż powrotną po zakończeniu śledztwa na wschodnim kontynencie, jednak słynny pociąg, którym miał wracać jest oblężony, a wszystkie przedziały zarezerwowane. Dzięki znajomości słynnego inspektora z poważanym pracownikiem kolei udaje się znaleźć jedno miejsce. Jak się okazuje Poirot ląduje w przedziale z przeróżnymi osobowościami, a w dodatku narzuca mu się gburowaty jegomość, który w dość mało wyrafinowany sposób prosi o pomoc. Po pewnym czasie w Orient Expressie zostają znalezione zasztyletowane zwłoki.",
       "price": 14.59,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/813/64390401144KS.jpg"
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/813/64390401144KS.jpg"
     },
     {
-      "id": 26 ,
+      "id": 26,
       "category": "thiller",
-      "title":  "Na gorącym uczynku",
+      "title": "Na gorącym uczynku",
       "author": "Harlan Coben",
       "description": "“Na gorącym uczynku” to kolejny kryminał autorstwa mistrza tego gatunku - Harlana Cobena. Historia osnuta jest tym razem wokół tajemniczego zaginięcia siedemnastoletniej Haley McWaid, nastoletniej wzorowej uczennicy. Pewnego dnia dziewczyna niespodziewanie nie wraca ze szkoły, a jej rodzina rozpoczyna rozpaczliwe poszukiwania. Gdy przez kolejne trzy miesiące śledztwo nie przynosi żadnych rezultatów, wszyscy powoli przygotowują się na najgorsze.",
       "price": 28.12,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/A86/9788381256834.jpg"
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/A86/9788381256834.jpg"
     },
     {
-      "id": 27 ,
+      "id": 27,
       "category": "Komiksy",
-      "title":  "Marvel Classic Strażnicy Galaktyki. Tom 1",
+      "title": "Marvel Classic Strażnicy Galaktyki. Tom 1",
       "author": "Dan Abnett Andy, Lanning Wes Craig  ",
       "description": "“Uniwersum Marvela to jeden z najbogatszych światów superbohaterów, jaki kiedykolwiek powstał. Komiksowe początki szybko znalazły odzwierciedlenie w kreskówkach. W kolejnym kroku ewolucji niesamowitego wszechświata narodziła się w epicka seria zawierająca dziesiątki pełnometrażowych filmów opowiadających o przygodach Avengersów.",
       "price": 71.99,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/F8C/9788328141803.jpg"
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/F8C/9788328141803.jpg"
     },
     {
-      "id": 28 ,
+      "id": 28,
       "category": "Komiksy",
-      "title":  "Tajfun. Nowe przygody. Antologia",
+      "title": "Tajfun. Nowe przygody. Antologia",
       "author": "Marcin Nowakowski, Mariusz Zabdyr ",
       "description": "Agenci NINO wracają do akcji! Nowe przygody Tajfuna, Kriss i Maar!\nDość już wakacji na marsjańskich plażach. Trójka niestrudzonych agentów znowu bierze się do roboty! Mrożące krew w żyłach niebezpieczeństwo, postapokaliptyczne wizje, bezlitosna kosmiczna próżnia, a także Piękne kobiety, ryczące buldożery, zakręcony humor, dzikie pościgi, walki kung-fu, nieprawdopodobne wynalazki nauki przyszłości oraz solidna, nieskrępowana prawami fizyki dawka przygody. Po prostu Tajfun w całej okazałości, przemawiający przez nowe pokolenie twórców. Jeszcze nie pora golić wąsa! Do boju!",
       "price": 82.92,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/BFB/9788395505928.jpg"
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/BFB/9788395505928.jpg"
     },
     {
-      "id": 29 ,
+      "id": 29,
       "category": "Komiksy",
-      "title":  "Astonishing X-Men. Tom 3",
+      "title": "Astonishing X-Men. Tom 3",
       "author": "John Cassaday, Warren Ellis ",
       "description": "Warren Ellis, brytyjski scenarzysta komiksowy i telewizyjny znany z takich serii, jak The Authority, Planetary, Detektyw Fell, Transmetropolitan czy Hellblazer przedstawia swoją wizję przygód X-Men. W jej urzeczywistnieniu pomagają mu rysownicy Simone Bianchi (Thanos powstaje) oraz Phil Jimenez (Nieskończony kryzys) oraz cała rzesza innych znanych artystów tworzących kilkustronicowe epizody.\nX-Men wracają do działania. Mają nową bazę, nowe kostiumy i tajemnicę, której rozwiązanie będzie wymagało podróży na nieznane tereny. Czym są widmowe skrzynki? Gdzie umierają statki kosmiczne? Co kryje się za pojawieniem się na Ziemi nowego mutanta? Czy X-Men zdążą uratować Abigail Brand? Kto stoi za zamachami na mutantów? Szaleni genetycy, inne wymiary, przybysze z kosmosu i Krakoa, Żyjąca Wyspa to wszystko w najnowszym tomie przygód zadziwiających X-Men.\nW albumie umieszczono materiały pierwotnie opublikowane w formie zeszytowej w serii Astonishing X-Men #25-35 oraz miniserii Astonishing X-Men: Ghost Boxes #1-2.",
-      "price": 93.50,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/A2C/9788365938596.jpg"
+      "price": 93.5,
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/A2C/9788365938596.jpg"
     },
     {
-      "id":  30,
+      "id": 30,
       "category": "Komiksy",
-      "title":  "Komiks wiedźmin Wiedźmin. Tom 4. Córka płomienia",
+      "title": "Komiks wiedźmin Wiedźmin. Tom 4. Córka płomienia",
       "author": "Marianna Strychowska, Aleksandra Motyka ",
       "description": "Stary znajomy Geralta z Rivii prosi go o pomoc w pewnej bardzo delikatnej sprawie. Obawia się ON mianowicie o swoją córkę, która w tajemnicy spotyka się z jakimś nieznajomym mężczyzną. Gdy Biały Wilk zaczyna badać sprawę, okazuje się, że zamieszany jest w nią jego przyjaciel, bard imieniem Jaskier. Ten niefrasobliwy lekkoduch ma wyjątkowy talent do pakowania się w najrozmaitsze kłopoty. Tym razem - jak zwykle zresztą - wciąga w nie również Wiedźmina.",
       "price": 31.99,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/A03/9788328135628.jpg"
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/A03/9788328135628.jpg"
     },
     {
-      "id": 31 ,
+      "id": 31,
       "category": "Komiksy",
-      "title":  "Marvel Now 2.0 Śmierć X",
+      "title": "Marvel Now 2.0 Śmierć X",
       "author": "Jeff Lemire, Charles Soule ",
       "description": " Terrigen, święta substancja Inhumans, która daje im życie, stanowi śmiertelnie zagrożenie dla mutantów. Przedstawiciele obu ras ścigają się z czasem, aby znaleźć pokojowe rozwiązanie tego problemu, ale mogą nie zdążyć, szczególnie że Scott Summers i Emma Frost realizują już własny plan. Przyparci do muru, nie cofną się przed niczym, żeby ocalić swój gatunek... nawet przed wydaniem wojny najpotężniejszym istotom na Ziemi. ",
       "price": 31.99,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/814/9788328141933.jpg"
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/814/9788328141933.jpg"
     },
     {
-      "id": 32 ,
+      "id": 32,
       "category": "Komiksy",
-      "title":  "Liga Niezwykłych Dżentelmenów. Burza",
+      "title": "Liga Niezwykłych Dżentelmenów. Burza",
       "author": "Alan Moore ",
       "description": "Kolejny tom rewelacyjnej opowieści o najsłynniejszych postaciach z dawnych powieści i filmów przygodowych, które w ujęciu mistrza komiksu Alana Moore’a stały się superbohaterami o niezwykłych mocach! Pani Night, mocno postarzała szefowa brytyjskiej agencji MI5, wraz z dwiema przyjaciółkami z bardzo dawnych czasów – nawróconą wampirzycą Miną Murray i zmiennopłciową Orlando – jedzie do zapomnianego zakątka Afryki, nad starożytny staw Aiszy. ",
       "price": 71.99,
-      "image":"https://cf2-taniaksiazka.statiki.pl/images/popups/047/9788328197138.jpg"
+      "image": "https://cf2-taniaksiazka.statiki.pl/images/popups/047/9788328197138.jpg"
     }
   ],
   "orders": [
-    
+
   ]
 }

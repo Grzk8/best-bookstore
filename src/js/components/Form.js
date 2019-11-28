@@ -26,7 +26,12 @@ class Form extends Component {
             [e.target.name]: e.target.value
         });
     }
-
+    handlepickup = (e) =>{
+        this.setState(
+            {
+                [e.target.name]: e.target.value
+            });
+    }
     handleSubmitForm = (e) => {
         e.preventDefault();
         this.setState({
@@ -39,6 +44,17 @@ class Form extends Component {
             });
 
             return false;
+        }else{
+            fetch(`http://localhost:3000/orders`,{method: 'POST',
+                body:JSON.stringify({name: this.state.name, surname: this.state.surname, street: this.state.street, postCode: this.state.postCode, city: this.state.city, mail: this.state.mail, pickup: this.state.pickup}),headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+                .then(resp => resp.json())
+                .then(data => {
+                    console.log();
+
+                })
         }
 
         console.log(this.state);
@@ -62,7 +78,7 @@ class Form extends Component {
                         <label>Email</label>
                         <input type="text" name="mail" value={this.state.mail} placeholder="Email" onChange={this.handleChange}/>
 
-                        <select
+                        <select name="pickup"
                             value={this.state.pickup}
                             onChange={this.handleChange}>
                             <option value="ms">Odbiór osobisty</option>
@@ -72,7 +88,7 @@ class Form extends Component {
 
                         <label>Uwagi</label>
                         <textarea name="description" value={this.state.description} onChange={this.handleChange}/>
-                        <input className="btn btn3" type="submit" value="Wyślij"/>
+                        <input className="btn btn3" type="submit" value="WYŚLIJ"/>
                     </form>
                 </>
 

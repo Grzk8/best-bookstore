@@ -14,7 +14,7 @@ class Nav extends React.Component {
 
                 <header>
                     <div className='headerMain'>
-                        <div className='logo'><li className="menuItem"><NavLink to="/" activeClassName="active">Best<span>BooK</span>Store</NavLink></li></div>
+                        <div className='logo'><li className="menuItem"><NavLink to="/" activeClassName="active"><span className="logoBB">Best</span><span>BooK</span ><span className="logoBB">Store</span></NavLink></li></div>
                         <div className='menu'>
                             <ul className='menuList'>
                                 <li className="menuItem"><NavLink to="/aboutUs" activeClassName="active">O nas</NavLink></li>
