@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Nav from './Nav';
+import {Link} from "react-router-dom";
 
 class Comic extends Component {
     state = {
@@ -41,7 +42,7 @@ class Comic extends Component {
                                 <p className="title"><strong>{b.title}</strong></p>
                                 <p className="author">{b.author}</p>
                                 <p className="author">{b.price}</p>
-                                <button className="btn" >WIĘCEJ</button>
+                                <button className="btn"><Link to={'/description/'+b.id}>WIĘCEJ</Link></button>
                                 <button className="btn" onClick={()=>this.handleClick(b)}>DO KOSZYKA</button>
                             </div>
 

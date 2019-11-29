@@ -1,11 +1,7 @@
 import React, {Component} from "react";
 import Bascet from "./Bascet";
 import {
-    HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink,
+    Redirect
 } from 'react-router-dom';
 
 class Form extends Component {
@@ -17,7 +13,8 @@ class Form extends Component {
         city: "",
         mail: "",
         pickup:"Przesyłka",
-        errorMsg: ""
+        errorMsg: "",
+        orderCompleted: false,
 
     }
 
@@ -52,7 +49,9 @@ class Form extends Component {
             })
                 .then(resp => resp.json())
                 .then(data => {
-                    console.log();
+                    this.setState({
+                        orderCompleted: true,
+                    })
 
                 })
         }
@@ -61,6 +60,9 @@ class Form extends Component {
     }
 
     render() {
+        if(this.state.orderCompleted){
+            return<Redirect to="/orderCompleted"/>
+        }
         return (
 
                 <>

@@ -103,9 +103,9 @@ section{
   text-align: center;
   text-shadow: 2px 2px sienna;
 }
-.asadeList{
-  width: 100%;
-
+.backgr {
+  background: rgba(255, 255, 255, 0.5);
+  filter: alpha(opacity=50);
 }
 .asideItem {
   text-decoration: none;
