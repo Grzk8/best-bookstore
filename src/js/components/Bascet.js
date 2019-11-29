@@ -2,27 +2,21 @@ import React, {Component} from 'react';
 import Nav from './Nav';
 import Form from './Form';
 
-import {
-    HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink,
-} from 'react-router-dom';
-
 class Bascet extends Component {
-    state = {
-        basket: [],
-        showform: false
-    };
+        state = {
+            basket: [],
+            showform: false
+        };
 
-    showForm = () =>{
+        showForm = () =>{
 
-        this.setState({
-                showform: this.state.showform ? false : true
+            this.setState({
+                    showform: this.state.showform ? false : true
+        }
+            )};
+    handleRemove = (id) =>{
+        this.props.removeBook(id)
     }
-        )}
-
     render(
 
     ) {
@@ -30,14 +24,12 @@ class Bascet extends Component {
             <Nav basket={this.props.basket}>
                 <h1 className="headerStyle">KOSZYK</h1>
                 {
-
                     this.props.basket.map(b=>
                             <table className="tableContainer">
-
                                 <tr>
-                                    <td>{b.title}</td>
-                                    <td>{b.author}</td>
-                                    <td>{b.price}</td>
+                                        <td>{b.title}</td>
+                                        <td>{b.author}</td>
+                                        <td>{b.price}<button className="btn" onClick={()=>this.handleRemove(b.id)}>USUŃ Z LISTY</button></td>
                                 </tr>
                             </table>
                     )
