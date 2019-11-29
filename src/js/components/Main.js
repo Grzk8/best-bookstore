@@ -13,7 +13,7 @@ class Main extends Component {
             <Nav basket={this.props.basket}>
 
                 <div className="mainSide">
-                    <h1>Witamy na stronie <br></br>naszej księgarni</h1>
+                    <h1 className="mainSide backgr">Witamy na stronie <br></br>naszej księgarni</h1>
                 </div>
             </Nav>
         </>;

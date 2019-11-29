@@ -291,50 +291,13 @@
   ],
   "orders": [
     {
-      "name": "sadas",
-      "surname": "eweq",
-      "street": "rer",
-      "postCode": "4",
-      "city": "gfdg",
-      "mail": "fgdf@",
-      "pickup": "mrs",
+      "name": "Jan",
+      "surname": "Kowalski",
+      "street": "Kolejowa 21",
+      "city": "Kraków",
+      "mail": "kowal@onet.pl",
+      "pickup": "Przesyłka",
       "id": 1
-    },
-    {
-      "name": "qq",
-      "surname": "qq",
-      "street": "",
-      "city": "",
-      "mail": "sda@",
-      "pickup": "Przesyłka",
-      "id": 2
-    },
-    {
-      "name": "qq",
-      "surname": "qq",
-      "street": "",
-      "city": "",
-      "mail": "sda@",
-      "pickup": "Przesyłka",
-      "id": 3
-    },
-    {
-      "name": "sadas",
-      "surname": "ewrewr",
-      "street": "",
-      "city": "",
-      "mail": "sad@ffe",
-      "pickup": "Przesyłka",
-      "id": 4
-    },
-    {
-      "name": "qqqqqq",
-      "surname": "wwww",
-      "street": "",
-      "city": "",
-      "mail": "sad@ffe",
-      "pickup": "Przesyłka",
-      "id": 5
     }
   ]
 }

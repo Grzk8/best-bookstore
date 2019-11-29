@@ -63,6 +63,17 @@ span{
   display: inline-block;
   padding: 10px;
 }
+.booksImage{
+  width: 40em;
+  height: 40em;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/books.png");
+  display: flow;
+  left: 40em;
+  right: 40em;
+  margin: 0 auto;
+}
 
 
 .mapouter{
@@ -101,11 +112,11 @@ section{
   color: white;
   font-size: 2em;
   text-align: center;
-  text-shadow: 2px 2px sienna;
+  text-shadow: 2px 2px #000000;
 }
 .backgr {
-  background: rgba(255, 255, 255, 0.5);
-  filter: alpha(opacity=50);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px -5px 40px #00000029;
 }
 .asideItem {
   text-decoration: none;

@@ -38,7 +38,7 @@ class Form extends Component {
         if (this.state.mail.indexOf("@") === -1) {
             this.setState({
                 errorMsg: "Błędny adres email"
-            });
+            })
 
             return false;
         }else{
@@ -75,7 +75,7 @@ class Form extends Component {
                         <input type="text" name="surname" value={this.state.surname} placeholder="nazwisko" onChange={this.handleChange}/>
                         <label>Adres:</label>
                         <input type="text" name="street" value={this.state.street} placeholder="ulica i nr" onChange={this.handleChange}/>
-                        <input type="text" name="postCode" value={this.state.postalCode} placeholder="kod pocztowy" onChange={this.handleChange}/>
+                        <input type="text" name="postCode" value={this.state.postCode} placeholder="kod pocztowy" onChange={this.handleChange}/>
                         <input type="text" name="city" value={this.state.city} placeholder="miejscowość" onChange={this.handleChange}/>
                         <label>Email</label>
                         <input type="text" name="mail" value={this.state.mail} placeholder="Email" onChange={this.handleChange}/>
