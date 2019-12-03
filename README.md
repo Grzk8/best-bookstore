@@ -1,4 +1,4 @@
-#Projekt księgarni internetowej.
+Projekt księgarni internetowej.
 Projekt został stworzony dzięki takim narzędziom jak:
 -React
 -React Router
