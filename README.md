@@ -19,4 +19,5 @@ Po wejściu w zakładkę koszyk, użytkownik wypełnia formulaż ze swoimi danym
 
 - uruchom JSON Server, w katalogu JSON: json-server --watch db.json
 - w głównym katalogu zainstaluj i uruchom webpack: npm install, npn run start
+- w oknie przeglądarki wpisz adres: http://localhost:3002/#/ 
 
