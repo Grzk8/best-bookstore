@@ -9,7 +9,7 @@ class Description extends Component {
     componentDidMount() {
         console.log(this.props);
         const{id}=this.props.match.params;
-        fetch(`http://localhost:3000/books/`+id)
+        fetch(`https://api.npoint.io/f350e77249ffe02ebd33/books/`+id)
             .then(resp => resp.json())
             .then(data => {
                // console.log(data, "from API");

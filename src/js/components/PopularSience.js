@@ -9,7 +9,7 @@ class PopularSience extends Component {
 
     componentDidMount() {
 
-        fetch(`http://localhost:3000/books`)
+        fetch(`https://api.npoint.io/f350e77249ffe02ebd33/books`)
             .then(resp => resp.json())
             .then(data => {
                 console.log(data, "from API");

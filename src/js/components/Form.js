@@ -42,7 +42,7 @@ class Form extends Component {
 
             return false;
         }else{
-            fetch(`http://localhost:3000/orders`,{method: 'POST',
+            fetch(`https://api.npoint.io/f350e77249ffe02ebd33/orders`,{method: 'POST',
                 body:JSON.stringify({name: this.state.name, surname: this.state.surname, street: this.state.street, postCode: this.state.postCode, city: this.state.city, mail: this.state.mail, pickup: this.state.pickup}),headers: {
                     'Content-Type': 'application/json'
                 },
