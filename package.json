@@ -1,5 +1,6 @@
 {
   "name": "best-bookstore",
+  "homepage": "https://grzk8.github.io/best-bookstore",
   "version": "1.0.0",
   "main": "webpack.config.js",
   "scripts": {
