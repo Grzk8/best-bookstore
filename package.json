@@ -1,5 +1,5 @@
 {
-  "name": "Bookstore",
+  "name": "best-bookstore",
   "version": "1.0.0",
   "main": "webpack.config.js",
   "scripts": {
