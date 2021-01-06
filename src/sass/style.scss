@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: 'ralewayregular';
-  src: url('../fonts/raleway-regular.woff2') format('woff2'), url('../fonts/raleway-regular.woff') format('woff');
+  src: url('../assets/fonts/raleway-regular.woff2') format('woff2'), url('../assets/fonts/raleway-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -68,7 +68,7 @@ span{
   height: 40em;
   background-position: center;
   background-size: cover;
-  background-image: url("../images/books.png");
+  background-image: url("../assets/images/books.png");
   display: flow;
   left: 40em;
   right: 40em;
@@ -103,7 +103,7 @@ section{
   width: 1300px;
 }
 .mainSide{
-  background-image: url("../images/books.jpg");
+  background-image: url("../assets/images/books.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -125,7 +125,7 @@ section{
   text-align: center;
 }
 .itemList{
-  background-image: url(".././images/pap.png");
+  background-image: url(".././assets/images/pap.png");
   background-size: cover;
   padding-top: 3em;
 }
@@ -155,7 +155,7 @@ td{
  .basketLogo{
    width: 3em;
    height: 3em;
-   background-image: url(".././images/basket.png");
+   background-image: url(".././assets/images/basket.png");
    background-size: contain;
    position: relative;
    left: 5em;
@@ -196,7 +196,7 @@ td{
   color: white;
   font-weight: bolder;
 }
-.btn2, {
+.btn2 {
   left: 30em;
 }
 
@@ -231,12 +231,12 @@ footer{
   display: inline-block;
 }
 .facebook{
-  background-image: url("../images/facebook.png");
+  background-image: url("../assets/images/facebook.png");
   background-size: cover;
 }
 
 .tweeter{
-  background-image: url("../images/tweeter.jpg");
+  background-image: url("../assets/images/tweeter.jpg");
   background-size: cover;
 }
 input[type="text"],
