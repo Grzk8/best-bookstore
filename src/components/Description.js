@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Nav from './Nav';
+import Nav from '../components/Nav';
 import {Link, NavLink} from "react-router-dom";
 
 class Description extends Component {

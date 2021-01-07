@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Nav from './Nav';
-import Form from './Form';
+import Nav from '../components/Nav';
+import Form from '../components/Form';
 
 class Bascet extends Component {
         state = {
