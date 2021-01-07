@@ -8,12 +8,10 @@ import AboutUs from './AboutUs';
 import DeliveryCost from './DeliveryCost';
 import SelfPickup from './SelfPickup';
 import Contact from './Contact';
-import Bascet from './Bascet';
 import Sf from './Sf';
 import PopularSience from './PopularSience';
 import Comic from './Comic';
 import Thiller from './Thiller';
-import Form from './Form';
 import Description from './Description';
 import OrderCompleted from './OrderCompleted';
 

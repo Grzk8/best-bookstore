@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Nav from '../components/Nav';
-import Form from '../components/Form';
+import Nav from './Nav';
+import Form from './Form';
 
-class Bascet extends Component {
+class Basket extends Component {
         state = {
             basket: [],
             showform: false
@@ -45,4 +45,4 @@ class Bascet extends Component {
 }
 
 
-export default Bascet;
+export default Basket;

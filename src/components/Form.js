@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Bascet from "./Bascet";
 import {
     Redirect
 } from 'react-router-dom';

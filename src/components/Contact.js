@@ -1,12 +1,5 @@
 import React, {Component} from 'react';
 import Nav from '../components/Nav';
-import {
-    HashRouter,
-    Route,
-    Link,
-    Switch,
-    NavLink,
-} from 'react-router-dom';
 
 class Contact extends Component {
     render(
