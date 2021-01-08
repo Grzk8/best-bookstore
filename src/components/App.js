@@ -3,17 +3,17 @@ import {
     HashRouter,
     Route,
 } from 'react-router-dom';
-import Main from './Main';
-import AboutUs from './AboutUs';
-import DeliveryCost from './DeliveryCost';
-import SelfPickup from './SelfPickup';
-import Contact from './Contact';
-import Sf from './Sf';
-import PopularSience from './PopularSience';
-import Comic from './Comic';
-import Thiller from './Thiller';
-import Description from './Description';
-import OrderCompleted from './OrderCompleted';
+import Main from './MenuInfo/Main';
+import AboutUs from './MenuInfo/AboutUs/AboutUs';
+import DeliveryCost from './MenuInfo/DeliveryCost/DeliveryCost';
+import SelfPickup from './MenuInfo/SelfPickup/SelfPickup';
+import Contact from './/MenuInfo/Contact/Contact';
+import Sf from './Categories/SF/Sf';
+import PopularSience from './Categories/PopularSience/PopularSience';
+import Comic from './Categories/Comic/Comic';
+import Thiller from './Categories/Thiller/Thiller';
+import Description from './Categories/Description';
+import OrderCompleted from './Basket/Form/OrderCompleted';
 
 class App extends Component {
     state = {

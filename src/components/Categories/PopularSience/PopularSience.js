@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import Nav from './Nav';
-import {
-    Link,
-} from 'react-router-dom';
+import Nav from '../../Navigation/Navigation';
+import {Link} from "react-router-dom";
 
-class Sf extends Component {
+class PopularSience extends Component {
     state = {
         books: [],
     };
@@ -18,7 +16,7 @@ class Sf extends Component {
 
 
                 const newList = data.filter(item => {
-                    return item.category === "s-f" ;
+                    return item.category === "Popularnonaukowe" ;
                 });
 
                 this.setState({
@@ -34,13 +32,13 @@ class Sf extends Component {
     ) {
         console.log(this.state.books)
         return <>
-            <Nav basket={this.props.basket}> <div className="books">
+            <Nav basket={this.props.basket}><div className="books" >
                 {
                     this.state.books.map(b=>
-
+                        <>
 
                                 <div className="book" key={b.id}>
-                                    <img className="cover"  src={b.image} height="120px" width="120px"></img>
+                                    <img className="cover" src={b.image} height="120px" width="120px"></img>
                                     <p className="title"><strong>{b.title}</strong></p>
                                     <p className="author">{b.author}</p>
                                     <p className="author">{b.price}</p>
@@ -48,12 +46,12 @@ class Sf extends Component {
                                     <button className="btn" onClick={()=>this.handleClick(b)}>DO KOSZYKA</button>
                                 </div>
 
-
+                        </>
                     )
-                }
-            </div></Nav>
+                }</div>
+            </Nav>
         </>;
     }
 }
 
-export default Sf;
+export default PopularSience;

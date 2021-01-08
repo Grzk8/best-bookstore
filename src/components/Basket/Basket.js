@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Nav from './Nav';
-import Form from './Form';
+import Nav from '../Navigation/Nav';
+import Form from './Basket/Form/Form';
 
 class Basket extends Component {
         state = {

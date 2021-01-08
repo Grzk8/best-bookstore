@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Nav from './Nav';
+import Nav from '../../Navigation/Navigation';
 import {Link} from "react-router-dom";
 
 class Thiller extends Component {

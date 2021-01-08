@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Nav from '../components/Nav';
+import Nav from '../../Navigation/Navigation';
 import {Link} from "react-router-dom";
 
 class Comic extends Component {

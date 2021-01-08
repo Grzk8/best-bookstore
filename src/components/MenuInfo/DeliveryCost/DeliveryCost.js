@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Nav from '../components/Nav';
+import Nav from '../../Navigation/Navigation';
 
 class DeliveryCost extends Component {
     render(
