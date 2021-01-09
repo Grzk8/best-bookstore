@@ -3,10 +3,8 @@ import Nav from '../../Navigation/Navigation';
 
 class DeliveryCost extends Component {
     render(
-
     ) {
         return <>
-            <Nav basket={this.props.basket}>
                 <h1 className="headerStyle">Koszty dostawy</h1>
                 <p className="headerStyle">Jeśli wartość twojego zamówienia przekracza 200 zł, nie płacisz za dostawę :-)</p>
 
@@ -58,7 +56,6 @@ class DeliveryCost extends Component {
                             </tbody>
                         </table>
                     </div>
-            </Nav>
         </>;
     }
 }

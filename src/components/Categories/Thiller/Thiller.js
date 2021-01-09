@@ -33,7 +33,7 @@ class Thiller extends Component {
     ) {
         console.log(this.state.books)
         return <>
-            <Nav basket={this.props.basket}> <div className="books">
+            <div className="books">
                 {
                     this.state.books.map(b=>
 
@@ -50,7 +50,7 @@ class Thiller extends Component {
 
                     )
                 }
-            </div></Nav>
+            </div>
         </>;
     }
 }

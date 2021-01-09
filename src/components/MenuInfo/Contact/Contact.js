@@ -3,10 +3,8 @@ import Nav from '../../Navigation/Navigation';
 
 class Contact extends Component {
     render(
-
     ) {
         return <>
-            <Nav basket={this.props.basket}>
                 <div>
                     <h1 className="headerStyle">kontakt</h1>
                     <h2 className="headerStyle">Dział Obsługi Klienta</h2>
@@ -14,9 +12,6 @@ class Contact extends Component {
                     <h2 className="headerStyle">Napisz do nas</h2>
                     <p className="headerStyle">BestBooKStore@BestBooKStore.pl</p>
                 </div>
-
-
-            </Nav>
         </>;
     }
 }

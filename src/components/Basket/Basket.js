@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Nav from '../Navigation/Nav';
-import Form from './Basket/Form/Form';
+import Nav from '../Navigation/Navigation';
+import Form from './Form/Form';
 
 class Basket extends Component {
         state = {
@@ -21,7 +21,7 @@ class Basket extends Component {
 
     ) {
         return <>
-            <Nav basket={this.props.basket}>
+
                 <h1 className="headerStyle">KOSZYK</h1>
                 {
                     this.props.basket.map(b=>
@@ -39,7 +39,6 @@ class Basket extends Component {
 
                 {this.state.showform && <Form></Form> }
 
-            </Nav>
         </>;
     }
 }
