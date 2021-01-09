@@ -24,22 +24,23 @@ a{
 .active{
   color: black;
 }
-//header
-header{
-  margin: 0 auto;
-  width: 1300px;
-  background-color: burlywood;
-  min-height: 5em;
-}
+
+
+
+
+
+
 .headerStyle{
   text-align: center;
   padding: 1.2em;
   color: sienna;
 }
-.headerMain{
-  margin: 0 auto;
-  width: 1200px;
-}
+
+
+
+
+
+
 
 
 
@@ -48,14 +49,7 @@ header{
 .menu{
   float: right;
 }
-.menuList{
-  width: 100%;
-}
-.menuItem{
-  font-size: 1em;
-  display: inline-block;
-  padding: 10px;
-}
+
 .booksImage{
   width: 40em;
   height: 40em;
@@ -86,9 +80,7 @@ header{
   height: 100%;
   background-color: burlywood;
 }
-section{
-  width: 1300px;
-}
+
 .mainSide{
   background-image: url("../assets/images/books.jpg");
   background-position: center;

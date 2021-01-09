@@ -1,22 +1,21 @@
 import React, {Component} from 'react';
-import MainMenu from './Toolbar/MainMenu';
-import AsideMenu from './Toolbar/AsideMenu';
+import MainMenu from './Toolbar/MainMenu/MainMenu';
+import AsideMenu from './Toolbar/AsideMenu/AsideMenu';
 import Footer from './Footer/Footer';
 
-class Nav extends React.Component {
+class Navigation extends React.Component {
     render() {
         return (<>
             <MainMenu />
             <div className="container">
                 <AsideMenu basket={this.props.basket}/>
-                <section>
+                <div className="mainWindow">
                     {this.props.children}
-                </section>
+                </div>
             </div>
             <Footer />
         </>);
     };
 };
 
-export default Nav;
-
+export default Navigation;
