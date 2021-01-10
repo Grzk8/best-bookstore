@@ -1,15 +1,15 @@
 import React from 'react';
 import Logo from '../../../Logo/Logo';
 import MenuItems from './MenuItems/MenuItems';
+import DrawerToggle from "../../SideDrawer/DrawerToggle/DrawerToggle";
 
 const mainMenu = () => {
     return (
         <div className='mainMenu'>
             <div className='mainMenu_container'>
-                <Logo fontSize={'3.8em'}/>
-                <div className='menu'>
-                    <MenuItems />
-                </div>
+                <DrawerToggle />    
+                <Logo fontSize={'350%'}/>
+                <MenuItems />
             </div>
         </div>
     )

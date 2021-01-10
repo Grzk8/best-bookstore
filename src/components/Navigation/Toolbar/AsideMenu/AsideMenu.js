@@ -12,7 +12,7 @@ const asideMenu = props => {
                 </div>
                 <AsideItems />
             </div>
-    </aside>
+        </aside>
     );
 };
 

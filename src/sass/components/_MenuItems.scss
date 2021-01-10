@@ -1,8 +1,11 @@
-.menuItems{
-    width: 100%;
-    .menuItem{
+.menuItem{
         font-size: 1em;
         display: inline-block;
         padding: 10px;
-    }
+}
+
+@media (max-width: 700px) {
+        .menuItem {
+            display: none;
+        }
 }

@@ -7,5 +7,11 @@
         list-style-type: none;
         height: 7em;
         text-align: center;
-      }
-  }
+      };
+};
+
+@media (max-width: 700px) {
+    .asideMenu {
+        display: none;
+    };
+};
