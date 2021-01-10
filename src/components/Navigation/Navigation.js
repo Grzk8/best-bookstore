@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import MainMenu from './Toolbar/MainMenu/MainMenu';
 import AsideMenu from './Toolbar/AsideMenu/AsideMenu';
 import Footer from './Footer/Footer';
+import SideDrawer from './SideDrawer/SideDrawer';
 
 class Navigation extends React.Component {
     render() {
