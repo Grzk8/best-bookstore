@@ -5,9 +5,24 @@ import Footer from './Footer/Footer';
 import SideDrawer from './SideDrawer/SideDrawer';
 
 class Navigation extends React.Component {
+    state = {
+        showSideDrawer: false
+    };
+
+    sideDrawerToggleHandler = () => {
+        this.setState((prevState) => {
+            return {showSideDrawer: !prevState.showSideDrawer}
+        });
+    };
+
+    sideDrawerClosedHandler = () => {
+        this.setState({showSideDrawer = false});
+    };
+
     render() {
         return (<>
             <MainMenu />
+            <SideDrawer />
             <div className="container">
                 <AsideMenu basket={this.props.basket}/>
                 <div className="mainWindow">
