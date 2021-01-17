@@ -4,7 +4,7 @@ import AsideMenu from './Toolbar/AsideMenu/AsideMenu';
 import Footer from './Footer/Footer';
 import SideDrawer from './SideDrawer/SideDrawer';
 
-class Navigation extends React.Component {
+class Navigation extends Component {
     state = {
         showSideDrawer: false
     };
@@ -16,13 +16,14 @@ class Navigation extends React.Component {
     };
 
     sideDrawerClosedHandler = () => {
-        this.setState({showSideDrawer = false});
+        this.setState({showSideDrawer: false});
     };
 
     render() {
         return (<>
-            <MainMenu />
-            <SideDrawer />
+            <MainMenu drawerToggleClicked={this.sideDrawerToggleHandler}/>
+            <SideDrawer open={this.state.showSideDrawer}
+             closed={this.sideDrawerClosedHandler}/>
             <div className="container">
                 <AsideMenu basket={this.props.basket}/>
                 <div className="mainWindow">

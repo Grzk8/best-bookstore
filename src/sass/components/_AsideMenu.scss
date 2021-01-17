@@ -9,8 +9,11 @@
         text-align: center;
       };
 };
+.mainWindow {
+    z-index: 90;
+}
 
-@media (max-width: 700px) {
+@media (max-width: 699px) {
     .asideMenu {
         display: none;
     };

@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 const asideItems = () => (
-     <ul className={asideItems}>
+     <ul className='asideItems'>
          <NavLink to="/sf" activeClassName="active"><li className="asideItem itemList">Sience - fiction</li></NavLink>
         <NavLink to="/popularSience" activeClassName="active"><li className="asideItem itemList">Popularnonaukowe</li></NavLink>
         <NavLink to="/comic" activeClassName="active"><li className="asideItem itemList">Komiksy</li></NavLink>

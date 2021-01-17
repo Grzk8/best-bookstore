@@ -3,10 +3,10 @@ import Logo from '../../../Logo/Logo';
 import MenuItems from './MenuItems/MenuItems';
 import DrawerToggle from "../../SideDrawer/DrawerToggle/DrawerToggle";
 
-const mainMenu = () => (
+const mainMenu = props => (
     <div className='mainMenu'>
         <div className='mainMenu_container'>
-            <DrawerToggle />    
+            <DrawerToggle clicked={props.drawerToggleClicked}/>    
             <Logo fontSize={'350%'}/>
             <MenuItems />
         </div>
