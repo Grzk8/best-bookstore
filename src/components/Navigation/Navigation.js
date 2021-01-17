@@ -21,7 +21,7 @@ class Navigation extends Component {
 
     render() {
         return (<>
-            <MainMenu drawerToggleClicked={this.sideDrawerToggleHandler}/>
+            <MainMenu drawerToggleClicked={this.sideDrawerToggleHandler} basket={this.props.basket}/>
             <SideDrawer open={this.state.showSideDrawer}
              closed={this.sideDrawerClosedHandler}/>
             <div className="container">

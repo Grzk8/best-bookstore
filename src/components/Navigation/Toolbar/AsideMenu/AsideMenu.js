@@ -8,7 +8,7 @@ const asideMenu = props => {
         <aside>
             <div className="asideMenu">
                 <div className="asideItem">
-                    <BasketButton basket={props.basket} />
+                    <BasketButton basket={props.basket} height='3em' width='5em'/>
                 </div>
                 <AsideItems />
             </div>
