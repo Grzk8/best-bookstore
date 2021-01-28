@@ -1,5 +1,4 @@
-@import "./style.scss";
-
+@import "./settings/Reset";
 @import "./components/Navigation";
 @import "./components/Logo";
 @import "./components/Footer";
@@ -11,3 +10,11 @@
 @import "./components/DrawerToggle";
 @import "./components/SideDrawer";
 @import "./components/Backdrop";
+@import "./components/Books";
+@import "./components/AboutUs";
+@import "./components/SelfPickup";
+@import "./components/Main";
+@import "./components/Basket";
+@import "./components/Form";
+@import "./components/Fonts";
+

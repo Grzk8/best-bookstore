@@ -6,10 +6,10 @@ import BasketButton from "../AsideMenu/BasketButton/BasketButton";
 
 
 const mainMenu = props => {
-    let respLogo = window.matchMedia("(max-width: 700px)");
+    let Rwd = window.matchMedia("(max-width: 700px)");
     let respBasket = null;
     let fontSize = '350%';
-    if(respLogo.matches) {
+    if(Rwd.matches) {
         fontSize = '150%'
         respBasket = <BasketButton basket={props.basket}/>
     };

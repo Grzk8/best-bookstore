@@ -1,0 +1,36 @@
+.books{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .book{
+    border: 1px solid #d6d5d5;
+    background-color: beige;
+    padding: 0.5em;
+    width: 200px;
+    display: block;
+  }
+  
+  .title, .author{
+    text-align: center
+  }
+  .cover{
+    position: relative;
+    left: 2.3em;
+  }
+  .btn{
+    position: relative;
+    font-size: 0.8em;
+    left: 2em;
+    background-color: sienna;
+    width: 10em;
+    height: 3em;
+    border-radius: 20%;
+    color: white;
+    font-weight: bolder;
+  }
+  .btn2 {
+    left: 30em;
+  }

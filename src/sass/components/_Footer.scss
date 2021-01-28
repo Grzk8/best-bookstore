@@ -6,5 +6,30 @@
   .footerMain_container{
     margin: 0 auto;
     width: 70%;
+    .rights{
+      display: flex;
+      flex-direction: column;
+    }
+    .bestbookstoreRights{
+      color: sienna;
+      font-size: 0.7em;
+    }
+    .media{
+      float: right;
+    }
+    .mediaLogo{
+      width: 1.5em;
+      height: 1.5em;
+      display: inline-block;
+    }
+    .facebook{
+      background-image: url("../assets/images/facebook.png");
+      background-size: cover;
+    }
+    
+    .tweeter{
+      background-image: url("../assets/images/tweeter.jpg");
+      background-size: cover;
+    }
   }
 }
