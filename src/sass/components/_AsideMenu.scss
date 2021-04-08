@@ -8,13 +8,13 @@
         height: 7em;
         text-align: center;
       };
-};
+}
 .mainWindow {
     z-index: 90;
 }
 
-@media (max-width: 699px) {
+@media (min-width: 699px) {
     .asideMenu {
         display: none;
-    };
-};
+    }
+}

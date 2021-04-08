@@ -40,12 +40,12 @@ class Description extends Component {
             return null
         }
                 return <>
-                    <Nav basket={this.props.basket}>
+                    <div basket={this.props.basket}>
                         <h1 className="headerStyle">{this.state.data.title}</h1>
                         <h2 className="headerStyle">{this.state.data.author}</h2>
                         <p className="headerStyle">{this.state.data.description}</p>
                         <button className="btn"><NavLink to={this.getBackUrl()} activeClassName="active">WRÓĆ</NavLink></button>
-                    </Nav>
+                    </div>
                 </>;
             }
 }
