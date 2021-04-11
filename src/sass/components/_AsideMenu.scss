@@ -8,12 +8,13 @@
         height: 7em;
         text-align: center;
       };
+
 }
 .mainWindow {
     z-index: 90;
 }
 
-@media (min-width: 699px) {
+@media screen and (max-width: 900px) {
     .asideMenu {
         display: none;
     }

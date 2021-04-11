@@ -6,20 +6,24 @@ import BasketButton from "../AsideMenu/BasketButton/BasketButton";
 
 
 const mainMenu = props => {
-    let Rwd = window.matchMedia("(max-width: 700px)");
-    let respBasket = null;
-    let fontSize = '350%';
-    if(Rwd.matches) {
-        fontSize = '150%'
-        respBasket = <BasketButton basket={props.basket}/>
+
+    let fontSize = null;
+    var crit = "(max-width: 700px)";
+    let mobile = window.matchMedia(crit).matches
+
+    if(mobile) {
+        fontSize = '2em'
+    } else {
+        fontSize = '4em'
     };
+
     return(
     <div className='mainMenu'>
         <div className='mainMenu_container'>
             <DrawerToggle clicked={props.drawerToggleClicked}/>    
             <Logo fontSize={fontSize}/>
             <MenuItems />
-            {respBasket}
+
         </div>
     </div>
     )};

@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 import BasketButton from './BasketButton/BasketButton';
 import AsideItems from './AsideItems/AsideItems';
 

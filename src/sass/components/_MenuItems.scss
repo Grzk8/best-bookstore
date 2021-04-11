@@ -4,7 +4,7 @@
         padding: 10px;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 900px) {
         .menuItem {
             display: none;
         }

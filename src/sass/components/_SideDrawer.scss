@@ -1,7 +1,6 @@
 .drawer {
     display: inline;
     position: fixed;
-
     max-width: 70%;
     height: 100%;
     left: 0;
@@ -12,13 +11,6 @@
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
 }
-
-@media (min-width: 1000px) {
-    .drawer {
-        display: none;
-    }
-}
-
 
 .open {
     transform: translateX(0);
