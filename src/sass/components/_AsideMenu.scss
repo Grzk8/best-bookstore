@@ -17,5 +17,12 @@
 @media screen and (max-width: 900px) {
     .asideMenu {
         display: none;
+        .asideItem {
+            color: black;
+        }
     }
+        .asideItems a {
+           color: darkslateblue;
+        }
+
 }

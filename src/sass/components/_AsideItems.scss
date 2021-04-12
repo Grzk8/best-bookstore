@@ -8,3 +8,15 @@
 .itemList:first-child {
   margin-top: 50px;
 }
+
+@media screen and (max-width: 900px) {
+  .itemList {
+    background-image: none;
+    padding-top: 3px;
+    margin-bottom: 2px;
+  }
+
+  .itemList:first-child {
+    margin-top: 1px;
+  }
+}
