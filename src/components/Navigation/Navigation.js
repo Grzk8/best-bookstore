@@ -23,7 +23,8 @@ class Navigation extends Component {
         return (<>
             <MainMenu drawerToggleClicked={this.sideDrawerToggleHandler} basket={this.props.basket}/>
             <SideDrawer open={this.state.showSideDrawer}
-             closed={this.sideDrawerClosedHandler}/>
+             closed={this.sideDrawerClosedHandler}
+             basket={this.props.basket}/>
             <div className="container">
                 <AsideMenu basket={this.props.basket}/>
                 <div className="mainWindow">

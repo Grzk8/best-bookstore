@@ -6,6 +6,13 @@
 
 @media screen and (max-width: 900px) {
         .menuItem {
-            display: none;
+           display: none;
+        }
+
+        .sideDrawer_nav .menuItem {
+                display: block;
+                a {
+                        color: darkslateblue;
+                }
         }
 }

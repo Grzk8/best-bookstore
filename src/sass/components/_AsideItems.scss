@@ -12,11 +12,13 @@
 @media screen and (max-width: 900px) {
   .itemList {
     background-image: none;
-    padding-top: 3px;
-    margin-bottom: 2px;
+    color: darkslateblue;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-top: 15px;
   }
 
   .itemList:first-child {
-    margin-top: 1px;
+    margin-top: 0;
   }
 }

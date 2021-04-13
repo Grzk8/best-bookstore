@@ -2,12 +2,23 @@ import React from 'react';
 import Logo from '../../Logo/Logo';
 
 const footer = () => {
+
+    let fontSize = null;
+    var crit = "(max-width: 700px)";
+    let mobile = window.matchMedia(crit).matches
+
+    if(mobile) {
+        fontSize = '1em'
+    } else {
+        fontSize = '2em'
+    };
+
     return (
         <div className="footerMain">
             <div className="footerMain_container">
                 <div className="rights">
-                <Logo fontSize={'2em'}/>
-                    <div className="bestbookstoreRights">2019 BestBooKStore sp z o.o. All rights reserved</div>
+                    <Logo fontSize={fontSize}/>
+                    <p className="bestbookstoreRights">2021 BestBooKStore <br/>created by Grzegorz Kaczor</p>
                 </div>
                 <div className="media">
                     <a className="mediaLogo facebook" href="https://twitter.com"></a>

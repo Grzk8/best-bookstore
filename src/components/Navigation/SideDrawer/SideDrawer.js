@@ -14,12 +14,17 @@ if (props.open) {
     <>
         <Backdrop show={props.open} clicked={props.closed}/>
         <div className={attachedClasses.join(' ')}>
-        <Logo fontSize={'2em'}/>
-        <BasketButton basket={props.basket} height='3em' width='5em'/>
-        <p>Menu</p>
-            < MenuItems />
-            <p>Kategorie</p>
-            <AsideItems />
+            <Logo fontSize={'2em'}/>
+            <br/>
+            <BasketButton basket={props.basket} height='2em' width='4em'/>
+            <br/>
+            <div className='sideDrawer_nav'>
+                <p className='sideDrawer_nav_title'>Menu</p>
+                < MenuItems />
+                <br/>
+                <p className='sideDrawer_nav_title'>Kategorie</p>
+                <AsideItems />
+            </div>
         </div>
     </>      
     );

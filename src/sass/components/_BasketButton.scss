@@ -23,4 +23,14 @@
     .inBasket{
       padding: 0;
     }
+}
+
+@media screen and (max-width: 900px) {
+  .basket {
+    text-align: center;
+    color: sienna;
   }
+  .inBasket:first-child {
+    display: none;
+  }
+}
