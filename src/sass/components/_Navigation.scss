@@ -9,3 +9,9 @@
         min-height: 100vh;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .container{
+    border-left: 20px solid burlywood;
+    }
+}

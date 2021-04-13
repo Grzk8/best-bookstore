@@ -7,7 +7,8 @@
     top: 0;
     z-index: 200;
     background-color: white;
-    padding: 32px 16px;
+    padding: 16px;
+    padding-top: 6px;
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
 }
@@ -21,7 +22,7 @@
 }
 
 .sideDrawer_nav_title {
-    font-size: 1.6em;
+    font-size: 1em;
     text-align: center;
     text-transform: uppercase;
     color: dimgray;
