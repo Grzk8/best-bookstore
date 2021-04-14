@@ -21,8 +21,8 @@ const footer = () => {
                     <p className="bestbookstoreRights">2021 BestBooKStore <br/>created by Grzegorz Kaczor</p>
                 </div>
                 <div className="media">
-                    <a className="mediaLogo facebook" href="https://twitter.com"></a>
-                    <a className="mediaLogo tweeter" href="https://facebook.com"></a>
+                    <div><a className="mediaLogo facebook" href="https://twitter.com"></a></div>
+                    <div><a className="mediaLogo tweeter" href="https://facebook.com"></a></div>
                 </div>
             </div>
         </div>

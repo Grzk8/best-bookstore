@@ -13,7 +13,7 @@ if (props.open) {
     return (
     <>
         <Backdrop show={props.open} clicked={props.closed}/>
-        <div className={attachedClasses.join(' ')}>
+        <div className={attachedClasses.join(' ')} onClick={props.closed}>
             <Logo fontSize={'2em'}/>
             <br/>
             <BasketButton basket={props.basket} height='2em' width='4em'/>

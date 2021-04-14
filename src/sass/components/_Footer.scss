@@ -5,9 +5,9 @@
   background-color: burlywood;
   .footerMain_container{
     margin: 0 auto;
-    width: 70%;
+    display: flex;
+    justify-content:space-around;
     .rights{
-      display: flex;
       flex-direction: column;
     }
     .bestbookstoreRights{
@@ -15,9 +15,12 @@
       font-size: 0.7em;
     }
     .media{
-      float: right;
+      display: flex;
+      justify-content: space-between;
+      width: 10%;
     }
     .mediaLogo{
+      margin-top: 90%;
       width: 1.5em;
       height: 1.5em;
       display: inline-block;
@@ -36,6 +39,6 @@
 
 @media screen and (max-width: 900px) {
   .bestbookstoreRights {
-    font-size: 1px;
+    font-size: 0.3em;
   }
 }
