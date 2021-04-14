@@ -17,11 +17,11 @@ if (props.open) {
             <Logo fontSize={'2em'}/>
             <br/>
             <BasketButton basket={props.basket} height='2em' width='4em'/>
-            <br/>
+            <hr className='horizontalLine'/>
             <div className='sideDrawer_nav'>
                 <p className='sideDrawer_nav_title'>Menu</p>
                 < MenuItems />
-                <br/>
+                <hr className='horizontalLine'/>
                 <p className='sideDrawer_nav_title'>Kategorie</p>
                 <AsideItems />
             </div>
