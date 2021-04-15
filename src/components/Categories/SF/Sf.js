@@ -3,6 +3,7 @@ import Nav from '../../Navigation/Navigation';
 import {
     Link,
 } from 'react-router-dom';
+import Button from '../../Layout/Button/Button';
 
 class Sf extends Component {
     state = {
@@ -43,7 +44,8 @@ class Sf extends Component {
                                     <p className="author">{b.author}</p>
                                     <p className="author">{b.price}</p>
                                     <button className="btn"><Link to={'/description/'+b.id}>WIĘCEJ</Link></button>
-                                    <button className="btn" onClick={()=>this.handleClick(b)}>DO KOSZYKA</button>
+                                    <Button clicked={()=>this.handleClick(b)}>DO KOSZYKA</Button>
+                                    
                                 </div>)
                 }
             </div>
