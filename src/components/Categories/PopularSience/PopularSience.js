@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
 import Book from "../../Layout/Book/Book";
 
 class PopularSience extends Component {
@@ -14,7 +13,6 @@ class PopularSience extends Component {
             .then(data => {
                 console.log(data, "from API");
 
-
                 const newList = data.filter(item => {
                     return item.category === "Popularnonaukowe" ;
                 });
@@ -23,14 +21,12 @@ class PopularSience extends Component {
                     books: newList,
                 })
             })
-    }
-    render(
-
-    ) {
+    };
+    render(){
         return <>
             <Book data={this.state.books} addBook={this.props.addBook}/>
         </>;
-    }
-}
+    };
+};
 
 export default PopularSience;
