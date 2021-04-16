@@ -19,3 +19,18 @@ table {
     max-width: 30px;
     text-align: center;
   }
+
+  @media screen and (max-width: 900px) {
+    .tableContainer {
+      width: 90%;
+      td {
+        display: flex;
+        flex-direction: column;
+      }
+      input, textarea {
+        max-width: 100%;
+      }
+    }
+
+
+}

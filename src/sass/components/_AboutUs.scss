@@ -14,3 +14,10 @@
     right: 40em;
     margin: 0 auto;
   }
+
+  @media screen and (max-width: 900px) {
+    .booksImage {
+      width: 100%;
+    
+    }
+  }

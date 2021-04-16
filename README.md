@@ -1,5 +1,5 @@
 # BestBookStore
-BestBookStore is a webside of online bookstore. It`s my final project for Coders Lab course of React.
+BestBookStore is a webside of online bookstore.
 
 Website was made by:
 -React
@@ -7,7 +7,7 @@ Website was made by:
 -React Router
 -Sass
 
-Still in progress: RWD, Redux, Authentication, leyout, other improvements...
+Still in progress: Redux, Authentication, leyout, other improvements...
 
 
 ## Instructions
