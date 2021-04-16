@@ -8,7 +8,7 @@ import BasketButton from "../AsideMenu/BasketButton/BasketButton";
 const mainMenu = props => {
 
     let fontSize = null;
-    var crit = "(max-width: 700px)";
+    let crit = "(max-width: 700px)";
     let mobile = window.matchMedia(crit).matches
 
     if(mobile) {

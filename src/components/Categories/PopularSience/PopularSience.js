@@ -22,7 +22,7 @@ class PopularSience extends Component {
                 })
             })
     };
-    render(){
+    render() {
         return <>
             <Book data={this.state.books} addBook={this.props.addBook}/>
         </>;

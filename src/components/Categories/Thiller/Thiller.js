@@ -13,7 +13,6 @@ class Thiller extends Component {
             .then(data => {
                 console.log(data, "from API");
 
-
                 const newList = data.filter(item => {
                     return item.category === "thiller" ;
                 });
@@ -22,14 +21,12 @@ class Thiller extends Component {
                     books: newList,
                 })
             })
-    }
-
-    render(
-    ) {
+    };
+    render() {
         return <>
             <Book data={this.state.books} addBook={this.props.addBook}/>
         </>;
-    }
-}
+    };
+};
 
 export default Thiller;

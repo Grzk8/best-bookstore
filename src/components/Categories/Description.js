@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Nav from '../Navigation/Navigation';
 import {NavLink} from "react-router-dom";
+import Button from "../Layout/Button/Button";
 
 class Description extends Component {
     state={
@@ -9,7 +9,7 @@ class Description extends Component {
     componentDidMount() {
         console.log(this.props);
         const{id}=this.props.match.params;
-        fetch(`https://api.npoint.io/f350e77249ffe02ebd33/books/`+id)
+        fetch(`https://api.npoint.io/f350e77249ffe02ebd33/books/`+(id-1))
             .then(resp => resp.json())
             .then(data => {
                // console.log(data, "from API");
@@ -44,7 +44,7 @@ class Description extends Component {
                         <h1 className="headerStyle">{this.state.data.title}</h1>
                         <h2 className="headerStyle">{this.state.data.author}</h2>
                         <p className="headerStyle">{this.state.data.description}</p>
-                        <button className="btn"><NavLink to={this.getBackUrl()} activeClassName="active">WRÓĆ</NavLink></button>
+                        <Button><NavLink to={this.getBackUrl()} activeClassName="active">WRÓĆ</NavLink></Button>
                     </div>
                 </>;
             }

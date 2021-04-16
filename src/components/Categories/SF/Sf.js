@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import Book from "../../Layout/Book/Book";
 
 class Sf extends Component {
@@ -22,14 +21,12 @@ class Sf extends Component {
                     books: newList,
                 })
             })
-    }
-
-    render(
-    ) {
+    };
+    render() {
         return <>
             <Book data={this.state.books} addBook={this.props.addBook}/>
         </>;
-    }
-}
+    };
+};
 
 export default Sf;

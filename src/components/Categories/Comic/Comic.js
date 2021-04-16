@@ -21,14 +21,12 @@ class Comic extends Component {
                     books: newList,
                 })
             })
-    }
-
-    render(
-    ) {
+    };
+    render() {
         return <>
             <Book data={this.state.books} addBook={this.props.addBook}/>
         </>;
-    }
-}
+    };
+};
 
 export default Comic;
