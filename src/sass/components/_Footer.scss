@@ -2,7 +2,7 @@
   margin: 0 auto;
   width: 100%;
   height: 6em;
-  background-color: burlywood;
+  background-color: $primaryColorLight;
   .footerMain_container{
     margin: 0 auto;
     display: flex;
@@ -11,7 +11,7 @@
       flex-direction: column;
     }
     .bestbookstoreRights{
-      color: sienna;
+      color: $primaryColorDark;
       font-size: 0.7em;
     }
     .media{

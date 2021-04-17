@@ -1,7 +1,8 @@
 .asideMenu{
     width: 15em;
     height: 100%;
-    background-color: burlywood;
+    background-color: $primaryColorLight;
+    ;
     .asideItem {
         text-decoration: none;
         list-style-type: none;

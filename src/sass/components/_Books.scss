@@ -6,8 +6,8 @@
   }
   
   .book{
-    border: 1px solid #d6d5d5;
-    background-color: beige;
+    border: 1px solid $bookBorder;
+    background-color: $bookBackground;
     padding: 0.5em;
     width: 200px;
     display: block;

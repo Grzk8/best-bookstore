@@ -6,7 +6,7 @@
     left: 0;
     top: 0;
     z-index: 200;
-    background-color: white;
+    background-color: $menuFonts;
     padding: 16px;
     padding-top: 6px;
     box-sizing: border-box;
@@ -25,7 +25,7 @@
     font-size: 1em;
     text-align: center;
     text-transform: uppercase;
-    color: dimgray;
+    color: $drawerNavTitle;
     font-weight: bold;
 }
 
