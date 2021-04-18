@@ -16,6 +16,7 @@ import Description from './Categories/Description';
 import OrderCompleted from './Basket/Form/OrderCompleted';
 import Navigation from './Navigation/Navigation';
 import Basket from './Basket/Basket';
+import Search from './MenuInfo/Search/Search';
 
 class App extends Component {
     state = {
@@ -47,6 +48,7 @@ class App extends Component {
                         <Route path='/deliveryCost' render={props=><DeliveryCost {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/selfPickup' render={props=><SelfPickup {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/contact' render={props=><Contact {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                        <Route path='/search' render={props=><Search {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/basket' render={props=><Basket {...props} removeBook={this.removeBook} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/sf' render={props=><Sf {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/popularsience' render={props=><PopularSience {...props} addBook={ this.addBook} basket={this.state.basket} />}/>

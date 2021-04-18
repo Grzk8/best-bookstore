@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Nav from '../../Navigation/Navigation';
 
 class AboutUs extends Component {
     render(
