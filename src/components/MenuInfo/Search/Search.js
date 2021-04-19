@@ -1,5 +1,4 @@
 import React, {Component}  from 'react';
-import SearchBar from './SearchBar/SearchBar';
 import Book from '../../Layout/Book/Book';
 
 class Search extends Component {
@@ -16,7 +15,7 @@ class Search extends Component {
                 console.log(data, "from API");
 
                 const newList = data.filter(item => {
-                    return this.state.searching === ''? null:item.title.toLowerCase().includes(this.state.searching.toLowerCase()) || item.author.toLowerCase().includes(this.state.searching.toLowerCase()) ;
+                    return this.state.searching === '' ? null : item.title.toLowerCase().includes(this.state.searching.toLowerCase()) || item.author.toLowerCase().includes(this.state.searching.toLowerCase()) ;
                 });
 
                 this.setState({

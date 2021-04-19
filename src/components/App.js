@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom';
 import Main from './MenuInfo/Main';
 import AboutUs from './MenuInfo/AboutUs/AboutUs';
-import DeliveryCost from './MenuInfo/DeliveryCost/DeliveryCost';
 import SelfPickup from './MenuInfo/SelfPickup/SelfPickup';
 import Contact from './/MenuInfo/Contact/Contact';
 import Sf from './Categories/SF/Sf';
@@ -45,7 +44,6 @@ class App extends Component {
                 <Navigation basket={this.state.basket}>
                         <Route exact path='/' render={props=><Main {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/aboutUs' render={props=><AboutUs {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
-                        <Route path='/deliveryCost' render={props=><DeliveryCost {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/selfPickup' render={props=><SelfPickup {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/contact' render={props=><Contact {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/search' render={props=><Search {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
