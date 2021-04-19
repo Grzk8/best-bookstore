@@ -5,10 +5,10 @@ import Book from '../../Layout/Book/Book';
 class Search extends Component {
     state = {
         books: [],
-        searched: ''
+        searching: ''
     };
 
-    componentDidMount() {
+    componentDidUpdate() {
 
         fetch(`https://api.npoint.io/f350e77249ffe02ebd33/books`)
             .then(resp => resp.json())
@@ -16,27 +16,31 @@ class Search extends Component {
                 console.log(data, "from API");
 
                 const newList = data.filter(item => {
-                    return this.state.books.title.filter(title => title.toLowerCase().includes(this.state.searched.toLocaleLowerCase())) ;
+                    return this.state.searching === ''? null:item.title.toLowerCase().includes(this.state.searching.toLowerCase()) || item.author.toLowerCase().includes(this.state.searching.toLowerCase()) ;
                 });
 
                 this.setState({
                     books: newList,
                 })
-            })     
+            })
     };
 
-    editSearch = e => {
-        this.setState({searched: e.target.value})
+    handleSearchHandle = e => {
+        this.setState({searching: e.target.value})
     }
 
-    // searching = () => {
-    //     return this.state.books.title.filter(title => title.toLowerCase().includes(this.state.searched.toLocaleLowerCase()))
-    // }
+    handleSubmitForm = e => {
+        e.preventDefault();
+        console.log(this.state.searching)
+    }
+
     render(){
         return(<>
-            <SearchBar search={this.state.searched}/>
-           
-           {}
+            <h1 className="headerStyle">Wpisz tytuł ksiązki lub nazwisko autora</h1>
+            <form className="tableContainer" onSubmit={this.handleSubmitForm}>
+                    <input type="text" name="s" value={this.state.searching} onChange={this.handleSearchHandle}></input>
+            </form>
+            <Book data={this.state.books} addBook={this.props.addBook}/>
         </>)
     }
 }
