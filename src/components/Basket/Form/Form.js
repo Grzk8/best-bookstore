@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {
     Redirect
 } from 'react-router-dom';
+import Input from '../../Layout/Input/Input';
 
 class Form extends Component {
     state = {
@@ -68,28 +69,22 @@ class Form extends Component {
                     <form className="tableContainer" onSubmit={this.handleSubmitForm}>
                         <h1>Wpisz swoje dane</h1>
                         <span>{this.state.errorMsg}</span>
-                        <label>Imię</label>
-                        <input type="text" name="name" value={this.state.name} placeholder="imię" onChange={this.handleChange}/>
-                        <label>Nazwisko</label>
-                        <input type="text" name="surname" value={this.state.surname} placeholder="nazwisko" onChange={this.handleChange}/>
-                        <label>Adres:</label>
-                        <input type="text" name="street" value={this.state.street} placeholder="ulica i nr" onChange={this.handleChange}/>
-                        <input type="text" name="postCode" value={this.state.postCode} placeholder="kod pocztowy" onChange={this.handleChange}/>
-                        <input type="text" name="city" value={this.state.city} placeholder="miejscowość" onChange={this.handleChange}/>
-                        <label>Email</label>
-                        <input type="text" name="mail" value={this.state.mail} placeholder="Email" onChange={this.handleChange}/>
 
-                        <select name="pickup"
+                        <Input inputtype="input" label="Imię:" type="text" name="name" value={this.state.name} placeholder="imię" onChange={this.handleChange}/>
+                        <Input inputtype="input" label="Nazwisko:"  type="text" name="surname" value={this.state.surname} placeholder="nazwisko" onChange={this.handleChange}/>
+                        <Input inputtype="input" label="Adres:"  type="text" name="street" value={this.state.street} placeholder="ulica i nr" onChange={this.handleChange}/>
+                        <Input inputtype="input" type="text" name="postCode" value={this.state.postCode} placeholder="kod pocztowy" onChange={this.handleChange}/>
+                        <Input inputtype="input" type="text" name="city" value={this.state.city} placeholder="miejscowość" onChange={this.handleChange}/>
+                        <Input inputtype="input" label="Email:"  type="text" name="mail" value={this.state.mail} placeholder="Email" onChange={this.handleChange}/>
+                        <Input inputtype="select" name="pickup"
                             value={this.state.pickup}
-                            onChange={this.handleChange}>
-                            <option value="ms">Odbiór osobisty</option>
-                            <option value="mrs">Przesyłka</option>
-                        </select>
-
-
-                        <label>Uwagi</label>
-                        <textarea name="description" value={this.state.description} onChange={this.handleChange}/>
-                        <input className="btn btn3" type="submit" value="WYŚLIJ"/>
+                            onChange={this.handleChange}
+                            options={<>
+                                <option value="ms">Odbiór osobisty</option>
+                                <option value="mrs">Przesyłka</option>
+                                </>} />
+                        <Input inputtype="textarea" label="Uwagi:" name="description" value={this.state.description} onChange={this.handleChange}/>
+                        <Input inputtype="input" className="btn btn3" type="submit" value="WYŚLIJ"/>
                     </form>
                 </>
 

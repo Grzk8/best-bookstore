@@ -25,13 +25,15 @@ class Basket extends Component {
                 <h1 className="headerStyle">KOSZYK</h1>
                 {
                     this.props.basket.map(b=>
-                            <table className="tableContainer">
-                                <tr>
-                                        <td>{b.title}</td>
-                                        <td>{b.author}</td>
-                                        <td>{b.price}<Button clicked={()=>this.handleRemove(b.id)}>USUŃ Z LISTY</Button></td>
-                                        
-                                </tr>
+                            <table className="tableContainer" key={b.id}>
+                                <tbody>
+                                    <tr>
+                                            <td>{b.title}</td>
+                                            <td>{b.author}</td>
+                                            <td>{b.price}<Button clicked={()=>this.handleRemove(b.id)}>USUŃ Z LISTY</Button></td>
+                                    </tr>
+                                </tbody>
+
                             </table>
                     )
                 }

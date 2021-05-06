@@ -4,12 +4,12 @@ const input = (props) => {
 
 let inputElement = null;
 
-switch (props.inputType) {
+switch (props.inputtype) {
     case('input'):
         inputElement = <input {...props}/>;
         break;
     case('select'):
-        inputElement = <select {...props}/>;
+        inputElement = <select {...props}> {props.options}</select>;
         break;
     case('textarea'):
         inputElement = <textarea {...props}/>;
