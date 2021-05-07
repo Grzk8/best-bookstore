@@ -1,5 +1,6 @@
 import React, {Component}  from 'react';
 import Book from '../../Layout/Book/Book';
+import Input from '../../Layout/Input/Input';
 
 class Search extends Component {
     state = {
@@ -37,7 +38,7 @@ class Search extends Component {
         return(<>
             <h1 className="headerStyle">Wpisz tytuł ksiązki lub nazwisko autora</h1>
             <form className="tableContainer" onSubmit={this.handleSubmitForm}>
-                    <input type="text" name="s" value={this.state.searching} onChange={this.handleSearchHandle}></input>
+                    <Input type="text" name="s" value={this.state.searching} onChange={this.handleSearchHandle} />
             </form>
             <Book data={this.state.books} addBook={this.props.addBook}/>
         </>)
