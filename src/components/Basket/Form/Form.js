@@ -6,16 +6,87 @@ import Input from '../../Layout/Input/Input';
 
 class Form extends Component {
     state = {
-        name: "",
-        surname: "",
-        street: "",
-        postalCode: "",
-        city: "",
-        mail: "",
-        pickup:"Przesyłka",
+        orderForm: {
+            name: {
+                inputtype: 'input',
+                elementConfig: {
+                     type: 'text',
+                     label: 'Imię:',
+                     placeholder: 'imię',
+
+                },
+                value: ''
+            },
+            surname: {
+                inputtype: 'input',
+                elementConfig: {
+                     type: 'text',
+                     label: 'Nazwisko:',
+                     placeholder: 'nazwisko',
+
+                },
+                value: ''
+            },
+            street: {
+                inputtype: 'input',
+                elementConfig: {
+                     type: 'text',
+                     label: 'Adres:',
+                     placeholder: 'ulica',
+
+                },
+                value: ''
+            },
+            postalCode: {
+                inputtype: 'input',
+                elementConfig: {
+                     type: 'text',
+                     placeholder: 'kod pocztowy',
+
+                },
+                value: ''
+            },
+            city: {
+                inputtype: 'input',
+                elementConfig: {
+                     type: 'text',
+                     placeholder: 'miejscowość',
+
+                },
+                value: ''
+            },
+            mail: {
+                inputtype: 'input',
+                elementConfig: {
+                     type: 'email',
+                     label: 'Email:',
+                     placeholder: 'email',
+
+                },
+                value: ''
+            },
+            pickup: {
+                inputtype: 'select',
+                elementConfig: {
+                     options: [
+                         {value: 'odbiór osobisty', displayValue: 'Odbiór osobisty'},
+                         {value: 'przesyłka', displayValue: 'Przesyłka'}
+                     ]
+                },
+                value: ''
+            },
+            comments: {
+                inputtype: 'textarea',
+                elementConfig: {
+                     type: 'text',
+                     label="Uwagi:",
+                     placeholder: "uwagi"
+                },
+                value: ''
+            },
+        },
         errorMsg: "",
         orderCompleted: false,
-
     }
 
     handleChange = (e) => {
@@ -70,20 +141,8 @@ class Form extends Component {
                         <h1>Wpisz swoje dane</h1>
                         <span>{this.state.errorMsg}</span>
 
-                        <Input inputtype="input" label="Imię:" type="text" name="name" value={this.state.name} placeholder="imię" onChange={this.handleChange}/>
-                        <Input inputtype="input" label="Nazwisko:"  type="text" name="surname" value={this.state.surname} placeholder="nazwisko" onChange={this.handleChange}/>
-                        <Input inputtype="input" label="Adres:"  type="text" name="street" value={this.state.street} placeholder="ulica i nr" onChange={this.handleChange}/>
-                        <Input inputtype="input" type="text" name="postCode" value={this.state.postCode} placeholder="kod pocztowy" onChange={this.handleChange}/>
-                        <Input inputtype="input" type="text" name="city" value={this.state.city} placeholder="miejscowość" onChange={this.handleChange}/>
-                        <Input inputtype="input" label="Email:"  type="text" name="mail" value={this.state.mail} placeholder="Email" onChange={this.handleChange}/>
-                        <Input inputtype="select" name="pickup"
-                            value={this.state.pickup}
-                            onChange={this.handleChange}
-                            options={<>
-                                <option value="ms">Odbiór osobisty</option>
-                                <option value="mrs">Przesyłka</option>
-                                </>} />
-                        <Input inputtype="textarea" label="Uwagi:" name="description" value={this.state.description} onChange={this.handleChange}/>
+                        <Input  onChange={this.handleChange}/>
+
                         <Input inputtype="input" className="btn btn3" type="submit" value="WYŚLIJ"/>
                     </form>
                 </>
