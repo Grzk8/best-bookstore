@@ -9,7 +9,11 @@ switch (props.inputtype) {
         inputElement = <input {...props.elementConfig} value={props.value}/>;
         break;
     case('select'):
-        inputElement = <select {...props.elementConfig} value={props.value}/>;
+        inputElement = (<select value={props.value}>{
+            props.elementConfig.options.map(option=> (
+                <option key={option.value} value={option.value}>{option.displayValue}</option>
+            ))
+        }</select>);
         break;
     case('textarea'):
         inputElement = <textarea {...props.elementConfig} value={props.value}/>;
@@ -18,7 +22,7 @@ switch (props.inputtype) {
         inputElement = <input {...props.elementConfig} value={props.value}/>;
 }
     return (<>
-        <label>{props.elementConfig.label}</label>
+        
         {inputElement}
     </>)
 }

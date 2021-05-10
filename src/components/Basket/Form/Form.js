@@ -79,7 +79,7 @@ class Form extends Component {
                 inputtype: 'textarea',
                 elementConfig: {
                      type: 'text',
-                     label="Uwagi:",
+                     label: "Uwagi:",
                      placeholder: "uwagi"
                 },
                 value: ''
@@ -131,6 +131,13 @@ class Form extends Component {
     }
 
     render() {
+        const formElementsArr = [];
+        for (let key in this.state.orderForm) {
+            formElementsArr.push({
+                id: key,
+                config: this.state.orderForm[key]
+            })
+        }
         if(this.state.orderCompleted){
             return<Redirect to="/orderCompleted"/>
         }
@@ -140,9 +147,14 @@ class Form extends Component {
                     <form className="tableContainer" onSubmit={this.handleSubmitForm}>
                         <h1>Wpisz swoje dane</h1>
                         <span>{this.state.errorMsg}</span>
-
-                        <Input  onChange={this.handleChange}/>
-
+                        {formElementsArr.map(formElement => (
+                            <Input
+                                key={formElement.id}
+                                inputtype={formElement.config.inputtype}
+                                elementConfig={formElement.config.elementConfig}
+                                value={formElement.config.value}
+                                label={formElement.config.label}/>
+                        ))}
                         <Input inputtype="input" className="btn btn3" type="submit" value="WYŚLIJ"/>
                     </form>
                 </>
