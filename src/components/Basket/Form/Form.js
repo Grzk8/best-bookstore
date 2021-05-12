@@ -3,6 +3,7 @@ import {
     Redirect
 } from 'react-router-dom';
 import Input from '../../Layout/Input/Input';
+import Button from '../../Layout/Button/Button';
 
 class Form extends Component {
     state = {
@@ -105,7 +106,18 @@ class Form extends Component {
         this.setState({
             errorMsg: ""
         });
-
+    inputChangedHandler = (event, inputId) => {
+        console.log(event.target.value)
+        const updatedForm = {
+            ...this.state.orderForm
+        };
+        const updatedFormElement = {
+            ...updatedForm[inputId]
+        };
+        updatedFormElement.value = event.target.value;
+        updatedForm[inputId] = updatedFormElement;
+        this.setState({orderForm: updatedForm});
+    };
         if (this.state.mail.indexOf("@") === -1) {
             this.setState({
                 errorMsg: "Błędny adres email"
@@ -131,10 +143,10 @@ class Form extends Component {
     }
 
     render() {
-        const formElementsArr = [];
+        const formElementsArray = [];
         for (let key in this.state.orderForm) {
-            formElementsArr.push({
-                id: key,
+            formElementsArray.push({
+                id:key,
                 config: this.state.orderForm[key]
             })
         }
@@ -147,15 +159,16 @@ class Form extends Component {
                     <form className="tableContainer" onSubmit={this.handleSubmitForm}>
                         <h1>Wpisz swoje dane</h1>
                         <span>{this.state.errorMsg}</span>
-                        {formElementsArr.map(formElement => (
+                        {formElementsArray.map(formElement => (
                             <Input
                                 key={formElement.id}
                                 inputtype={formElement.config.inputtype}
                                 elementConfig={formElement.config.elementConfig}
                                 value={formElement.config.value}
-                                label={formElement.config.label}/>
+                                label={formElement.config.label}
+                                changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
                         ))}
-                        <Input inputtype="input" className="btn btn3" type="submit" value="WYŚLIJ"/>
+                        <Button clicked={this.handleSubmitForm}>Wyślij</Button>
                     </form>
                 </>
 
