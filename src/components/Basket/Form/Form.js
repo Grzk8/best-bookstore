@@ -89,7 +89,14 @@ class Form extends Component {
         errorMsg: "",
         orderCompleted: false,
     }
-
+    inputChangedHandler = (event, inputId) => {
+        console.log(event.target.value)
+        const updatedOrderForm = {...this.state.orderForm};
+        const updatedFormElement = {...updatedOrderForm[inputId]};
+        updatedFormElement.value = event.target.value;
+        updatedOrderForm[inputId] = updatedFormElement;
+        this.setState({orderForm: updatedOrderForm});
+    };
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -106,18 +113,6 @@ class Form extends Component {
         this.setState({
             errorMsg: ""
         });
-    inputChangedHandler = (event, inputId) => {
-        console.log(event.target.value)
-        const updatedForm = {
-            ...this.state.orderForm
-        };
-        const updatedFormElement = {
-            ...updatedForm[inputId]
-        };
-        updatedFormElement.value = event.target.value;
-        updatedForm[inputId] = updatedFormElement;
-        this.setState({orderForm: updatedForm});
-    };
         if (this.state.mail.indexOf("@") === -1) {
             this.setState({
                 errorMsg: "Błędny adres email"
@@ -167,8 +162,8 @@ class Form extends Component {
                                 value={formElement.config.value}
                                 label={formElement.config.label}
                                 changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
-                        ))}
-                        <Button clicked={this.handleSubmitForm}>Wyślij</Button>
+                        ))};
+                        <Button>Wyślij</Button>
                     </form>
                 </>
 
