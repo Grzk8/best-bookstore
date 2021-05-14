@@ -1,5 +1,4 @@
-input[type="text"],
-textarea {
+.input {
   padding: 15px;
   box-sizing: border-box;
   border-radius: 3px;
@@ -11,4 +10,7 @@ textarea {
 
 textarea {
   min-height: 150px;
+}
+select {
+  width: 20px;
 }

@@ -12,7 +12,6 @@ class Form extends Component {
                 inputtype: 'input',
                 elementConfig: {
                      type: 'text',
-                     label: 'Imię:',
                      placeholder: 'imię',
 
                 },
@@ -22,7 +21,6 @@ class Form extends Component {
                 inputtype: 'input',
                 elementConfig: {
                      type: 'text',
-                     label: 'Nazwisko:',
                      placeholder: 'nazwisko',
 
                 },
@@ -32,7 +30,6 @@ class Form extends Component {
                 inputtype: 'input',
                 elementConfig: {
                      type: 'text',
-                     label: 'Adres:',
                      placeholder: 'ulica',
 
                 },
@@ -60,7 +57,6 @@ class Form extends Component {
                 inputtype: 'input',
                 elementConfig: {
                      type: 'email',
-                     label: 'Email:',
                      placeholder: 'email',
 
                 },
@@ -80,7 +76,6 @@ class Form extends Component {
                 inputtype: 'textarea',
                 elementConfig: {
                      type: 'text',
-                     label: "Uwagi:",
                      placeholder: "uwagi"
                 },
                 value: ''
@@ -90,38 +85,31 @@ class Form extends Component {
         orderCompleted: false,
     }
     inputChangedHandler = (event, inputId) => {
-        console.log(event.target.value)
         const updatedOrderForm = {...this.state.orderForm};
         const updatedFormElement = {...updatedOrderForm[inputId]};
         updatedFormElement.value = event.target.value;
         updatedOrderForm[inputId] = updatedFormElement;
         this.setState({orderForm: updatedOrderForm});
     };
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    }
-    handlepickup = (e) =>{
-        this.setState(
-            {
-                [e.target.name]: e.target.value
-            });
-    }
+
     handleSubmitForm = (e) => {
         e.preventDefault();
+        const formData = {};
+        for (let formElementId in this.state.orderForm) {
+            formData[formElementId] = this.state.orderForm[formElementId.value]
+        }
         this.setState({
             errorMsg: ""
         });
-        if (this.state.mail.indexOf("@") === -1) {
+        if (this.state.orderForm.mail.value.indexOf("@") === -1) {
             this.setState({
                 errorMsg: "Błędny adres email"
             })
 
             return false;
         }else{
-            fetch(`https://api.npoint.io/f350e77249ffe02ebd33/orders`,{method: 'POST',
-                body:JSON.stringify({name: this.state.name, surname: this.state.surname, street: this.state.street, postCode: this.state.postCode, city: this.state.city, mail: this.state.mail, pickup: this.state.pickup}),headers: {
+            fetch(`https://console.firebase.google.com/u/0/project/best-bookstore/database/best-bookstore-default-rtdb/data/~2Forders`,{method: 'POST',
+                body:JSON.stringify({formData}),headers: {
                     'Content-Type': 'application/json'
                 },
             })
@@ -133,7 +121,6 @@ class Form extends Component {
 
                 })
         }
-
         console.log(this.state);
     }
 
