@@ -97,7 +97,9 @@ class Form extends Component {
         const formData = {};
         for (let formElementId in this.state.orderForm) {
             formData[formElementId] = this.state.orderForm[formElementId.value]
-        }
+        };
+
+
         this.setState({
             errorMsg: ""
         });
@@ -108,18 +110,13 @@ class Form extends Component {
 
             return false;
         }else{
-            fetch(`https://console.firebase.google.com/u/0/project/best-bookstore/database/best-bookstore-default-rtdb/data/~2Forders`,{method: 'POST',
-                body:JSON.stringify({formData}),headers: {
+            fetch(`http://localhost:3000/orders`,{method: 'POST',
+                body:JSON.stringify({value: formData}),headers: {
                     'Content-Type': 'application/json'
                 },
             })
                 .then(resp => resp.json())
-                .then(data => {
-                    this.setState({
-                        orderCompleted: true,
-                    })
-
-                })
+                
         }
         console.log(this.state);
     }
