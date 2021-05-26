@@ -41,7 +41,7 @@ class Basket extends Component {
                 
                 <Button clicked={this.showForm}>KUPUJĘ</Button>
 
-                {this.state.showform && <Form></Form> }
+                {this.state.showform && <Form basket={this.props.basket}/> }
 
         </>;
     }

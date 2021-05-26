@@ -1,19 +1,6 @@
 import React, {Component} from 'react';
-import Nav from '../../Navigation/Navigation';
 
-class OrderCompleted extends Component {
-    render(
-
-    ) {
-        return <>
-            <Nav basket={this.props.basket}>
-                <h1 className="headerStyle">Zamówienie zostało przyjęte</h1>
-            </Nav>
-        </>;
-    }
+const  OrderCompleted = () =>{
+        return <h1 className="headerStyle">Zamówienie zostało przyjęte</h1>    
 }
-
-
-
-
 export default OrderCompleted;

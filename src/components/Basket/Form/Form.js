@@ -96,9 +96,17 @@ class Form extends Component {
         e.preventDefault();
         const formData = {};
         for (let formElementId in this.state.orderForm) {
-            formData[formElementId] = this.state.orderForm[formElementId.value]
+            formData[formElementId] = this.state.orderForm[formElementId].value
         };
 
+        let boo = [];
+        const b = this.props.basket.map(b=> boo = [b.title, b.author, b.price])
+
+        const order = {
+            orderData: formData,
+            orderedBooks: b,
+            totalPrice: this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2)
+        };
 
         this.setState({
             errorMsg: ""
@@ -111,14 +119,16 @@ class Form extends Component {
             return false;
         }else{
             fetch(`http://localhost:3000/orders`,{method: 'POST',
-                body:JSON.stringify({value: formData}),headers: {
-                    'Content-Type': 'application/json'
+                body:JSON.stringify(order),headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
             })
-                .then(resp => resp.json())
+                .then(resp => resp.json(), this.setState({orderCompleted: true}))
                 
         }
-        console.log(this.state);
+        console.log(order);
+
     }
 
     render() {
