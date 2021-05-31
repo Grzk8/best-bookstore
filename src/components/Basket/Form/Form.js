@@ -15,7 +15,11 @@ class Form extends Component {
                      placeholder: 'imię',
 
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false
             },
             surname: {
                 inputtype: 'input',
@@ -24,43 +28,61 @@ class Form extends Component {
                      placeholder: 'nazwisko',
 
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true 
+                },
+                valid: false
             },
             street: {
                 inputtype: 'input',
                 elementConfig: {
                      type: 'text',
                      placeholder: 'ulica',
-
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true 
+                },
+                valid: false
             },
             postalCode: {
                 inputtype: 'input',
                 elementConfig: {
                      type: 'text',
                      placeholder: 'kod pocztowy',
-
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true,
+                    lengthM: 5
+                },
+                valid: false
             },
             city: {
                 inputtype: 'input',
                 elementConfig: {
                      type: 'text',
                      placeholder: 'miejscowość',
-
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false
             },
             mail: {
                 inputtype: 'input',
                 elementConfig: {
                      type: 'email',
                      placeholder: 'email',
-
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true,
+                    mail: false
+                },
+                valid: false
             },
             pickup: {
                 inputtype: 'select',
@@ -78,17 +100,36 @@ class Form extends Component {
                      type: 'text',
                      placeholder: "uwagi"
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false
             },
         },
-        errorMsg: "",
         orderCompleted: false,
+    }
+    checkValidity(value, rules) {
+        let isValid = false;
+
+        if(rules.required) {
+            isValid = value.trim() !== '';
+        }
+        if(rules.lenghtM) {
+            isValid = value.length <= rules.lengthM
+        }
+        if(rules.mail) {
+            isValid = value.indexOf("@");
+        }
+        return isValid;
     }
     inputChangedHandler = (event, inputId) => {
         const updatedOrderForm = {...this.state.orderForm};
         const updatedFormElement = {...updatedOrderForm[inputId]};
         updatedFormElement.value = event.target.value;
+        updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
         updatedOrderForm[inputId] = updatedFormElement;
+        console.log(updatedFormElement)
         this.setState({orderForm: updatedOrderForm});
     };
 
@@ -108,27 +149,13 @@ class Form extends Component {
             totalPrice: this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2)
         };
 
-        this.setState({
-            errorMsg: ""
-        });
-        if (this.state.orderForm.mail.value.indexOf("@") === -1) {
-            this.setState({
-                errorMsg: "Błędny adres email"
-            })
-
-            return false;
-        }else{
-            fetch(`http://localhost:3000/orders`,{method: 'POST',
-                body:JSON.stringify(order),headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-            })
-                .then(resp => resp.json(), this.setState({orderCompleted: true}))
-                
-        }
-        console.log(order);
-
+        fetch(`http://localhost:3000/orders`,{method: 'POST',
+            body:JSON.stringify(order),headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+            .then(resp => resp.json(), this.setState({orderCompleted: true}));
     }
 
     render() {
