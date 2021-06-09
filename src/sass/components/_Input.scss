@@ -9,8 +9,15 @@
 }
 
 textarea {
+  padding: 15px;
   min-height: 150px;
 }
 select {
+  padding: 15px;
   width: 20px;
+}
+
+.invalid {
+  border: 1px solid $invalidColor;
+  background-color: $invalidBackground;
 }

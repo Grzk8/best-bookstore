@@ -9,3 +9,7 @@
     color: white;
     font-weight: bolder;
   }
+.btn:disabled{
+  background-color: $disabled;
+  cursor: not-allowed;
+}

@@ -19,7 +19,8 @@ class Form extends Component {
                 validation: {
                     required: true
                 },
-                valid: false
+                valid: false,
+                touched: false
             },
             surname: {
                 inputtype: 'input',
@@ -32,7 +33,8 @@ class Form extends Component {
                 validation: {
                     required: true 
                 },
-                valid: false
+                valid: false,
+                touched: false
             },
             street: {
                 inputtype: 'input',
@@ -44,7 +46,8 @@ class Form extends Component {
                 validation: {
                     required: true 
                 },
-                valid: false
+                valid: false,
+                touched: false
             },
             postalCode: {
                 inputtype: 'input',
@@ -58,7 +61,8 @@ class Form extends Component {
                     minLenght: 5,
                     maxLenght: 5
                 },
-                valid: false
+                valid: false,
+                touched: false
             },
             city: {
                 inputtype: 'input',
@@ -70,7 +74,8 @@ class Form extends Component {
                 validation: {
                     required: true
                 },
-                valid: false
+                valid: false,
+                touched: false
             },
             mail: {
                 inputtype: 'input',
@@ -83,7 +88,8 @@ class Form extends Component {
                     required: true,
                     mail: false
                 },
-                valid: false
+                valid: false,
+                touched: false
             },
             pickup: {
                 inputtype: 'select',
@@ -93,7 +99,8 @@ class Form extends Component {
                          {value: 'przesyłka', displayValue: 'Przesyłka'}
                      ]
                 },
-                value: ''
+                value: 'fastest',
+                valid: true
             },
             comments: {
                 inputtype: 'textarea',
@@ -105,10 +112,12 @@ class Form extends Component {
                 validation: {
                     required: true
                 },
-                valid: false
+                valid: false,
+                touched: false
             },
         },
         orderCompleted: false,
+        formIsValid: false
     }
     checkValidity(value, rules) {
         let isValid = true;
@@ -132,9 +141,14 @@ class Form extends Component {
         const updatedFormElement = {...updatedOrderForm[inputId]};
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
+        updatedFormElement.touched = true;
         updatedOrderForm[inputId] = updatedFormElement;
-        console.log(updatedFormElement)
-        this.setState({orderForm: updatedOrderForm});
+        
+        let updatedFormIsValid = true;
+        for (let inputId in updatedOrderForm) {
+            updatedFormIsValid = updatedOrderForm[inputId].valid && updatedFormIsValid;
+        }
+        this.setState({orderForm: updatedOrderForm, formIsValid: updatedFormIsValid});
     };
 
     handleSubmitForm = (e) => {
@@ -186,9 +200,12 @@ class Form extends Component {
                                 elementConfig={formElement.config.elementConfig}
                                 value={formElement.config.value}
                                 label={formElement.config.label}
+                                invalid={!formElement.config.valid}
+                                shouldValidate={formElement.config.validation}
+                                touched={formElement.config.touched}
                                 changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
                         ))}
-                        <Button>Wyślij</Button>
+                        <Button disabled={!this.state.formIsValid}>Wyślij</Button>
                     </form>
                 </>
 
