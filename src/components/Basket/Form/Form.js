@@ -17,7 +17,8 @@ class Form extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true
+                    required: true,
+                    minLenght: 2
                 },
                 valid: false,
                 touched: false
@@ -31,7 +32,8 @@ class Form extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true 
+                    required: true,
+                    minLenght: 2
                 },
                 valid: false,
                 touched: false
@@ -44,7 +46,8 @@ class Form extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true 
+                    required: true,
+                    minLenght: 2
                 },
                 valid: false,
                 touched: false
@@ -72,7 +75,8 @@ class Form extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true
+                    required: true,
+                    minLenght: 2
                 },
                 valid: false,
                 touched: false
@@ -132,7 +136,7 @@ class Form extends Component {
             isValid = value.length <= rules.maxLenght && isValid;
         }
         if(rules.mail) {
-            isValid = value.indexOf("@");
+            isValid = value.indexOf("@") && isValid;
         }
         return isValid;
     }
