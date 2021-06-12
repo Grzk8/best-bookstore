@@ -13,7 +13,6 @@ class Form extends Component {
                 elementConfig: {
                      type: 'text',
                      placeholder: 'imię',
-
                 },
                 value: '',
                 validation: {
@@ -62,7 +61,8 @@ class Form extends Component {
                 validation: {
                     required: true,
                     minLenght: 5,
-                    maxLenght: 5
+                    maxLenght: 5,
+                    isNumeric: true
                 },
                 valid: false,
                 touched: false
@@ -90,7 +90,7 @@ class Form extends Component {
                 value: '',
                 validation: {
                     required: true,
-                    mail: false
+                    mail: true
                 },
                 valid: false,
                 touched: false
@@ -136,7 +136,12 @@ class Form extends Component {
             isValid = value.length <= rules.maxLenght && isValid;
         }
         if(rules.mail) {
-            isValid = value.indexOf("@") && isValid;
+            const isMail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+            isValid = isMail.test(value) && isValid;
+        }
+        if (rules.isNumeric) {
+            const numeric = /^\d+$/;
+            isValid = numeric.test(value) && isValid
         }
         return isValid;
     }
