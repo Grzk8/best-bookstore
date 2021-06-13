@@ -72,6 +72,16 @@ class Login extends Component {
         this.setState({controls: updatedControls})
     };
 
+    handleSubmitForm = (e) => {
+        e.preventDefault();
+
+        fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=AIzaSyByjStsAv2JIOOQDv95alcaJH4cBhjod5Y`,{method: 'POST',
+            body:JSON.stringify(token),headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
+    }
     render () {
         const formElementsArray = [];
         for (let key in this.state.controls) {
