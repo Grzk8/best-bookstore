@@ -37,7 +37,41 @@ class Login extends Component {
         }
     }
 
-    
+    checkValidity(value, rules) {
+        let isValid = true;
+
+        if(rules.required) {
+            isValid = value.trim() !== '' && isValid;
+        }
+        if(rules.minLenght) {
+            isValid = value.length >= rules.minLenght && isValid;
+        }
+        if(rules.maxLenght) {
+            isValid = value.length <= rules.maxLenght && isValid;
+        }
+        if(rules.mail) {
+            const isMail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+            isValid = isMail.test(value) && isValid;
+        }
+        if (rules.isNumeric) {
+            const numeric = /^\d+$/;
+            isValid = numeric.test(value) && isValid
+        }
+        return isValid;
+    }
+    inputChangedHandler = (event, control) => {
+        const updatedControls = {
+            ...this.state.controls,
+            [control]: {
+                ...this.state.controls[controlName],
+                value: event.target.value,
+                valid: this.checkValidity(event.target.value, this.state.controls[control].validation),
+                touched: true
+            }
+        };
+        this.setState({controls: updatedControls})
+    };
+
     render () {
         const formElementsArray = [];
         for (let key in this.state.controls) {
