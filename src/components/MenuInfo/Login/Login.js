@@ -36,17 +36,38 @@ class Login extends Component {
             }  
         }
     }
+
+    
     render () {
         const formElementsArray = [];
-        for (let key in this.state.orderForm) {
+        for (let key in this.state.controls) {
             formElementsArray.push({
                 id:key,
-                config: this.state.orderForm[key]
+                config: this.state.controls[key]
             })
         }
+
+        const form = formElementsArray.map(el => (
+            <Input
+                key={el.id}
+                inputtype={el.config.inputtype}
+                elementConfig={el.config.elementConfig}
+                value={el.config.value}
+                label={el.config.label}
+                invalid={!el.config.valid}
+                shouldValidate={el.config.validation}
+                touched={el.config.touched}
+                changed={(event) => this.inputChangedHandler(event, el.id)}
+            /> 
+        ) );
         return (
             <>
-                
+                <h1 className="headerStyle">Zaloguj się lub załóż konto</h1>
+                <form className="tableContainer">
+                    {form}
+                    <br/>
+                    <Button >Dalej</Button>
+                </form>
             </>
         )
     }

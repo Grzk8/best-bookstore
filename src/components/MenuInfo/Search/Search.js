@@ -12,8 +12,6 @@ class Search extends Component {
         fetch(`https://api.npoint.io/f350e77249ffe02ebd33/books`)
             .then(resp => resp.json())
             .then(data => {
-                console.log(data, "from API");
-
                 const newList = data.filter(item => {
                     return this.state.searching === '' ? null : item.title.toLowerCase().includes(this.state.searching.toLowerCase()) || item.author.toLowerCase().includes(this.state.searching.toLowerCase()) ;
                 });

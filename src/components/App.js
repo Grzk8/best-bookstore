@@ -16,6 +16,7 @@ import OrderCompleted from './Basket/Form/OrderCompleted';
 import Navigation from './Navigation/Navigation';
 import Basket from './Basket/Basket';
 import Search from './MenuInfo/Search/Search';
+import Login from './MenuInfo/Login/Login';
 
 class App extends Component {
     state = {
@@ -54,6 +55,7 @@ class App extends Component {
                         <Route path='/thiller' render={props=><Thiller {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/description/:id' render={props=><Description {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/orderCompleted' render={props=><OrderCompleted {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                        <Route path='/login' render={props=><Login {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                 </Navigation>
             </HashRouter>
         );
