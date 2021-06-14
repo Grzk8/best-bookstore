@@ -9,7 +9,7 @@ class Search extends Component {
 
     componentDidUpdate() {
 
-        fetch(`https://api.npoint.io/f350e77249ffe02ebd33/books`)
+        fetch(`https://best-bookstore-default-rtdb.firebaseio.com//books.json`)
             .then(resp => resp.json())
             .then(data => {
                 const newList = data.filter(item => {

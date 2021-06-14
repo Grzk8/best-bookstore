@@ -8,7 +8,7 @@ class Comic extends Component {
 
     componentDidMount() {
 
-        fetch(`https://api.npoint.io/f350e77249ffe02ebd33/books`)
+        fetch(`https://best-bookstore-default-rtdb.firebaseio.com//books.json`)
             .then(resp => resp.json())
             .then(data => {
                 console.log(data, "from API");

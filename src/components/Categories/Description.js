@@ -8,7 +8,7 @@ class Description extends Component {
     componentDidMount() {
         console.log(this.props);
         const{id}=this.props.match.params;
-        fetch(`https://api.npoint.io/f350e77249ffe02ebd33/books/`+(id-1))
+        fetch(`https://best-bookstore-default-rtdb.firebaseio.com//books.json/`+(id-1))
             .then(resp => resp.json())
             .then(data => {
                 this.setState({

@@ -176,7 +176,7 @@ class Form extends Component {
             totalPrice: this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2)
         };
 
-        fetch(`http://localhost:3000/orders`,{method: 'POST',
+        fetch(`https://best-bookstore-default-rtdb.firebaseio.com/orders.json`,{method: 'POST',
             body:JSON.stringify(order),headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
