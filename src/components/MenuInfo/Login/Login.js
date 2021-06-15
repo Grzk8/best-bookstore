@@ -110,7 +110,7 @@ class Login extends Component {
                 <form className="tableContainer">
                     {form}
                     <br/>
-                    <Button >Dalej</Button>
+                    <Button>Dalej</Button>
                 </form>
             </>
         )
