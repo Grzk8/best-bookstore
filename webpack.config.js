@@ -12,7 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, "build") //zapisuj wszystko w ./build
   },
   devServer: {
-    port: 3001,
+    port: 3000,
   },
   module: {
     rules: [
