@@ -7,15 +7,8 @@ Website was made by:
 -React Router
 -Sass
 
-Still in progress: Redux, Authentication, leyout, other improvements...
+Still in progress
 
-
-## Instructions
-
-To run this project, install it locally using npm:
-- npm install
-- npm start
-- adress:  http://localhost:3000
 
 ### Open
 
