@@ -113,11 +113,7 @@ class Form extends Component {
                      placeholder: "uwagi"
                 },
                 value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false
+                touched: true
             },
         },
         orderCompleted: false,
@@ -126,6 +122,9 @@ class Form extends Component {
     checkValidity(value, rules) {
         let isValid = true;
 
+        if ( !rules ) {
+            return true;
+        }
         if(rules.required) {
             isValid = value.trim() !== '' && isValid;
         }

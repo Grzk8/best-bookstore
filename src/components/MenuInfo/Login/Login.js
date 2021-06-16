@@ -59,29 +59,39 @@ class Login extends Component {
         }
         return isValid;
     }
-    inputChangedHandler = (event, control) => {
+    inputChangedHandler = ( event, controlName ) => {
         const updatedControls = {
             ...this.state.controls,
-            [control]: {
+            [controlName]: {
                 ...this.state.controls[controlName],
                 value: event.target.value,
-                valid: this.checkValidity(event.target.value, this.state.controls[control].validation),
+                valid: this.checkValidity( event.target.value, this.state.controls[controlName].validation ),
                 touched: true
             }
         };
-        this.setState({controls: updatedControls})
-    };
+        this.setState( { controls: updatedControls } );
+    }
+
+    getToken = (email, password) => {
+        let loginData = {
+            email: email,
+            password: password,
+            returnSecureToken: true
+        }
+
+        fetch('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyByjStsAv2JIOOQDv95alcaJH4cBhjod5Y',{method: 'POST',
+        body:JSON.stringify(loginData)
+
+        
+        });
+    }
 
     handleSubmitForm = (e) => {
         e.preventDefault();
 
-        fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=AIzaSyByjStsAv2JIOOQDv95alcaJH4cBhjod5Y`,{method: 'POST',
-            body:JSON.stringify(token),headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        });
+        this.getToken(this.state.controls.email.value, this.state.controls.password.value)
     }
+
     render () {
         const formElementsArray = [];
         for (let key in this.state.controls) {
@@ -107,7 +117,7 @@ class Login extends Component {
         return (
             <>
                 <h1 className="headerStyle">Zaloguj się lub załóż konto</h1>
-                <form className="tableContainer">
+                <form className="tableContainer" onSubmit={this.handleSubmitForm}>
                     {form}
                     <br/>
                     <Button>Dalej</Button>
