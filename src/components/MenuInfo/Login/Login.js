@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Input from "../../Layout/Input/Input";
 import Button from "../../Layout/Button/Button";
 
-class Login extends Component {
+class Login extends Component {7
     state = {
         controls: {
             email: {
@@ -34,7 +34,8 @@ class Login extends Component {
                 valid: false,
                 touched: false
             }  
-        }
+        },
+        isSignup: true
     }
 
     checkValidity(value, rules) {
@@ -78,12 +79,14 @@ class Login extends Component {
             password: password,
             returnSecureToken: true
         }
-
-        fetch('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyByjStsAv2JIOOQDv95alcaJH4cBhjod5Y',{method: 'POST',
+        let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyByjStsAv2JIOOQDv95alcaJH4cBhjod5Y'
+        if (!this.state.isSignup) {
+            url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyByjStsAv2JIOOQDv95alcaJH4cBhjod5Y'
+        }
+        fetch(url,{method: 'POST',
         body:JSON.stringify(loginData)
-
-        
-        });
+        })
+        .then(response => {console.log(response)});
     }
 
     handleSubmitForm = (e) => {
@@ -91,6 +94,11 @@ class Login extends Component {
 
         this.getToken(this.state.controls.email.value, this.state.controls.password.value)
     }
+    switchLoginHandler = () => {
+        this.setState(prevState => {
+            return {isSignup: !prevState.isSignup};
+        });
+    };
 
     render () {
         const formElementsArray = [];
@@ -116,12 +124,18 @@ class Login extends Component {
         ) );
         return (
             <>
-                <h1 className="headerStyle">Zaloguj się lub załóż konto</h1>
+                <h1 className="headerStyle">{this.state.isSignup ? 'Załóż konto' : 'Zaloguj się'}</h1>
+
                 <form className="tableContainer" onSubmit={this.handleSubmitForm}>
                     {form}
                     <br/>
                     <Button>Dalej</Button>
                 </form>
+
+                <div className="tableContainer">
+                    <Button clicked={this.switchLoginHandler}>{this.state.isSignup ? 'Zaloguj się' : 'Załóż konto'}</Button>
+                </div>
+                
             </>
         )
     }
