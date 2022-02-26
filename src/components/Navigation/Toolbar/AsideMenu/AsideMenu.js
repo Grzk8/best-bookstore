@@ -1,5 +1,5 @@
 import React from 'react';
-import BasketButton from './BasketButton/BasketButton';
+import BasketButton from '../MainMenu/BasketButton/BasketButton';
 import AsideItems from './AsideItems/AsideItems';
 
 const asideMenu = props => {
@@ -7,7 +7,7 @@ const asideMenu = props => {
         <aside>
             <div className="asideMenu">
                 <div className="asideItem">
-                    <BasketButton basket={props.basket} height='3em' width='5em'/>
+                    
                 </div>
                 <AsideItems />
             </div>

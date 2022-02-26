@@ -2,7 +2,25 @@
         font-size: 1em;
         display: inline-block;
         padding: 10px;
+        //background-color: black;
+        a{
+                color: red;
+        }
 }
+.sublist{
+        display: none;
+}
+.menuItem:hover > .sublist {
+        display: block;
+        border: black solid 1px;
+        //border-radius-bottom: 10%;
+        //background-color: black;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        //text-align: center;
+    }
+
 
 @media screen and (max-width: 900px) {
         .menuItem {

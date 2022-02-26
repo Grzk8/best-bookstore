@@ -1,13 +1,25 @@
 .mainMenu{
-    margin: 0 auto;
     width: 100%;
-    background-color: $primaryColorLight;
-    height: 80px;
+    height: 190px;
+
     .mainMenu_container{
-    margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content:space-around;
+    .logo{
+        margin-top: 40px;
+    margin-left: 15em;
+    font-size: 0.8em;
+    }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .mainMenu {
+        margin-left: 0;
+    }
+    .basket{
+        display: none;
     }
 }
 

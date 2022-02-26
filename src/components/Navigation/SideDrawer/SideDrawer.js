@@ -2,7 +2,7 @@ import React from 'react';
 import MenuItems from '../Toolbar/MainMenu/MenuItems/MenuItems';
 import AsideItems from '../Toolbar/AsideMenu/AsideItems/AsideItems';
 import Backdrop from '../../Layout/Backdrop/Backdrop';
-import BasketButton from '../../Navigation/Toolbar/AsideMenu/BasketButton/BasketButton';
+import BasketButton from '../Toolbar/MainMenu/BasketButton/BasketButton';
 import Logo from '../../Logo/Logo'
 
 const sideDrawer = (props) => {
