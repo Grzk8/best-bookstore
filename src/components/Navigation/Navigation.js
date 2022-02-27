@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import MainMenu from './Toolbar/MainMenu/MainMenu';
-import AsideMenu from './Toolbar/AsideMenu/AsideMenu';
+import Header from './Header/Header'
 import Footer from './Footer/Footer';
 import SideDrawer from './SideDrawer/SideDrawer';
+import MenuItems from './MenuItems/MenuItems'
 
 class Navigation extends Component {
     state = {
@@ -21,12 +21,13 @@ class Navigation extends Component {
 
     render() {
         return (<>
-            <MainMenu drawerToggleClicked={this.sideDrawerToggleHandler} basket={this.props.basket}/>
+
+            <Header drawerToggleClicked={this.sideDrawerToggleHandler} basket={this.props.basket}/>
+            <MenuItems/>
             <SideDrawer open={this.state.showSideDrawer}
              closed={this.sideDrawerClosedHandler}
              basket={this.props.basket}/>
             <div className="container">
-                <AsideMenu basket={this.props.basket}/>
                 <div className="mainWindow">
                     {this.props.children}
                 </div>

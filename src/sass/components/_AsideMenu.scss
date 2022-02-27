@@ -1,22 +1,21 @@
-.asideMenu{
-    width: 15em;
-    height: 100%;
-    background-color: $primaryColorLight;
-    ;
-    .asideItem {
-        text-decoration: none;
-        list-style-type: none;
-        height: 7em;
-        text-align: center;
-      };
-
-}
-.mainWindow {
-    z-index: 90;
-}
-
-@media screen and (max-width: 900px) {
-    .asideMenu {
-        display: none;
-    }
-}
+//.asideMenu{
+//    width: 15em;
+//    height: 100%;
+//    background-color: $primaryColorLight;
+//    .asideItem {
+//        text-decoration: none;
+//        list-style-type: none;
+//        height: 7em;
+//        text-align: center;
+//      };
+//
+//}
+//.mainWindow {
+//    z-index: 90;
+//}
+//
+//@media screen and (max-width: 900px) {
+//    .asideMenu {
+//        display: none;
+//    }
+//}

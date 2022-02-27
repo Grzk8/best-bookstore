@@ -1,16 +1,13 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import AsideItems from '../../AsideMenu/AsideItems/AsideItems'
+import AsideItems from './AsideItems/AsideItems'
 
 const menuItems = () => {
     return (
         <ul className='menuItems'>
-            <li className="menuItem"><NavLink to="" activeClassName="active">Kategorie</NavLink>
-                <ul  class="sublist">
-                <NavLink to="/sf" activeClassName="active"><li className="asideItem itemList">Sience - fiction</li></NavLink>
-                <NavLink to="/popularSience" activeClassName="active"><li className="asideItem itemList">Popularnonaukowe</li></NavLink>
-                <NavLink to="/comic" activeClassName="active"><li className="asideItem itemList">Komiksy</li></NavLink>
-                <NavLink to="/thiller" activeClassName="active"><li className="asideItem itemList">Kryminał</li></NavLink>
+            <li className="menuItem categories"><NavLink to="" className="desktop-only" activeClassName="active">Kategorie</NavLink>
+                <ul  class="categories_sublist">
+                    <AsideItems/>
                 </ul>
             </li>
             <li className="menuItem"><NavLink to="/aboutUs" activeClassName="active">O nas</NavLink></li>

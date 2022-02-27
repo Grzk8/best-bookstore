@@ -1,35 +1,72 @@
-.menuItem{
-        font-size: 1em;
-        display: inline-block;
-        padding: 10px;
-        //background-color: black;
-        a{
-                color: red;
-        }
+.menuItems{
+ background-color:$secondLogo;
+ height: 3em;
+ width: 650px;
+ margin: 0 auto;
+ margin-top: 30px;
+ margin-bottom: 30px;
+ padding-left: 20px;
+ .menuItem{
+  font-size: 1em;
+  display: inline-block;
+  padding: 10px;
+  a{
+   color: white;
+  } 
+  .categories_sublist{
+   display: none;
+   .itemList{
+    background-color: $secondLogo;
+    padding: 5px;
+   }
+  } 
+ }
 }
-.sublist{
-        display: none;
-}
-.menuItem:hover > .sublist {
+
+.categories:hover > .categories_sublist {
         display: block;
-        border: black solid 1px;
-        //border-radius-bottom: 10%;
-        //background-color: black;
-        position: absolute;
-        top: 55px;
-        left: 0;
-        //text-align: center;
-    }
+        position: relative;
+        top: 185px;
+        left: 222px;
+        z-index: 99;
+        text-align: center;
+}
+
+
+
+        
+@media screen and (max-width: 900px) {
+        .menuItems{
+                display: none;
+        }
+          .menuItem {
+            font-size: 0.5em;
+            background-image: none;
+            color: $secondLogo;
+            list-style-type: none;
+            margin-bottom: 0;
+            padding-top: 15px;
+          }
+        
+          .itemList:first-child {
+            margin-top: 0;
+          }
+        }
+
+
 
 
 @media screen and (max-width: 900px) {
         .menuItem {
            display: none;
            padding: 1.5%;
+           .desktop-only{
+                display: none;    
         }
-
-        .sideDrawer_nav .menuItem {
-                display: block;
+        }
+        .menuItem {
+                
+                background-color: white;
                 a {
                         color: $secondLogo;
                         font-size: 0.6em;
