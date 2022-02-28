@@ -5,11 +5,14 @@ import AsideItems from './AsideItems/AsideItems'
 const menuItems = () => {
     return (
         <ul className='menuItems'>
-            <li className="menuItem categories"><NavLink to="" className="desktop-only" activeClassName="active">Kategorie</NavLink>
-                <ul  class="categories_sublist">
+            <div className='dropdown'>
+            <li className="menuItem dropbtn"><NavLink to="" className="desktop-only" activeClassName="active">Kategorie</NavLink>
+                <ul  class="dropdown-content">
                     <AsideItems/>
                 </ul>
             </li>
+            </div>
+
             <li className="menuItem"><NavLink to="/aboutUs" activeClassName="active">O nas</NavLink></li>
             <li className="menuItem"><NavLink to="/selfPickup" activeClassName="active">Odbiór osobisty</NavLink></li>
             <li className="menuItem"><NavLink to="/search" activeClassName="active">Szukaj</NavLink></li>

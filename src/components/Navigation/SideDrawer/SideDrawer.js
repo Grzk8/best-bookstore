@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuItems from '../Toolbar/MainMenu/MenuItems/MenuItems';
+import MenuItems from '../MenuItems/MenuItems';
 import AsideItems from '../MenuItems/AsideItems/AsideItems';
 import Backdrop from '../../Layout/Backdrop/Backdrop';
 import BasketButton from '../BasketButton/BasketButton';

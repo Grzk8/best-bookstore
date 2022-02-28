@@ -5,11 +5,13 @@
     background-image: url(".././assets/images/basket.png");
     background-size: contain;
     position: relative;
-    left: 1em;
+    left: 0.5em;
     background-repeat: no-repeat;
 }
   .inBasket{
+    font-size: 0.6em;
     padding: 0;
+    text-align: center;
     color: black;
   }
 
