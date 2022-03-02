@@ -11,7 +11,7 @@ if (props.open) {
     attachedClasses = ['drawer', 'open']
 }
     return (
-    <>
+    <div className="sideDrawer">
         <Backdrop show={props.open} clicked={props.closed}/>
         <div className={attachedClasses.join(' ')} onClick={props.closed}>
             <Logo fontSize={'2em'}/>
@@ -26,7 +26,7 @@ if (props.open) {
                 <AsideItems />
             </div>
         </div>
-    </>      
+    </div>      
     );
 };
 export default sideDrawer;

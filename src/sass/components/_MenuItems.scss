@@ -51,45 +51,68 @@
         opacity:0.6
 }
 
-
-
-
-        
 @media screen and (max-width: 900px) {
-        .menuItems{
+.menuItems {
+        display: none;
+}
+.sideDrawer .menuItems{
+        display: inline-block;
+        background-color:white;
+        height: 100%;
+        width: 100%;
+        //margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        .menuItem{
+                font-size: 1em;
+                display: block;
+                padding: 10px;
+                padding-bottom: 18px;
+                a{
+                 color: black;
+                }}
+        .dropdown{
                 display: none;
         }
-          .menuItem {
-            font-size: 0.5em;
-            background-image: none;
-            color: $secondLogo;
-            list-style-type: none;
-            margin-bottom: 0;
-            padding-top: 15px;
-          }
-        
-          .itemList:first-child {
-            margin-top: 0;
-          }
-        }
-
-
-
-
-@media screen and (max-width: 900px) {
-        .menuItem {
-           display: none;
-           padding: 1.5%;
-           .desktop-only{
-                display: none;    
-        }
-        }
-        .menuItem {
-                
-                background-color: white;
-                a {
-                        color: $secondLogo;
-                        font-size: 0.6em;
-                }
-        }
 }
+
+}
+    
+//@media screen and (max-width: 900px) {
+//        .menuItems{
+//                display: none;
+//        }
+//          .menuItem {
+//            font-size: 0.5em;
+//            background-image: none;
+//            color: $secondLogo;
+//            list-style-type: none;
+//            margin-bottom: 0;
+//            padding-top: 15px;
+//          }
+//        
+//          .itemList:first-child {
+//            margin-top: 0;
+//          }
+//        }
+//
+//
+//
+//
+//@media screen and (max-width: 900px) {
+//        .menuItem {
+//           display: none;
+//           padding: 1.5%;
+//           .desktop-only{
+//                display: none;    
+//        }
+//        }
+//        .menuItem {
+//                
+//                background-color: white;
+//                a {
+//                        color: $secondLogo;
+//                        font-size: 0.6em;
+//                }
+//        }
+//}
