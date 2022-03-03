@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import AsideItems from './AsideItems/AsideItems'
+import Categories from './Categories/Categories'
 
 const menuItems = () => {
     return (
@@ -8,7 +8,7 @@ const menuItems = () => {
             <div className='dropdown'>
             <li className="menuItem dropbtn"><NavLink to="" className="desktop-only" activeClassName="active">Kategorie</NavLink>
                 <ul  class="dropdown-content">
-                    <AsideItems/>
+                    <Categories/>
                 </ul>
             </li>
             </div>
