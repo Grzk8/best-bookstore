@@ -20,7 +20,7 @@ class Navigation extends Component {
     };
 
     render() {
-        return (<>
+        return (<div className="container">
 
             <Header drawerToggleClicked={this.sideDrawerToggleHandler} basket={this.props.basket}/>
             <MenuItems/>
@@ -33,7 +33,7 @@ class Navigation extends Component {
                 </div>
             </div>
             <Footer />
-        </>);
+        </div>);
     };
 };
 

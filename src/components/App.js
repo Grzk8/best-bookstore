@@ -41,6 +41,7 @@ class App extends Component {
 
     render() {
         return (
+            <div className="navigation">
             <HashRouter>
                 <Navigation basket={this.state.basket}>
                         <Route exact path='/' render={props=><Main {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
@@ -58,6 +59,8 @@ class App extends Component {
                         <Route path='/login' render={props=><Login {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                 </Navigation>
             </HashRouter>
+            </div>
+
         );
     };
 };
