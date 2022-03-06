@@ -34,6 +34,7 @@ class Search extends Component {
 
     render(){
         return(<>
+            <p className="headerStyle">Wpisz tytuł lub autora</p>
             <form className="tableContainer" onSubmit={this.handleSubmitForm}>
                 <Input className="input" inputtype="text" name="s" value={this.state.searching} changed={this.handleSearchHandle}/>
             </form>

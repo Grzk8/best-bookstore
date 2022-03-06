@@ -1,14 +1,19 @@
 .btn{
-    position: relative;
-    font-size: 0.8em;
-    left: 2em;
-    background-color: $primaryColorDark;
-    width: 10em;
-    height: 3em;
-    border-radius: 20%;
-    color: white;
-    font-weight: bolder;
-  }
+  position: relative;
+  font-size: 0.8em;
+  left: 2em;
+  background-color: $primaryColorDark;
+  width: 8em;
+  height: 2em;
+  border-radius: 20%;
+  color: white;
+  font-weight: bolder;
+}
+.btnSmall{
+  width: 5em;
+  height: 2em;
+}
+
 .btn:disabled{
   background-color: $disabled;
   cursor: not-allowed;

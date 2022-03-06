@@ -8,12 +8,11 @@ const menuItems = () => {
             <ul className='menuItems'>
                 <div className='dropdown'>
                 <li className="menuItem dropbtn"><NavLink to="" className="desktop-only" activeClassName="active">Kategorie</NavLink>
-                    <ul  class="dropdown-content">
+                    <ul  className="dropdown-content">
                         <Categories/>
                     </ul>
                 </li>
                 </div>
-
                 <li className="menuItem"><NavLink to="/aboutUs" activeClassName="active">O nas</NavLink></li>
                 <li className="menuItem"><NavLink to="/selfPickup" activeClassName="active">Odbiór osobisty</NavLink></li>
                 <li className="menuItem"><NavLink to="/search" activeClassName="active">Szukaj</NavLink></li>

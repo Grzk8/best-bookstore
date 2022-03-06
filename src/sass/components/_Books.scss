@@ -6,6 +6,7 @@
   }
   
   .book{
+    margin: 3px;
     border: 1px solid $bookBorder;
     background-color: $bookBackground;
     padding: 0.5em;
@@ -23,4 +24,13 @@
 
   .btn2 {
     left: 30em;
+  }
+  .new{
+    position: relative;
+    bottom: 150px;
+    text-align: center;
+    color: white;
+    width:70px;
+    height: 20px;
+    background-color: $secondLogo;
   }

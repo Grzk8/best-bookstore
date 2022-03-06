@@ -9,15 +9,21 @@ class Book extends Component {
     };
 
     render(){
+
+        var newReleases = null;
+        var newRel = <div className='new'><strong>Nowość</strong></div>;
+        this.props.newBook ? newReleases = newRel : null
+        
         return(
             <>
             <div className="books" >{
                 this.props.data.map(b=>
                     <div className="book" key={b.id}>
-                        <img className="cover" src={b.image} height="120px" width="120px"></img>
+                        <img className="cover" src={b.image} height="150px" width="150px"></img>
+                        {newReleases}
                         <p className="title"><strong>{b.title}</strong></p>
                         <p className="author">{b.author}</p>
-                        <p className="author">{b.price}</p>
+                        <p className="author"><strong>Cena: </strong>{b.price}</p>
                         <Button><Link to={'/description/'+b.id}>WIĘCEJ</Link></Button>
                         <Button clicked={()=>this.handleClick(b)}>DO KOSZYKA</Button>
                     </div>)

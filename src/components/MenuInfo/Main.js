@@ -13,9 +13,7 @@ class Main extends Component {
             .then(data => {
                 console.log(data, "from API");
 
-                const newList = data.filter(item => {
-                    return item[ Math.floor(Math.random() * item.length) ] ;
-                });
+                const newList = data.slice(-10).reverse();
 
                 this.setState({
                     books: newList,
@@ -23,9 +21,10 @@ class Main extends Component {
             })
     };
     render() {
-        return <>
-            <Book data={this.state.books} addBook={this.props.addBook}/>
-        </>;
+        return <div>
+            <h1 className="headerStyle">Nowości</h1>
+            <Book data={this.state.books} addBook={this.props.addBook} newBook={true}/>
+        </div>;
     };
 }
 

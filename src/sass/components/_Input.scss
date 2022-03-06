@@ -21,3 +21,7 @@ select {
   border: 1px solid $invalidColor;
   background-color: $invalidBackground;
 }
+input::placeholder {
+  color: black;
+  font-style: italic;
+}
