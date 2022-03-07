@@ -5,10 +5,13 @@
 }
 
 @media screen and (max-width: 900px) {
+    .header{
+        position: sticky;
+    }
     .mainMenu {
         margin-left: 0;
     }
-    .basket{
+    .header .basket{
         display: none;
     }
 } 

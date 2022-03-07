@@ -32,13 +32,16 @@
 
 @media screen and (max-width: 900px) {
   .basket {
-    border: 1px solid black;
     text-align: center;
     color: $primaryColorDark;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    margin: 40px;
   }
   .basketLogo{
-    left: 7em;
+    margin: 0 auto;
+  }
+  .inBasket{
+    margin: 7px;
   }
   .inBasket:first-child {
     display: none;

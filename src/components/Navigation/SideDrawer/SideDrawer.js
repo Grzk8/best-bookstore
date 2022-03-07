@@ -14,9 +14,7 @@ if (props.open) {
     <div className="sideDrawer">
         <Backdrop show={props.open} clicked={props.closed}/>
         <div className={attachedClasses.join(' ')} onClick={props.closed}>
-            <Logo fontSize={'2em'}/>
-            <br/>
-            <BasketButton basket={props.basket} height='1em' width='1em'/>
+            <BasketButton basket={props.basket} height='2em' width='4em'/>
             <hr className='horizontalLine'/>
             <div className='sideDrawer_nav'>
                 <p className='sideDrawer_nav_title'>Menu</p>
