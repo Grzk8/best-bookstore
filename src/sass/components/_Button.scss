@@ -1,13 +1,15 @@
 .btn{
   position: relative;
-  font-size: 0.8em;
+  font-size: 0.75em;
+  margin: 7px;
   left: 2em;
-  background-color: $primaryColorDark;
-  width: 8em;
+  background-color: $secondLogo;
+  width: 12em;
   height: 2em;
-  border-radius: 20%;
+  //border-radius: 20%;
   color: white;
   font-weight: bolder;
+  cursor: pointer;
 }
 .btnSmall{
   width: 5em;

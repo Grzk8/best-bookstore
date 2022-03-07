@@ -15,11 +15,13 @@
   }
   
   .title, .author{
-    text-align: center
+    text-align: center;
+    margin: 6px;
   }
   .cover{
-    position: relative;
-    left: 2.3em;
+    //position: relative;
+    //left: 2.3em;
+    margin: 0, auto;
   }
 
   .btn2 {
@@ -27,10 +29,10 @@
   }
   .new{
     position: relative;
-    bottom: 150px;
+    bottom: 180px;
     text-align: center;
     color: white;
     width:70px;
     height: 20px;
-    background-color: $secondLogo;
+    background-color: $primaryColorDark;
   }

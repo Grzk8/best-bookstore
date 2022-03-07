@@ -19,11 +19,11 @@ class Book extends Component {
             <div className="books" >{
                 this.props.data.map(b=>
                     <div className="book" key={b.id}>
-                        <img className="cover" src={b.image} height="150px" width="150px"></img>
+                        <img className="cover" src={b.image} height="180px" width="180px"></img>
                         {newReleases}
                         <p className="title"><strong>{b.title}</strong></p>
                         <p className="author">{b.author}</p>
-                        <p className="author"><strong>Cena: </strong>{b.price}</p>
+                        <p className="author">Cena: <strong>{b.price}</strong></p>
                         <Button><Link to={'/description/'+b.id}>WIĘCEJ</Link></Button>
                         <Button clicked={()=>this.handleClick(b)}>DO KOSZYKA</Button>
                     </div>)
