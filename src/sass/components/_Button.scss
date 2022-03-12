@@ -13,8 +13,10 @@
 }
 
 .btn a{
+  display: inline-block;
   width: 100%;
   height: 100%;
+  margin: 4px;
   color: $secondLogo;
   text-decoration: none;
   font-weight: bolder;

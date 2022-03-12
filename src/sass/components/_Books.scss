@@ -14,7 +14,12 @@
     display: block;
   }
   
-  .title, .author{
+  .title{
+    text-align: center;
+    margin: 6px;
+  }
+  .author{
+    font-size: 0.8em;
     text-align: center;
     margin: 6px;
   }
