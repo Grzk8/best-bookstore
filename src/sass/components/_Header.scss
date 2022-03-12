@@ -2,12 +2,10 @@
     width: 100%;
     display: flex;
     justify-content:space-around;
+    position: sticky;
 }
 
 @media screen and (max-width: 900px) {
-    .header{
-        position: sticky;
-    }
     .mainMenu {
         margin-left: 0;
     }

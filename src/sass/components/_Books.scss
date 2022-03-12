@@ -15,8 +15,14 @@
   }
   
   .title{
+    display: block;
+    color: black;
+    font-size: 1em;
     text-align: center;
     margin: 6px;
+  }
+  .title:hover{
+    text-decoration: underline;
   }
   .author{
     font-size: 0.8em;

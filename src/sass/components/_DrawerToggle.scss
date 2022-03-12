@@ -1,7 +1,5 @@
 .drawerToggle {
     display: none;
-
-
 }
 
 .drawerToggle div {
@@ -12,8 +10,8 @@
 
 @media screen and (max-width: 900px) {
     .drawerToggle {
-        margin-top: 40px;
-        width: 50px;
+        margin-top: 20px;
+        width: 40px;
         height: 50px;
         display: flex;
         flex-flow: column;
