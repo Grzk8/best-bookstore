@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import Nav from '../../Navigation/Navigation';
 
 class SelfPickup extends Component {
     render(
 
     ) {
         return <>
-                <h1 className="headerStyle">Odbiór osobisty Księgarnia  oprócz sprzedaży wysyłkowej oferuje również możliwość bezpłatnego odbioru zamówień we własnych Punktach odbioru zamówień (płatność tylko gotówką): </h1>
+                <p className="headerStyle">Księgarnia  oprócz sprzedaży wysyłkowej oferuje również możliwość bezpłatnego odbioru zamówień we własnych Punktach odbioru zamówień: </p>
 
                     <p className="headerStyle">Warszawa ul. Słoneczna 2</p>
 

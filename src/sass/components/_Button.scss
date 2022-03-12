@@ -3,14 +3,24 @@
   font-size: 0.75em;
   margin: 7px;
   left: 2em;
-  background-color: $secondLogo;
+  background-color: white;
   width: 12em;
   height: 2em;
-  //border-radius: 20%;
-  color: white;
+  color: $secondLogo;
   font-weight: bolder;
   cursor: pointer;
+  border: 1px solid $secondLogo;
 }
+
+.btn a{
+  width: 100%;
+  height: 100%;
+  color: $secondLogo;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1em;
+}
+
 .btnSmall{
   width: 5em;
   height: 2em;
@@ -20,3 +30,12 @@
   background-color: $disabled;
   cursor: not-allowed;
 }
+.btn:hover{
+  color: white;
+  background-color: $secondLogo;
+  a{
+    color: white;
+  }
+
+}
+
