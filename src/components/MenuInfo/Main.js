@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Book from "../Layout/Book/Book";
 
 class Main extends Component {
@@ -23,7 +23,7 @@ class Main extends Component {
     render() {
         return <div>
             <h1 className="headerStyle">Nowości</h1>
-            <Book data={this.state.books} addBook={this.props.addBook} newBook={true}/>
+            <Book data={this.state.books} addBook={this.props.addBook} newBook={true} />
         </div>;
     };
 }

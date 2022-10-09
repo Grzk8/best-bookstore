@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
     Redirect
 } from 'react-router-dom';
@@ -11,8 +11,8 @@ class Form extends Component {
             name: {
                 inputtype: 'input',
                 elementConfig: {
-                     type: 'text',
-                     placeholder: 'imię',
+                    type: 'text',
+                    placeholder: 'imię',
                 },
                 value: '',
                 validation: {
@@ -25,8 +25,8 @@ class Form extends Component {
             surname: {
                 inputtype: 'input',
                 elementConfig: {
-                     type: 'text',
-                     placeholder: 'nazwisko',
+                    type: 'text',
+                    placeholder: 'nazwisko',
 
                 },
                 value: '',
@@ -40,8 +40,8 @@ class Form extends Component {
             street: {
                 inputtype: 'input',
                 elementConfig: {
-                     type: 'text',
-                     placeholder: 'ulica',
+                    type: 'text',
+                    placeholder: 'ulica',
                 },
                 value: '',
                 validation: {
@@ -54,8 +54,8 @@ class Form extends Component {
             postalCode: {
                 inputtype: 'input',
                 elementConfig: {
-                     type: 'text',
-                     placeholder: 'kod pocztowy',
+                    type: 'text',
+                    placeholder: 'kod pocztowy',
                 },
                 value: '',
                 validation: {
@@ -70,8 +70,8 @@ class Form extends Component {
             city: {
                 inputtype: 'input',
                 elementConfig: {
-                     type: 'text',
-                     placeholder: 'miejscowość',
+                    type: 'text',
+                    placeholder: 'miejscowość',
                 },
                 value: '',
                 validation: {
@@ -84,8 +84,8 @@ class Form extends Component {
             mail: {
                 inputtype: 'input',
                 elementConfig: {
-                     type: 'email',
-                     placeholder: 'email',
+                    type: 'email',
+                    placeholder: 'email',
                 },
                 value: '',
                 validation: {
@@ -98,10 +98,10 @@ class Form extends Component {
             pickup: {
                 inputtype: 'select',
                 elementConfig: {
-                     options: [
-                         {value: 'odbiór osobisty', displayValue: 'Odbiór osobisty'},
-                         {value: 'przesyłka', displayValue: 'Przesyłka'}
-                     ]
+                    options: [
+                        { value: 'odbiór osobisty', displayValue: 'Odbiór osobisty' },
+                        { value: 'przesyłka', displayValue: 'Przesyłka' }
+                    ]
                 },
                 value: 'fastest',
                 valid: true
@@ -109,8 +109,8 @@ class Form extends Component {
             comments: {
                 inputtype: 'textarea',
                 elementConfig: {
-                     type: 'text',
-                     placeholder: "uwagi"
+                    type: 'text',
+                    placeholder: "uwagi"
                 },
                 value: '',
                 touched: true
@@ -122,19 +122,19 @@ class Form extends Component {
     checkValidity(value, rules) {
         let isValid = true;
 
-        if ( !rules ) {
+        if (!rules) {
             return true;
         }
-        if(rules.required) {
+        if (rules.required) {
             isValid = value.trim() !== '' && isValid;
         }
-        if(rules.minLenght) {
+        if (rules.minLenght) {
             isValid = value.length >= rules.minLenght && isValid;
         }
-        if(rules.maxLenght) {
+        if (rules.maxLenght) {
             isValid = value.length <= rules.maxLenght && isValid;
         }
-        if(rules.mail) {
+        if (rules.mail) {
             const isMail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
             isValid = isMail.test(value) && isValid;
         }
@@ -145,18 +145,18 @@ class Form extends Component {
         return isValid;
     }
     inputChangedHandler = (event, inputId) => {
-        const updatedOrderForm = {...this.state.orderForm};
-        const updatedFormElement = {...updatedOrderForm[inputId]};
+        const updatedOrderForm = { ...this.state.orderForm };
+        const updatedFormElement = { ...updatedOrderForm[inputId] };
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
         updatedFormElement.touched = true;
         updatedOrderForm[inputId] = updatedFormElement;
-        
+
         let updatedFormIsValid = true;
         for (let inputId in updatedOrderForm) {
             updatedFormIsValid = updatedOrderForm[inputId].valid && updatedFormIsValid;
         }
-        this.setState({orderForm: updatedOrderForm, formIsValid: updatedFormIsValid});
+        this.setState({ orderForm: updatedOrderForm, formIsValid: updatedFormIsValid });
     };
 
     handleSubmitForm = (e) => {
@@ -167,55 +167,56 @@ class Form extends Component {
         };
 
         let boo = [];
-        const b = this.props.basket.map(b=> boo = [b.title, b.author, b.price])
+        const b = this.props.basket.map(b => boo = [b.title, b.author, b.price])
 
         const order = {
             orderData: formData,
             orderedBooks: b,
-            totalPrice: this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2)
+            totalPrice: this.props.basket.reduce((x, y) => x + y.price, 0).toFixed(2)
         };
 
-        fetch(`https://best-bookstore-default-rtdb.firebaseio.com/orders.json`,{method: 'POST',
-            body:JSON.stringify(order),headers: {
+        fetch(`https://best-bookstore-default-rtdb.firebaseio.com/orders.json`, {
+            method: 'POST',
+            body: JSON.stringify(order), headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             }
         })
-            .then(resp => resp.json(), this.setState({orderCompleted: true}));
+            .then(resp => resp.json(), this.setState({ orderCompleted: true }));
     }
 
     render() {
         const formElementsArray = [];
         for (let key in this.state.orderForm) {
             formElementsArray.push({
-                id:key,
+                id: key,
                 config: this.state.orderForm[key]
             })
         }
-        if(this.state.orderCompleted){
-            return<Redirect to="/orderCompleted"/>
+        if (this.state.orderCompleted) {
+            return <Redirect to="/orderCompleted" />
         }
         return (
 
-                <>
-                    <form className="tableContainer" onSubmit={this.handleSubmitForm}>
-                        <h1>Wpisz swoje dane</h1>
-                        <span>{this.state.errorMsg}</span>
-                        {formElementsArray.map(formElement => (
-                            <Input
-                                key={formElement.id}
-                                inputtype={formElement.config.inputtype}
-                                elementConfig={formElement.config.elementConfig}
-                                value={formElement.config.value}
-                                label={formElement.config.label}
-                                invalid={!formElement.config.valid}
-                                shouldValidate={formElement.config.validation}
-                                touched={formElement.config.touched}
-                                changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
-                        ))}
-                        <Button disabled={!this.state.formIsValid}>Wyślij</Button>
-                    </form>
-                </>
+            <>
+                <form className="tableContainer" onSubmit={this.handleSubmitForm}>
+                    <h1>Wpisz swoje dane</h1>
+                    <span>{this.state.errorMsg}</span>
+                    {formElementsArray.map(formElement => (
+                        <Input
+                            key={formElement.id}
+                            inputtype={formElement.config.inputtype}
+                            elementConfig={formElement.config.elementConfig}
+                            value={formElement.config.value}
+                            label={formElement.config.label}
+                            invalid={!formElement.config.valid}
+                            shouldValidate={formElement.config.validation}
+                            touched={formElement.config.touched}
+                            changed={(event) => this.inputChangedHandler(event, formElement.id)} />
+                    ))}
+                    <Button disabled={!this.state.formIsValid}>Wyślij</Button>
+                </form>
+            </>
 
         );
     }

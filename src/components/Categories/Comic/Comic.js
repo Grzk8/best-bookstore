@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component, useEffect } from 'react';
 import Book from "../../Layout/Book/Book";
 
 class Comic extends Component {
@@ -8,23 +8,32 @@ class Comic extends Component {
 
     componentDidMount() {
 
-        fetch(`https://best-bookstore-default-rtdb.firebaseio.com//books.json`)
-            .then(resp => resp.json())
+        let response
+        fetch('http://localhost:8000/api/items/category', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "category": "komiksy"
+            })
+        })
+            .then(response => response.json())
+            .then(json => response = json.category)
             .then(data => {
                 console.log(data, "from API");
-
-                const newList = data.filter(item => {
-                    return item.category === "Komiksy" ;
-                });
-
+                const newList = data
+                console.log(response);
                 this.setState({
                     books: newList,
-                })
-            })
+                });
+            });
     };
+
+
     render() {
         return <>
-            <Book data={this.state.books} addBook={this.props.addBook}/>
+            <Book data={this.state.books} addBook={this.props.addBook} />
         </>;
     };
 };

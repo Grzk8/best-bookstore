@@ -1,20 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Form from './Form/Form';
 import Button from '../Layout/Button/Button';
 
 class Basket extends Component {
-        state = {
-            basket: [],
-            showform: false
-        };
+    state = {
+        basket: [],
+        showform: false
+    };
 
-        showForm = () =>{
+    showForm = () => {
 
-            this.setState({
-                    showform: this.state.showform ? false : true
+        this.setState({
+            showform: this.state.showform ? false : true
         }
-            )};
-    handleRemove = (id) =>{
+        )
+    };
+    handleRemove = (id) => {
         this.props.removeBook(id)
     }
     render(
@@ -22,26 +23,26 @@ class Basket extends Component {
     ) {
         return <>
 
-                <h1 className="headerStyle">KOSZYK</h1>
-                {
-                    this.props.basket.map(b=>
-                            <table className="tableContainer" key={b.id}>
-                                <tbody>
-                                    <tr>
-                                            <td>{b.title}</td>
-                                            <td>{b.author}</td>
-                                            <td>{b.price}<Button clicked={()=>this.handleRemove(b.id)}>USUŃ Z LISTY</Button></td>
-                                    </tr>
-                                </tbody>
+            <h1 className="headerStyle">KOSZYK</h1>
+            {
+                this.props.basket.map(b =>
+                    <table className="tableContainer" key={b.id}>
+                        <tbody>
+                            <tr>
+                                <td>{b.title}</td>
+                                <td>{b.author}</td>
+                                <td>{b.price}<Button clicked={() => this.handleRemove(b.id)}>USUŃ Z LISTY</Button></td>
+                            </tr>
+                        </tbody>
 
-                            </table>
-                    )
-                }
-                <p className="totalprice">Łącznie do zapłaty :<span> {this.props.basket ? this.props.basket.reduce((x, y) => x+y.price, 0).toFixed(2):0} zł</span></p>
-                
-                <Button clicked={this.showForm}>KUPUJĘ</Button>
+                    </table>
+                )
+            }
+            <p className="totalprice">Łącznie do zapłaty :<span> {this.props.basket ? this.props.basket.reduce((x, y) => x + y.price, 0).toFixed(2) : 0} zł</span></p>
 
-                {this.state.showform && <Form basket={this.props.basket}/> }
+            <Button clicked={this.showForm}>KUPUJĘ</Button>
+
+            {this.state.showform && <Form basket={this.props.basket} />}
 
         </>;
     }

@@ -16,13 +16,14 @@
   width: 5em;
   height: 2em;
 }
-
-.btn:disabled{
-  background-color: $disabled;
-  cursor: not-allowed;
-}
 .btn:hover{
   color: white;
   background-color: $secondLogo;
 }
+.btn:disabled{
+  color: $secondLogo;
+  background-color: $disabled;
+  cursor: not-allowed;
+}
+
 
