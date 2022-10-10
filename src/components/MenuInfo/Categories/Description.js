@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Button from "../Layout/Button/Button";
+import Button from "../../Layout/Button/Button";
 
 class Description extends Component {
     state={

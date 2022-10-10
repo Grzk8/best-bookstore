@@ -3,7 +3,7 @@ import MenuItems from '../MenuItems/MenuItems';
 import Categories from '../MenuItems/Categories/Categories';
 import Backdrop from '../../Layout/Backdrop/Backdrop';
 import BasketButton from '../BasketButton/BasketButton';
-import Logo from '../../Logo/Logo'
+import Logo from '../../Layout/Logo/Logo'
 
 const sideDrawer = (props) => {
     let attachedClasses = ['drawer', 'close'];

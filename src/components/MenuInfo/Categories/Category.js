@@ -1,35 +1,32 @@
 import React, { Component, useEffect } from 'react';
 import Book from "../../Layout/Book/Book";
 
-class Comic extends Component {
+class Category extends Component {
     state = {
         books: [],
     };
 
     componentDidMount() {
-
-        let response
+        const category = this.props.category;
+        let response;
         fetch('http://localhost:8000/api/items/category', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                "category": "komiksy"
+                "category": category
             })
         })
             .then(response => response.json())
             .then(json => response = json.category)
             .then(data => {
-                console.log(data, "from API");
                 const newList = data
-                console.log(response);
                 this.setState({
                     books: newList,
                 });
             });
     };
-
 
     render() {
         return <>
@@ -38,4 +35,4 @@ class Comic extends Component {
     };
 };
 
-export default Comic;
+export default Category;

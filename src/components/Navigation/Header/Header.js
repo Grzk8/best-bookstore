@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../Logo/Logo';
+import Logo from '../../Layout/Logo/Logo';
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 import BasketButton from "../BasketButton/BasketButton";
 
