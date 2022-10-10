@@ -8,7 +8,8 @@ class Description extends Component {
     componentDidMount() {
         console.log(this.props);
         const{id}=this.props.match.params;
-        fetch(`https://best-bookstore-default-rtdb.firebaseio.com/books/` + (id-1) + `.json`)
+        console.log(id);
+        fetch(`http://localhost:8000/api/items/description/${{id}}`)
             .then(resp => resp.json())
             .then(data => {
                 this.setState({
@@ -37,3 +38,5 @@ class Description extends Component {
 
 
 export default Description;
+
+// http://localhost:8000/api/items/description/${id}

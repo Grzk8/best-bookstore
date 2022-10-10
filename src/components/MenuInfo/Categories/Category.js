@@ -9,14 +9,11 @@ class Category extends Component {
     componentDidMount() {
         const category = this.props.category;
         let response;
-        fetch('http://localhost:8000/api/items/category', {
-            method: "POST",
+        fetch(`http://localhost:8000/api/items/category/${category}`, {
+            method: "GET",
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                "category": category
-            })
         })
             .then(response => response.json())
             .then(json => response = json.category)
