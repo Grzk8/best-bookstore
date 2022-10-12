@@ -19,9 +19,9 @@ class Book extends Component {
             <div className="books" >{
                 this.props.data.map(b=>
                     <div className="book" key={b._id}>
-                        <Link to={'/description/'+b.id}><img className="cover" src={b.image} height="180px" width="180px"></img></Link>
+                        <Link to={'/description/'+b._id} image={b.image}><img className="cover" src={b.image} height="180px" width="180px"></img></Link>
                         {newReleases}
-                        <Link className="title" to={'/description/'+b.id}>{b.title}</Link>
+                        <Link className="title" to={'/description/'+b._id}>{b.title}</Link>
                         <p className="author">{b.author}</p>
                         <p className="author">Cena: <strong>{b.price}</strong> zł</p>
                         <Button clicked={()=>this.handleClick(b)}>DO KOSZYKA</Button>

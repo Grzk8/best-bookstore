@@ -51,7 +51,7 @@ class App extends Component {
                         <Route path='/popularsience' render={props=><Category {...props} addBook={ this.addBook} basket={this.state.basket} category="popularnonaukowe"/>}/>
                         <Route path='/comic' render={props=><Category {...props} addBook={ this.addBook} basket={this.state.basket} category="komiksy"/>}/>
                         <Route path='/thiller' render={props=><Category {...props} addBook={ this.addBook} basket={this.state.basket} category="thiller"/>}/>
-                        <Route path='/description/:id' render={props=><Description {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
+                        <Route path='/description/:_id' render={props=><Description {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/orderCompleted' render={props=><OrderCompleted {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                         <Route path='/login' render={props=><Login {...props} addBook={ this.addBook} basket={this.state.basket} />}/>
                 </Navigation>
