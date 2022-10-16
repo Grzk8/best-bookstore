@@ -10,8 +10,8 @@ class Book extends Component {
 
     render(){
 
-        var newReleases = null;
-        var newRel = <div className='new'><strong>Nowość</strong></div>;
+        let newReleases = null;
+        let newRel = <div className='new'><strong>Nowość</strong></div>;
         this.props.newBook ? newReleases = newRel : null
         
         return(

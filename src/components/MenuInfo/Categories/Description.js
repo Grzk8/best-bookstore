@@ -37,7 +37,7 @@ import Button from "../../Layout/Button/Button";
 // }
 class Description extends Component {
     state = {
-        item: []
+        books: []
     }
 
 
@@ -55,7 +55,7 @@ class Description extends Component {
         .then(data => {
             const it = data
             this.setState({
-                item: it
+                books: it
             });
         });
     }
@@ -65,15 +65,15 @@ class Description extends Component {
 
     render() {
 
-        if (this.state.item === null) {
+        if (this.state.books === null) {
             return null
         }
 
         return <>
             <div basket={this.props.basket}>
-                <h1 className="headerStyle">{this.state.item.title}</h1>
-                <h2 className="headerStyle">{this.state.item.author}</h2>
-                <p className="headerStyle">{this.state.item.description}</p>
+                <h1 className="headerStyle">{this.state.books.title}</h1>
+                <h2 className="headerStyle">{this.state.books.author}</h2>
+                <p className="headerStyle">{this.state.books.description}</p>
                 <Button clicked={this.getBackUrl}>WRÓĆ</Button>
             </div>
         </>;

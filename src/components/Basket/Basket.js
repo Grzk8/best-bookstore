@@ -17,9 +17,10 @@ class Basket extends Component {
     };
     handleRemove = (id) => {
         this.props.removeBook(id)
+        console.log(this.state)
     }
-    render(
 
+    render(
     ) {
         return <>
 
@@ -38,7 +39,7 @@ class Basket extends Component {
                     </table>
                 )
             }
-            <p className="totalprice">Łącznie do zapłaty :<span> {this.props.basket ? this.props.basket.reduce((x, y) => x + y.price, 0).toFixed(2) : 0} zł</span></p>
+            <p className="totalprice">Łącznie do zapłaty :<span> {this.props.basket ? this.props.basket.reduce((x, y) => x + parseFloat(y.price), 0).toFixed(2) : 0} zł</span></p>
 
             <Button clicked={this.showForm}>KUPUJĘ</Button>
 
