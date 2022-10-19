@@ -24,26 +24,29 @@ class Search extends Component {
 
     handleSubmitForm = e => {
         e.preventDefault();
-        console.log(this.state.searching);
-        fetch(`https://best-bookstore-default-rtdb.firebaseio.com//books.json`)
-            .then(resp => resp.json())
+        let response;
+        fetch(`http://localhost:8000/api/items/search`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ searching: this.state.searching })
+        })
+            .then(response => response.json())
+            .then(json => response = json.search)
             .then(data => {
-                const newList = data.filter(item => {
-                    return this.state.searching 
-                });
-
+                const newList = data
                 this.setState({
                     books: newList,
-                })
-            })
+                });
+            });
     }
 
     render() {
         return (<>
             <p className="headerStyle">Szukaj</p>
             <form className="tableContainer" onSubmit={this.handleSubmitForm}>
-            <Input className="input" inputtype="text" name="search" value={this.state.searching} label="search" placeholder="tytuł książki lub autor" changed={this.handleSearchHandle} />
-                {/* <input className="input" type="text" name="search" value={this.state.searchForm.value} label="search" placeholder="tytuł książki lub autor" onChange={this.handleSearchHandle}></input> */}
+                <Input className="input" inputtype="text" name="search" value={this.state.searching} label="search" placeholder="tytuł książki lub autor" changed={this.handleSearchHandle} />
                 <Button>Szukaj</Button>
             </form>
             <Book data={this.state.books} addBook={this.props.addBook} />
@@ -51,8 +54,4 @@ class Search extends Component {
     }
 }
 
-
 export default Search;
-
-// <Input className="input" inputtype="text" name="s" value={this.state.searching} changed={this.handleSearchHandle} />
-// <Input className="input" type="text" name="search" value="" label="search" placeholder="tytuł"></Input>
