@@ -197,7 +197,7 @@ class Form extends Component {
             return <Redirect to="/orderCompleted" />
         }
         return (
-
+            
             <>
                 <form className="tableContainer" onSubmit={this.handleSubmitForm}>
                     <h1>Wpisz swoje dane</h1>
