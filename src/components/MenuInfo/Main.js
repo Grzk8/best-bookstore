@@ -1,37 +1,38 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState} from 'react';
 import Book from "../Layout/Book/Book";
 
-class Main extends Component {
-    state = {
-        books: [],
-    };
+const Main = props => {
+    const [books, setBooks] = useState();
+    const [isLoading, setIsLoading] = useState(false);
+    
 
-    componentDidMount() {
-        const category = this.props.category;
-        let response;
-        fetch(`http://localhost:8000/api/items/newest`, {
-            method: "GET",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
-            .then(response => response.json())
-            .then(json => response = json.newest)
-            .then(data => {
-                const newList = data
-                this.setState({
-                    books: newList,
-                });
-                console.log(this.state.books)
-            });
-    };
-    render() {
-        return <>
-            <h1 className="headerStyle">Nowości</h1>
-            <Book data={this.state.books} addBook={this.props.addBook} newBook={true} />
-        </>;
-    };
-}
+    useEffect(() => {
+        const fetchNewest = async () => {
+            setIsLoading(true);
+            try {
+                const response = await fetch(`http://localhost:8000/api/items/newest`, {
+                    method: "GET",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                const responseData = await response.json();
+                setBooks(responseData.newest);
+                setIsLoading(false);
+            } catch {
+                (err) => console.log(err)
+            }
+            setIsLoading(false);
+        }
+        fetchNewest()
+    }, [])
+
+    return <>
+        <h1 className="headerStyle">Nowości</h1>
+        {isLoading && (<p>loading...</p>)}
+        { !isLoading && books && <Book data={books} addBook={props.addBook} newBook={true} />}
+    </>;
+};
 
 export default Main;
 
@@ -57,3 +58,24 @@ export default Main;
 //     </div>;
 // };
 // }
+
+
+    // componentDidMount() {
+    //     const category = this.props.category;
+    //     let response;
+    //     fetch(`http://localhost:8000/api/items/newest`, {
+    //         method: "GET",
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     })
+    //         .then(response => response.json())
+    //         .then(json => response = json.newest)
+    //         .then(data => {
+    //             const newList = data
+    //             this.setState({
+    //                 books: newList,
+    //             });
+    //             console.log(this.state.books)
+    //         });
+    // };

@@ -1,52 +1,52 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Form from './Form/Form';
 import Button from '../Layout/Button/Button';
 
-class Basket extends Component {
-    state = {
-        basket: [],
-        showform: false
+const Basket = props => {
+
+    const [basket, setBasket] = useState();
+    const [showForm, setShowForm] = useState(false);
+
+    const showFormHandler = () => {
+
+        // this.setState({
+        //     showform: this.state.showform ? false : true
+        // }
+        // )
+        setShowForm(showform ? false : true)
     };
 
-    showForm = () => {
+    
+    const handleRemove = (id) => {
+        props.removeBook(id)
+        //console.log(this.state)
+    }
 
-        this.setState({
-            showform: this.state.showform ? false : true
+    console.log(props);
+    return <>
+        <h1 className="headerStyle">KOSZYK</h1>
+        {
+            props.basket.map(b =>
+                <table className="tableContainer" key={b._id}>
+                    <tbody>
+                        <tr>
+                            <td>{b.title}</td>
+                            <td>{b.author}</td>
+                            <td>{b.price}<Button clicked={() => handleRemove(b.id)}>USUŃ Z LISTY</Button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            )
         }
-        )
-    };
-    handleRemove = (id) => {
-        this.props.removeBook(id)
-        console.log(this.state)
-    }
+        <p className="totalprice">Łącznie do zapłaty :<span> {props.basket ? props.basket.reduce((x, y) => x + parseFloat(y.price), 0).toFixed(2) : 0} zł</span></p>
 
-    render(
-    ) {
-        return <>
+        <Button clicked={showFormHandler}>KUPUJĘ</Button>
 
-            <h1 className="headerStyle">KOSZYK</h1>
-            {
-                this.props.basket.map(b =>
-                    <table className="tableContainer" key={b.id}>
-                        <tbody>
-                            <tr>
-                                <td>{b.title}</td>
-                                <td>{b.author}</td>
-                                <td>{b.price}<Button clicked={() => this.handleRemove(b.id)}>USUŃ Z LISTY</Button></td>
-                            </tr>
-                        </tbody>
+        {showForm && <Form basket={props.basket} />}
 
-                    </table>
-                )
-            }
-            <p className="totalprice">Łącznie do zapłaty :<span> {this.props.basket ? this.props.basket.reduce((x, y) => x + parseFloat(y.price), 0).toFixed(2) : 0} zł</span></p>
+    </>;
 
-            <Button clicked={this.showForm}>KUPUJĘ</Button>
-
-            {this.state.showform && <Form basket={this.props.basket} />}
-
-        </>;
-    }
 }
 
 
