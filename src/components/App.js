@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { HashRouter, Route } from 'react-router-dom';
 import Main from './MenuInfo/Main';
 import AboutUs from './MenuInfo/AboutUs/AboutUs';
@@ -20,35 +20,37 @@ const App = () => {
     };
 
     const removeBook = (id) => {
-        const newBasket = basket.filter(r => {
-            return r.id !== id;
+        const removedFromBasket = basket.filter(r => {
+            return r._id !== id;
         });
-        setBasket(newBasket)
+        setBasket(removedFromBasket);
     };
+
+    const routes = <>
+        <Route exact path='/' render={props => <Main {...props} addBook={addBook} basket={basket} />} />
+        <Route path='/aboutUs' render={props => <AboutUs {...props} basket={basket} />} />
+        <Route path='/selfPickup' render={props => <SelfPickup {...props} basket={basket} />} />
+        <Route path='/contact' render={props => <Contact {...props} basket={basket} />} />
+        <Route path='/search' render={props => <Search {...props} addBook={addBook} basket={basket} />} />
+        <Route path='/basket' render={props => <Basket {...props} removeBook={removeBook} basket={basket} />} />
+        <Route path='/sf' render={props => <Category {...props} addBook={addBook} basket={basket} category="s-f" />} />
+        <Route path='/popularsience' render={props => <Category {...props} addBook={addBook} basket={basket} category="popularnonaukowe" />} />
+        <Route path='/comic' render={props => <Category {...props} addBook={addBook} basket={basket} category="komiksy" />} />
+        <Route path='/thiller' render={props => <Category {...props} addBook={addBook} basket={basket} category="thiller" />} />
+        <Route path='/description/:_id' render={props => <Description {...props} basket={basket} />} />
+        <Route path='/orderCompleted' render={props => <OrderCompleted {...props} basket={basket} />} />
+        <Route path='/login' render={props => <Login {...props} basket={basket} />} />
+    </>
 
     return (
         <div className="navigation">
             <HashRouter>
                 <Navigation basket={basket}>
-                    <Route exact path='/' render={props => <Main {...props} addBook={addBook} basket={basket} />} />
-                    <Route path='/aboutUs' render={props => <AboutUs {...props} addBook={addBook} basket={basket} />} />
-                    <Route path='/selfPickup' render={props => <SelfPickup {...props} addBook={addBook} basket={basket} />} />
-                    <Route path='/contact' render={props => <Contact {...props} addBook={addBook} basket={basket} />} />
-                    <Route path='/search' render={props => <Search {...props} addBook={addBook} basket={basket} />} />
-                    <Route path='/basket' render={props => <Basket {...props} removeBook={removeBook} addBook={addBook} basket={basket} />} />
-                    <Route path='/sf' render={props => <Category {...props} addBook={addBook} basket={basket} category="s-f" />} />
-                    <Route path='/popularsience' render={props => <Category {...props} addBook={addBook} basket={basket} category="popularnonaukowe" />} />
-                    <Route path='/comic' render={props => <Category {...props} addBook={addBook} basket={basket} category="komiksy" />} />
-                    <Route path='/thiller' render={props => <Category {...props} addBook={addBook} basket={basket} category="thiller" />} />
-                    <Route path='/description/:_id' render={props => <Description {...props} addBook={addBook} basket={basket} />} />
-                    <Route path='/orderCompleted' render={props => <OrderCompleted {...props} addBook={addBook} basket={basket} />} />
-                    <Route path='/login' render={props => <Login {...props} addBook={addBook} basket={basket} />} />
+                    {routes}
                 </Navigation>
             </HashRouter>
         </div>
-
     );
-
 };
 
 export default App;

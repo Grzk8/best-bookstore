@@ -9,20 +9,20 @@ const header = props => {
     let crit = "(max-width: 700px)";
     let mobile = window.matchMedia(crit).matches
 
-    if(mobile) {
+    if (mobile) {
         fontSize = '2em'
     } else {
         fontSize = '4em'
     };
 
-    return(
-    <div className='header'>
-        
-            <DrawerToggle clicked={props.drawerToggleClicked}/>    
-            <Logo fontSize={fontSize}/>
-            <BasketButton basket={props.basket} height='2em' width='4em'/>
-        
-    </div>
-    )};
+    return (
+        <div className='header'>
+
+            <DrawerToggle clicked={props.drawerToggleClicked} />
+            <Logo fontSize={fontSize} />
+            <BasketButton basket={props.basket} totalPrice={props.totalPrice} height='2em' width='4em' />
+        </div>
+    )
+};
 
 export default header;

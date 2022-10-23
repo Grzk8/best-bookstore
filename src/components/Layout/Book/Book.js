@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
 const Book = props => {
-    
-   
+
     const handleClick = book => {
         props.addBook(book)
     };
@@ -27,8 +26,7 @@ const Book = props => {
                     </div>)
             }</div>
         </>
-    )
-
+    );
 };
 
 export default Book;

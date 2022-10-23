@@ -6,7 +6,7 @@ import Button from '../../Layout/Button/Button';
 class Search extends Component {
     state = {
         books: [],
-        searching: ' ',
+        searching: '',
         searchForm: {
             search: {
                 inputtype: 'input',
