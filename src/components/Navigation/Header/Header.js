@@ -22,7 +22,7 @@ const header = props => {
             <Logo fontSize={fontSize} />
             <BasketButton basket={props.basket} totalPrice={props.totalPrice} height='2em' width='4em' />
         </div>
-    )
+    );
 };
 
 export default header;

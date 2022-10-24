@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const basketButton = props => {
+
     return (
         <NavLink to="/basket" className='basket' activeClassName="active" >
             <div className="basketLogo" style={{ height: props.height, width: props.width }}></div>

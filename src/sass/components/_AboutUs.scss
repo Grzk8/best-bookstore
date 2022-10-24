@@ -1,23 +1,18 @@
-.headerStyle{
-    text-align: center;
-    padding: 1.2em;
-    color: black;
-  }
-  .booksImage{
-    width: 40em;
-    height: 40em;
-    background-position: center;
-    background-size: cover;
-    background-image: url("../assets/images/books.png");
-    display: flow;
-    left: 40em;
-    right: 40em;
-    margin: 0 auto;
-  }
+.booksImage {
+  width: 40em;
+  height: 40em;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../assets/images/books.png");
+  display: flow;
+  left: 40em;
+  right: 40em;
+  margin: 0 auto;
+}
 
-  @media screen and (max-width: 900px) {
-    .booksImage {
-      width: 100%;
-    
-    }
+@media screen and (max-width: 900px) {
+  .booksImage {
+    width: 100%;
+
   }
+}

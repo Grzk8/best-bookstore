@@ -1,50 +1,54 @@
-.books{
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .book{
-    margin: 3px;
-    border: 1px solid $bookBorder;
-    background-color: $bookBackground;
-    padding: 0.5em;
-    width: 200px;
-    display: block;
-  }
-  
-  .title{
-    display: block;
-    color: black;
-    font-size: 1em;
-    text-align: center;
-    margin: 6px;
-  }
-  .title:hover{
-    text-decoration: underline;
-  }
-  .author{
-    font-size: 0.8em;
-    text-align: center;
-    color: black;
-    margin: 6px;
-  }
-  .cover{
-    //position: relative;
-    //left: 2.3em;
-    margin: 0, auto;
-  }
+.books {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  .btn2 {
-    left: 30em;
-  }
-  .new{
-    position: relative;
-    bottom: 180px;
-    text-align: center;
-    color: white;
-    width:70px;
-    height: 20px;
-    background-color: $primaryColorDark;
-  }
+.book {
+  margin: 3px;
+  border: 1px solid $bookBorder;
+  background-color: $bookBackground;
+  padding: 0.5em;
+  width: 200px;
+  display: block;
+}
+
+.title {
+  display: block;
+  color: black;
+  font-size: 1em;
+  text-align: center;
+  margin: 6px;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.author {
+  font-size: 0.8em;
+  text-align: center;
+  color: black;
+  margin: 6px;
+}
+
+.cover {
+  //position: relative;
+  //left: 2.3em;
+  margin: 0, auto;
+}
+
+.btn2 {
+  left: 30em;
+}
+
+.new {
+  position: relative;
+  bottom: 180px;
+  text-align: center;
+  color: white;
+  width: 70px;
+  height: 20px;
+  background-color: $primaryColorDark;
+}

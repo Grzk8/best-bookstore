@@ -28,7 +28,7 @@ const Basket = props => {
                 </tbody>
 
             </table>
-        )};
+        )}
         <p className="totalprice">Łącznie do zapłaty :<span> {totalPrice} zł</span></p>
         <Button clicked={showFormHandler}>KUPUJĘ</Button>
         {showForm && totalPrice && <Form basket={props.basket} />}

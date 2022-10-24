@@ -1,40 +1,35 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 import Header from './Header/Header'
 import Footer from './Footer/Footer';
 import SideDrawer from './SideDrawer/SideDrawer';
 import MenuItems from './MenuItems/MenuItems'
 
-class Navigation extends Component {
-    state = {
-        showSideDrawer: false
+const Navigation = props => {
+    const [showSideDrawer, setShowSideDrawer] = useState(false);
+
+    const sideDrawerToggleHandler = () => {
+        setShowSideDrawer(prevState => !prevState)
     };
 
-    sideDrawerToggleHandler = () => {
-        this.setState((prevState) => {
-            return {showSideDrawer: !prevState.showSideDrawer}
-        });
+    const sideDrawerClosedHandler = () => {
+        setShowSideDrawer(false);
     };
 
-    sideDrawerClosedHandler = () => {
-        this.setState({showSideDrawer: false});
-    };
-
-    render() {
-        return (<div className="container">
-
-            <Header drawerToggleClicked={this.sideDrawerToggleHandler} basket={this.props.basket}/>
-            <MenuItems/>
-            <SideDrawer open={this.state.showSideDrawer}
-             closed={this.sideDrawerClosedHandler}
-             basket={this.props.basket}/>
+    return (
+        <div className="container">
+            <Header drawerToggleClicked={sideDrawerToggleHandler} basket={props.basket} />
+            <MenuItems />
+            <SideDrawer open={showSideDrawer}
+                closed={sideDrawerClosedHandler}
+                basket={props.basket} />
             <div className="container">
                 <div className="mainWindow">
-                    {this.props.children}
+                    {props.children}
                 </div>
             </div>
             <Footer />
-        </div>);
-    };
+        </div>
+    );
 };
 
 export default Navigation;

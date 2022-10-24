@@ -1,35 +1,37 @@
-import React, { Component, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Book from "../../Layout/Book/Book";
 
-class Category extends Component {
-    state = {
-        books: [],
-    };
+const Category = props => {
+    const [books, setBooks] = useState();
+    const [isLoading, setIsLoading] = useState(false);
 
-    componentDidMount() {
-        const category = this.props.category;
-        let response;
-        fetch(`http://localhost:8000/api/items/category/${category}`, {
-            method: "GET",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
-            .then(response => response.json())
-            .then(json => response = json.category)
-            .then(data => {
-                const newList = data
-                this.setState({
-                    books: newList,
-                });
-            });
-    };
+    useEffect(() => {
+        const fetchCategory = async () => {
+            const category = props.category;
+            setIsLoading(true);
+            try {
+                const response = await fetch(`http://localhost:8000/api/items/category/${category}`, {
+                    method: "GET",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                const responseData = await response.json();
+                setBooks(responseData.category);
+                setIsLoading(false);
+            } catch {
+                (err) => console.log(err)
+            }
+            setIsLoading(false);
+        }
+        fetchCategory();
+    }, []);
 
-    render() {
-        return <>
-            <Book data={this.state.books} addBook={this.props.addBook} />
-        </>;
-    };
+    return <>
+        <h1 className="headerStyle">{props.category.toUpperCase()}</h1>
+        {isLoading && <div className="loader">Loading...</div>}
+        {!isLoading && books && <Book data={books} addBook={props.addBook} />}
+    </>
 };
 
 export default Category;

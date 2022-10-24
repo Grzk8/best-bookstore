@@ -1,17 +1,18 @@
-.mapouter{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 4em;
-  }
-  iframe {
-    margin:0 auto;
-    display:block;
-    width: 500px;
-    height: 500px;
+.mapouter {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4em;
+}
+
+iframe {
+  margin: 0 auto;
+  display: block;
+  width: 500px;
+  height: 500px;
 }
 
 @media screen and (max-width: 900px) {
-  iframe{
+  iframe {
     width: 300px;
     height: 300px;
   }

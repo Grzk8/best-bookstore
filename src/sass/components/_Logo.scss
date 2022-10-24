@@ -1,12 +1,14 @@
-.logo{
+.logo {
     font-weight: bolder;
     margin-top: 40px;
     font-size: 0.8em;
-    .logoColor1{
+
+    .logoColor1 {
         color: $primaryColorDark;
     }
-    .logoColor2{
-        color: $secondLogo;  
+
+    .logoColor2 {
+        color: $secondLogo;
     }
 }
 

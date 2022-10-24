@@ -28,7 +28,7 @@ const Main = props => {
 
     return <>
         <h1 className="headerStyle">Nowości</h1>
-        {isLoading && (<p>loading...</p>)}
+        {isLoading && <div className="loader">Loading...</div>}
         {!isLoading && books && <Book data={books} addBook={props.addBook} newBook={true} />}
     </>
 };

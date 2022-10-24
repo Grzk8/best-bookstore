@@ -1,33 +1,36 @@
-.basket{
+.basket {
   margin-top: 30px;
 }
-.basketLogo{
+
+.basketLogo {
+  background-image: url(".././assets/images/basket.png");
+  background-size: contain;
+  position: relative;
+  left: 0.5em;
+  background-repeat: no-repeat;
+}
+
+.inBasket {
+  font-size: 0.6em;
+  padding: 0;
+  text-align: center;
+  color: black;
+}
+
+.basketLogoSmall {
+  .basketLogo {
+    width: 3em;
+    height: 2em;
     background-image: url(".././assets/images/basket.png");
     background-size: contain;
     position: relative;
-    left: 0.5em;
+    left: 4em;
     background-repeat: no-repeat;
-}
-  .inBasket{
-    font-size: 0.6em;
-    padding: 0;
-    text-align: center;
-    color: black;
   }
 
-  .basketLogoSmall {
-    .basketLogo{
-      width: 3em;
-      height: 2em;
-      background-image: url(".././assets/images/basket.png");
-      background-size: contain;
-      position: relative;
-      left: 4em;
-      background-repeat: no-repeat;
+  .inBasket {
+    padding: 0;
   }
-    .inBasket{
-      padding: 0;
-    }
 }
 
 @media screen and (max-width: 900px) {
@@ -37,12 +40,15 @@
     font-size: 0.9em;
     margin: 40px;
   }
-  .basketLogo{
+
+  .basketLogo {
     margin: 0 auto;
   }
-  .inBasket{
+
+  .inBasket {
     margin: 7px;
   }
+
   .inBasket:first-child {
     display: none;
   }

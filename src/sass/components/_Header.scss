@@ -1,15 +1,23 @@
-.header{
+.header {
     width: 100%;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     position: sticky;
+}
+
+.headerStyle {
+    text-align: center;
+    padding: 1.2em;
+    font-style: italic;
+    color: $secondLogo;
 }
 
 @media screen and (max-width: 900px) {
     .mainMenu {
         margin-left: 0;
     }
-    .header .basket{
+
+    .header .basket {
         display: none;
     }
-} 
+}
