@@ -42,7 +42,15 @@ const Search = props => {
     return <>
         <h1 className="headerStyle">Szukaj</h1>
         <form className="tableContainer" onSubmit={handleSubmitForm}>
-            <Input className="input" inputtype="text" name="search" value={searchingValue} label="search" placeholder="tytuł książki lub autor" changed={e => setSearchingValue(e.target.value)} />
+            <Input
+                className="input"
+                inputtype="text"
+                name="search"
+                value={searchingValue}
+                label="search"
+                placeholder="tytuł książki lub autor"
+                changed={e => setSearchingValue(e.target.value)}
+            />
             <Button>Szukaj</Button>
         </form>
         {isLoading && <div className="loader">Loading...</div>}

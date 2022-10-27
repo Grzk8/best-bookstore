@@ -8,7 +8,7 @@ const Navigation = props => {
     const [showSideDrawer, setShowSideDrawer] = useState(false);
 
     const sideDrawerToggleHandler = () => {
-        setShowSideDrawer(prevState => !prevState)
+        setShowSideDrawer(prevState => !prevState);
     };
 
     const sideDrawerClosedHandler = () => {

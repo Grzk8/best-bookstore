@@ -10,7 +10,8 @@ import OrderCompleted from './Basket/Form/OrderCompleted';
 import Navigation from './Navigation/Navigation';
 import Basket from './Basket/Basket';
 import Search from './MenuInfo/Search/Search';
-import Login from './MenuInfo/Login/Login';
+import Login from './Layout/Auth/Login/Login';
+import Signup from './Layout/Auth/Signup/Signup';
 
 const App = () => {
     const [basket, setBasket] = useState([]);
@@ -40,6 +41,7 @@ const App = () => {
         <Route path='/description/:_id' render={props => <Description {...props} basket={basket} />} />
         <Route path='/orderCompleted' render={props => <OrderCompleted {...props} basket={basket} />} />
         <Route path='/login' render={props => <Login {...props} basket={basket} />} />
+        <Route path='/signup' render={props => <Signup {...props} basket={basket} />} />
     </>
 
     return (

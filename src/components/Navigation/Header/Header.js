@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../../Layout/Logo/Logo';
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 import BasketButton from "../BasketButton/BasketButton";
+import Auth from '../../Layout/Auth/Auth';
 
 const header = props => {
 
@@ -17,10 +18,10 @@ const header = props => {
 
     return (
         <div className='header'>
-
             <DrawerToggle clicked={props.drawerToggleClicked} />
             <Logo fontSize={fontSize} />
             <BasketButton basket={props.basket} totalPrice={props.totalPrice} height='2em' width='4em' />
+            <Auth/>
         </div>
     );
 };
