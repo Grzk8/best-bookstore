@@ -1,4 +1,4 @@
-.btn{
+.btn {
   position: relative;
   font-size: 0.75em;
   margin: 7px;
@@ -12,18 +12,18 @@
   border: 1px solid $secondLogo;
 }
 
-.btnSmall{
+.btnSmall {
   width: 5em;
   height: 2em;
 }
-.btn:hover{
+
+.btn:hover {
   color: white;
   background-color: $secondLogo;
 }
-.btn:disabled{
+
+.btn:disabled {
   color: $secondLogo;
   background-color: $disabled;
   cursor: not-allowed;
 }
-
-

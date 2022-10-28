@@ -10,7 +10,7 @@ const input = (props) => {
     }
     switch (props.inputtype) {
         case ('input'):
-            inputElement = <input className={inputClasses.join(' ')}  onChange={props.changed} value={props.value} />;
+            inputElement = <input className={inputClasses.join(' ')} {...props} onChange={props.changed} value={props.value} />;
             break;
         case ('select'):
             inputElement = (
