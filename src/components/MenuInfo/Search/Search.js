@@ -14,30 +14,29 @@ const Search = props => {
         setIsSubmitted(true);
     };
 
-    useEffect(() => {
-        if (isSubmmited) {
-            const fetchSearch = async () => {
-                setIsLoading(true);
-                try {
-                    const response = await fetch(`http://localhost:8000/api/items/search`, {
-                        method: "POST",
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ searching: searchingValue })
-                    })
-                    const responseData = await response.json();
-                    setBooks(responseData.search);
-                    setIsLoading(false);
-                } catch {
-                    (err) => console.log(err)
-                }
+    if (isSubmmited) {
+        const fetchSearch = async () => {
+            setIsLoading(true);
+            try {
+                const response = await fetch('http://localhost:8000/api/items/search', {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ searching: searchingValue })
+                })
+                const responseData = await response.json();
+                setBooks(responseData.search);
                 setIsLoading(false);
+            } catch {
+                (err) => console.log(err)
             }
-            fetchSearch();
-            setIsSubmitted(false);
+            setIsLoading(false);
         }
-    }, [isSubmmited]);
+        fetchSearch();
+        setIsSubmitted(false);
+    }
+
 
     return <>
         <h1 className="headerStyle">Szukaj</h1>

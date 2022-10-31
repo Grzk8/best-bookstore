@@ -1,5 +1,20 @@
 export const UPDATE_FORM = "UPDATE_FORM"
 
+
+export const formReducer = (state, action) => {
+    switch (action.type) {
+        case UPDATE_FORM:
+            const { name, value, hasError, error, touched, isFormValid } = action.data
+            return {
+                ...state,
+                [name]: { ...state[name], value, hasError, error, touched },
+                isFormValid,
+            }
+        default:
+            return state
+    }
+};
+
 export const onInputChange = (name, value, dispatch, formState) => {
     const { hasError, error } = validateInput(name, value)
     let isFormValid = true

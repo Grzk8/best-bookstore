@@ -1,50 +1,36 @@
 import React, { useReducer, useState } from 'react';
+import { useHistory} from 'react-router-dom';
 
-import { UPDATE_FORM, onInputChange, onFocusOut, validateInput } from '../../../../lib/formUtils';
+import { UPDATE_FORM, onInputChange, onFocusOut, validateInput, formReducer } from '../../../../lib/formUtils';
 import Input from "../../Input/Input";
 import Button from "../../Button/Button";
 
 
-const initialState = {
-
-    email: { value: "", touched: false, hasError: true, error: "" },
-    password: { value: "", touched: false, hasError: true, error: "" },
-    passwordRepead: { value: "", touched: false, hasError: true, error: "" },
-    firstName: { value: "", touched: false, hasError: true, error: "" },
-    lastName: { value: "", touched: false, hasError: true, error: "" },
-    street: { value: "", touched: false, hasError: true, error: "" },
-    houseNr: { value: "", touched: false, hasError: true, error: "" },
-    town: { value: "", touched: false, hasError: true, error: "" },
-    postCode: { value: "", touched: false, hasError: true, error: "" },
-    phoneNr: { value: "", touched: false, hasError: true, error: "" },
-    isFormValid: false,
-}
-
-const formReducer = (state, action) => {
-    switch (action.type) {
-        case UPDATE_FORM:
-            const { name, value, hasError, error, touched, isFormValid } = action.data
-            return {
-                ...state,
-                [name]: { ...state[name], value, hasError, error, touched },
-                isFormValid,
-            }
-        default:
-            return state
-    }
-};
-
 const Signup = () => {
 
-    const [formState, dispatch] = useReducer(formReducer, initialState)
+    const [formState, dispatch] = useReducer(formReducer, {
+        email: { value: "", touched: false, hasError: true, error: "" },
+        password: { value: "", touched: false, hasError: true, error: "" },
+        passwordRepead: { value: "", touched: false, hasError: true, error: "" },
+        firstName: { value: "", touched: false, hasError: true, error: "" },
+        lastName: { value: "", touched: false, hasError: true, error: "" },
+        street: { value: "", touched: false, hasError: true, error: "" },
+        houseNr: { value: "", touched: false, hasError: true, error: "" },
+        town: { value: "", touched: false, hasError: true, error: "" },
+        postCode: { value: "", touched: false, hasError: true, error: "" },
+        phoneNr: { value: "", touched: false, hasError: true, error: "" },
+        isFormValid: false,
+    });
+    const [showError, setShowError] = useState(false);
+    const [fetchError, setFetchError] = useState();
+    const [formSubmited, setformSubmited] = useState(false);
 
-    const [showError, setShowError] = useState(false)
+    let history = useHistory();
 
-    const signupSubmitHandler = async e => {
+    const signupSubmitHandler = e => {
         e.preventDefault();
 
         let isFormValid = true
-
         for (const name in formState) {
             const item = formState[name]
             const { value } = item
@@ -66,19 +52,53 @@ const Signup = () => {
                 })
             }
         }
-        if (!isFormValid) {
-            setShowError(true)
+        if (isFormValid) {
+            const fetchSignup = async () => {
+                try {
+                    const response = await fetch(`http://localhost:8000/api/users/signup`, {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            email: formState.email.value,
+                            password: formState.password.value,
+                            firstName: formState.firstName.value,
+                            lastName: formState.lastName.value,
+                            street: formState.street.value,
+                            houseNr: formState.houseNr.value,
+                            postCode: formState.postCode.value,
+                            town: formState.town.value,
+                            phoneNr: formState.phoneNr.value
+                        })
+                    })
+                    if (!response.ok) {
+                        setShowError(true);
+                        throw new Error('Użytkownik o podanym adresie Email istnieje');
+                    }
+                     response.json();
+                     setformSubmited(true);
+                } catch (err) {
+                    setFetchError(err.message);
+                    setFetchError(err.message) && setShowError(true);
+                }
+            }
+            fetchSignup();
         } else {
-            // fetch post
-        }
+            setShowError(true)
+        };
     }
 
     return <>
+    {formSubmited && !showError && !fetchError && formState.isFormValid && (
+        history.push('/login')
+    )}
         <h1 className="headerStyle">Załóż konto</h1>
         {showError && !formState.isFormValid && (
             <div className="form_error">Wypełnij wszystkie pola</div>
         )}
-        <form onSubmit={signupSubmitHandler}>
+        {fetchError && (<div className="form_error">{fetchError}</div>)}
+        <form onSubmit={e => signupSubmitHandler(e)}>
             <p className="headerStyle">email</p>
             <Input
                 className="input"
@@ -86,12 +106,13 @@ const Signup = () => {
                 name="email"
                 value={formState.email.value}
                 id="email"
-                changed={e => { onInputChange("email", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("email", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("email", e.target.value, dispatch, formState) }}
             />
             {formState.email.touched && formState.email.hasError && (
                 <div className="error">{formState.email.error}</div>
             )}
+            {fetchError && (<div className="error">Zaloguj się lub wprowadz inny adres email</div>)}
             <p className="headerStyle">hasło</p>
             <Input
                 className="input"
@@ -100,7 +121,7 @@ const Signup = () => {
                 name="password"
                 value={formState.password.value}
                 id="password"
-                changed={e => { onInputChange("password", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("password", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("password", e.target.value, dispatch, formState) }}
             />
             {formState.password.touched && formState.password.hasError && (
@@ -114,7 +135,7 @@ const Signup = () => {
                 name="passwordRepead"
                 value={formState.passwordRepead.value}
                 id="passwordRepead"
-                changed={e => { onInputChange("passwordRepead", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("passwordRepead", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("passwordRepead", e.target.value, dispatch, formState) }}
             />
             {formState.passwordRepead.touched && formState.passwordRepead.hasError && (
@@ -128,7 +149,7 @@ const Signup = () => {
                 name="firstName"
                 value={formState.firstName.value}
                 id="firstName"
-                changed={e => { onInputChange("firstName", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("firstName", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("firstName", e.target.value, dispatch, formState) }}
             />
             {formState.firstName.touched && formState.firstName.hasError && (
@@ -141,7 +162,7 @@ const Signup = () => {
                 name="lastName"
                 value={formState.lastName.value}
                 id="lastName"
-                changed={e => { onInputChange("lastName", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("lastName", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("lastName", e.target.value, dispatch, formState) }}
             />
             {formState.lastName.touched && formState.lastName.hasError && (
@@ -154,7 +175,7 @@ const Signup = () => {
                 name="street"
                 value={formState.street.value}
                 id="street"
-                changed={e => { onInputChange("street", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("street", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("street", e.target.value, dispatch, formState) }}
             />
             {formState.street.touched && formState.street.hasError && (
@@ -167,7 +188,7 @@ const Signup = () => {
                 name="houseNr"
                 value={formState.houseNr.value}
                 id="houseNr"
-                changed={e => { onInputChange("houseNr", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("houseNr", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("nhouseNr", e.target.value, dispatch, formState) }}
             />
             {formState.houseNr.touched && formState.houseNr.hasError && (
@@ -180,7 +201,7 @@ const Signup = () => {
                 name="postCode"
                 value={formState.postCode.value}
                 id="postCode"
-                changed={e => { onInputChange("postCode", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("postCode", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("postCode", e.target.value, dispatch, formState) }}
             />
             {formState.postCode.touched && formState.postCode.hasError && (
@@ -193,7 +214,7 @@ const Signup = () => {
                 name="town"
                 value={formState.town.value}
                 id="town"
-                changed={e => { onInputChange("town", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("town", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("town", e.target.value, dispatch, formState) }}
             />
             {formState.town.touched && formState.town.hasError && (
@@ -206,16 +227,16 @@ const Signup = () => {
                 name="phoneNr"
                 value={formState.phoneNr.value}
                 id="phoneNr"
-                changed={e => { onInputChange("phoneNr", e.target.value, dispatch, formState) }}
+                onChange={e => { onInputChange("phoneNr", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("phoneNr", e.target.value, dispatch, formState) }}
             />
             {formState.phoneNr.touched && formState.phoneNr.hasError && (
                 <div className="error">{formState.phoneNr.error}</div>
             )}
             <div className='centered'>
-            <Button className="centered">Załóż konto</Button>
+                <Button className="centered">Załóż konto</Button>
             </div>
-            
+
         </form>
     </>
 
