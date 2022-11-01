@@ -1,10 +1,8 @@
 import React, { useReducer, useState } from 'react';
-import { useHistory} from 'react-router-dom';
-
+import { useHistory } from 'react-router-dom';
 import { UPDATE_FORM, onInputChange, onFocusOut, validateInput, formReducer } from '../../../../lib/formUtils';
 import Input from "../../Input/Input";
 import Button from "../../Button/Button";
-
 
 const Signup = () => {
 
@@ -22,10 +20,14 @@ const Signup = () => {
         isFormValid: false,
     });
     const [showError, setShowError] = useState(false);
-    const [fetchError, setFetchError] = useState();
-    const [formSubmited, setformSubmited] = useState(false);
+    const [fetchError, setFetchError] = useState(false);
 
     let history = useHistory();
+
+    const clearError = e => {
+        setShowError(false);
+        setFetchError(false);
+    };
 
     const signupSubmitHandler = e => {
         e.preventDefault();
@@ -52,6 +54,7 @@ const Signup = () => {
                 })
             }
         }
+        { formState.password !== formState.passwordRepead && setShowError(true) }
         if (isFormValid) {
             const fetchSignup = async () => {
                 try {
@@ -76,11 +79,13 @@ const Signup = () => {
                         setShowError(true);
                         throw new Error('Użytkownik o podanym adresie Email istnieje');
                     }
-                     response.json();
-                     setformSubmited(true);
+                    response.json();
+                    if (!showError && !fetchError && formState.isFormValid) {
+                        history.push('/login');
+                    }
                 } catch (err) {
                     setFetchError(err.message);
-                    setFetchError(err.message) && setShowError(true);
+                    setShowError(true);
                 }
             }
             fetchSignup();
@@ -90,9 +95,6 @@ const Signup = () => {
     }
 
     return <>
-    {formSubmited && !showError && !fetchError && formState.isFormValid && (
-        history.push('/login')
-    )}
         <h1 className="headerStyle">Załóż konto</h1>
         {showError && !formState.isFormValid && (
             <div className="form_error">Wypełnij wszystkie pola</div>
@@ -106,6 +108,7 @@ const Signup = () => {
                 name="email"
                 value={formState.email.value}
                 id="email"
+                onClick={e => clearError(e)}
                 onChange={e => { onInputChange("email", e.target.value, dispatch, formState) }}
                 onBlur={e => { onFocusOut("email", e.target.value, dispatch, formState) }}
             />
@@ -140,6 +143,9 @@ const Signup = () => {
             />
             {formState.passwordRepead.touched && formState.passwordRepead.hasError && (
                 <div className="error">{formState.passwordRepead.error}</div>
+            )}
+            {formState.passwordRepead.touched && (formState.passwordRepead.value !== formState.password.value) && (
+                <div className="error">Nieprawidłowe hasło</div>
             )}
             <h2 className="headerStyle">Dane do wysyłki</h2>
             <p className="headerStyle">imię</p>
@@ -236,10 +242,8 @@ const Signup = () => {
             <div className='centered'>
                 <Button className="centered">Załóż konto</Button>
             </div>
-
         </form>
     </>
-
 }
 
 export default Signup;
