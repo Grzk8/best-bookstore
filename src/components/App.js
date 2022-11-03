@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { HashRouter, Route } from 'react-router-dom';
 import Main from './MenuInfo/Main';
 import AboutUs from './MenuInfo/AboutUs/AboutUs';
@@ -12,9 +12,19 @@ import Basket from './Basket/Basket';
 import Search from './MenuInfo/Search/Search';
 import Login from './Layout/Auth/Login/Login';
 import Signup from './Layout/Auth/Signup/Signup';
+import { AuthContext } from "./Layout/Auth/Signup/auth-context";
 
 const App = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [basket, setBasket] = useState([]);
+
+    const login = useCallback(() => {
+        setIsLoggedIn(true);
+    }, []);
+
+    const logout = useCallback(() => {
+        setIsLoggedIn(false);
+    }, []);
 
     const addBook = (book) => {
         setBasket(basket => [...basket, book]);
@@ -45,13 +55,15 @@ const App = () => {
     </>
 
     return (
-        <div className="navigation">
-            <HashRouter>
-                <Navigation basket={basket}>
-                    {routes}
-                </Navigation>
-            </HashRouter>
-        </div>
+        <AuthContext.Provider>
+            <div className="navigation">
+                <HashRouter>
+                    <Navigation basket={basket}>
+                        {routes}
+                    </Navigation>
+                </HashRouter>
+            </div>
+        </AuthContext.Provider>
     );
 };
 
