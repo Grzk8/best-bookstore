@@ -1,12 +1,13 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { UPDATE_FORM, onInputChange, onFocusOut, validateInput, formReducer } from '../../../../lib/formUtils';
 import Input from "../../Input/Input";
 import Button from "../../Button/Button";
+import { AuthContext } from '../auth-context';
 
 
-const Signup = () => {
+const Login = () => {
 
     const [formState, dispatch] = useReducer(formReducer, {
         email: { value: "", touched: false, hasError: true, error: "" },
@@ -17,10 +18,11 @@ const Signup = () => {
     const [showError, setShowError] = useState(false);
     const [fetchError, setFetchError] = useState();
     const [formSubmited, setformSubmited] = useState(false);
+    const auth = useContext(AuthContext);
 
     let history = useHistory();
 
-    const signupSubmitHandler = e => {
+    const loginSubmitHandler = e => {
         e.preventDefault();
 
         let isFormValid = true
@@ -64,6 +66,7 @@ const Signup = () => {
                     }
                     response.json();
                     setformSubmited(true);
+                    auth.login();
                 } catch (err) {
                     setFetchError(err.message);
                     setFetchError(err.message) && setShowError(true);
@@ -83,7 +86,7 @@ const Signup = () => {
         {showError && !formState.isFormValid && (
             <div className="form_error">Wpisz login i hasło</div>
         )}
-        <form onSubmit={e => signupSubmitHandler(e)}>
+        <form onSubmit={e => loginSubmitHandler(e)}>
             <p className="headerStyle">email</p>
             <Input
                 className="input"
@@ -120,4 +123,4 @@ const Signup = () => {
 
 }
 
-export default Signup;
+export default Login;
