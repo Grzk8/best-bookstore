@@ -37,6 +37,17 @@ const App = () => {
         setBasket(removedFromBasket);
     };
 
+    let auth = (
+        <>
+            <Route path='/login' render={props => <Login {...props} basket={basket} />} />
+            <Route path='/signup' render={props => <Signup {...props} basket={basket} />} />
+        </>
+    );
+
+    if (isLoggedIn) {
+        auth = null;
+    };
+
     const routes = <>
         <Route exact path='/' render={props => <Main {...props} addBook={addBook} basket={basket} />} />
         <Route path='/aboutUs' render={props => <AboutUs {...props} basket={basket} />} />
@@ -50,8 +61,7 @@ const App = () => {
         <Route path='/thiller' render={props => <Category {...props} addBook={addBook} basket={basket} category="thiller" />} />
         <Route path='/description/:_id' render={props => <Description {...props} basket={basket} />} />
         <Route path='/orderCompleted' render={props => <OrderCompleted {...props} basket={basket} />} />
-        <Route path='/login' render={props => <Login {...props} basket={basket} />} />
-        <Route path='/signup' render={props => <Signup {...props} basket={basket} />} />
+        {auth}
     </>
 
     return (
