@@ -24,59 +24,59 @@ const Login = () => {
 
     const loginSubmitHandler = e => {
         e.preventDefault();
-        auth.login();
+        //auth.login();
         history.push('/');
-        // let isFormValid = true
-        // for (const name in formState) {
-        //     const item = formState[name]
-        //     const { value } = item
-        //     const { hasError, error } = validateInput(name, value)
-        //     if (hasError) {
-        //         isFormValid = false
-        //     }
-        //     if (name) {
-        //         dispatch({
-        //             type: UPDATE_FORM,
-        //             data: {
-        //                 name,
-        //                 value,
-        //                 hasError,
-        //                 error,
-        //                 touched: true,
-        //                 isFormValid,
-        //             },
-        //         })
-        //     }
-        // }
-        // if (isFormValid) {
-        //     const fetchSignup = async () => {
-        //         try {
-        //             const response = await fetch(`http://localhost:8000/api/users/login`, {
-        //                 method: "POST",
-        //                 headers: {
-        //                     'Content-Type': 'application/json'
-        //                 },
-        //                 body: JSON.stringify({
-        //                     email: formState.email.value,
-        //                     password: formState.password.value,
-        //                 })
-        //             })
-        //             if (!response.ok) {
-        //                 setShowError(true);
-        //                 throw new Error('Błędny email lub hasło');
-        //             }
-        //             response.json();
-        //             setformSubmited(true);
-        //             auth.login();
-        //         } catch (err) {
-        //             setFetchError(err.message);
-        //             setFetchError(err.message) && setShowError(true);
-        //         }
-        //     }
-        //     fetchSignup();
-        // } else {
-        //     setShowError(true)
-        // };
+        let isFormValid = true
+        for (const name in formState) {
+            const item = formState[name]
+            const { value } = item
+            const { hasError, error } = validateInput(name, value)
+            if (hasError) {
+                isFormValid = false
+            }
+            if (name) {
+                dispatch({
+                    type: UPDATE_FORM,
+                    data: {
+                        name,
+                        value,
+                        hasError,
+                        error,
+                        touched: true,
+                        isFormValid,
+                    },
+                })
+            }
+        }
+        if (isFormValid) {
+            const fetchSignup = async () => {
+                try {
+                    const response = await fetch(`http://localhost:8000/api/users/login`, {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            email: formState.email.value,
+                            password: formState.password.value,
+                        })
+                    })
+                    if (!response.ok) {
+                        setShowError(true);
+                        throw new Error('Błędny email lub hasło');
+                    }
+                    response.json();
+                    setformSubmited(true);
+                    auth.login(response.userId, response.token);
+                } catch (err) {
+                    setFetchError(err.message);
+                    setFetchError(err.message) && setShowError(true);
+                }
+            }
+            fetchSignup();
+        } else {
+            setShowError(true)
+        };
     }
 
     return <>

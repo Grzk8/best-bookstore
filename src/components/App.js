@@ -15,15 +15,22 @@ import Signup from './Layout/Auth/Signup/Signup';
 import { AuthContext } from "./Layout/Auth/auth-context";
 
 const App = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [token, setToken] = useState(false);
+    const [userId, setUserId] = useState(false);
     const [basket, setBasket] = useState([]);
 
-    const login = useCallback(() => {
-        setIsLoggedIn(true);
+    const login = useCallback((uid, token) => {
+        setToken(token);
+        setUserId(uid);
+        localStorage.setItem(
+            'userData',
+            JSON.stringify({ userId: uid, token: token })
+        );
     }, []);
 
     const logout = useCallback(() => {
-        setIsLoggedIn(false);
+        setToken(null);
+        setUserId(null);
     }, []);
 
     const addBook = (book) => {
@@ -44,7 +51,7 @@ const App = () => {
         </>
     );
 
-    if (isLoggedIn) {
+    if (token) {
         auth = null;
     };
 
@@ -54,7 +61,7 @@ const App = () => {
         <Route path='/selfPickup' render={props => <SelfPickup {...props} basket={basket} />} />
         <Route path='/contact' render={props => <Contact {...props} basket={basket} />} />
         <Route path='/search' render={props => <Search {...props} addBook={addBook} basket={basket} />} />
-        <Route path='/basket' render={props => <Basket {...props} removeBook={removeBook} basket={basket} />} />k
+        <Route path='/basket' render={props => <Basket {...props} removeBook={removeBook} basket={basket} />} />
         <Route path='/sf' render={props => <Category {...props} addBook={addBook} basket={basket} category="s-f" />} />
         <Route path='/popularsience' render={props => <Category {...props} addBook={addBook} basket={basket} category="popularnonaukowe" />} />
         <Route path='/comic' render={props => <Category {...props} addBook={addBook} basket={basket} category="komiksy" />} />
@@ -65,7 +72,7 @@ const App = () => {
     </>
 
     return (
-        <AuthContext.Provider value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}>
+        <AuthContext.Provider value={{ isLoggedIn: !!token, token: token, userId: userId, login: login, logout: logout }}>
             <div className="navigation">
                 <HashRouter>
                     <Navigation basket={basket}>

@@ -1,8 +1,9 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { UPDATE_FORM, onInputChange, onFocusOut, validateInput, formReducer } from '../../../../lib/formUtils';
 import Input from "../../Input/Input";
 import Button from "../../Button/Button";
+import { AuthContext } from '../auth-context';
 
 const Signup = () => {
 
@@ -21,6 +22,7 @@ const Signup = () => {
     });
     const [showError, setShowError] = useState(false);
     const [fetchError, setFetchError] = useState(false);
+    const auth = useContext(AuthContext);
 
     let history = useHistory();
 
@@ -80,6 +82,7 @@ const Signup = () => {
                         throw new Error('Użytkownik o podanym adresie Email istnieje');
                     }
                     response.json();
+                    auth.login(response.userId, response.token);
                     if (!showError && !fetchError && formState.isFormValid) {
                         history.push('/login');
                     }
