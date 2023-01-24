@@ -49,7 +49,7 @@ const Login = () => {
             }
         }
         if (isFormValid) {
-            const fetchSignup = async () => {
+            const fetchLogin = async () => {
                 try {
                     const response = await fetch(`http://localhost:8000/api/users/login`, {
                         method: "POST",
@@ -65,15 +65,15 @@ const Login = () => {
                         setShowError(true);
                         throw new Error('Błędny email lub hasło');
                     }
-                    response.json();
+                    const responseData = await response.json();
                     setformSubmited(true);
-                    auth.login(response.userId, response.token);
+                    auth.login(responseData.user, responseData.token, responseData.email);
                 } catch (err) {
                     setFetchError(err.message);
                     setFetchError(err.message) && setShowError(true);
                 }
             }
-            fetchSignup();
+            fetchLogin();
         } else {
             setShowError(true)
         };
