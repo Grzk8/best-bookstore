@@ -24,7 +24,6 @@ const Login = () => {
 
     const loginSubmitHandler = e => {
         e.preventDefault();
-        //auth.login();
         history.push('/');
         let isFormValid = true
         for (const name in formState) {

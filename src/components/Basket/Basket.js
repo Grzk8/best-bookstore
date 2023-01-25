@@ -1,19 +1,35 @@
-import React, { useState } from 'react';
-import Form from './Form/Form';
+import React, { useContext, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import Button from '../Layout/Button/Button';
+import { AuthContext } from '../Layout/Auth/auth-context';
 
 const Basket = props => {
-    const [showForm, setShowForm] = useState(false);
+    const auth = useContext(AuthContext);
+    const [orderCompleted, setOrderCompleted] = useState(false);
 
-    const showFormHandler = () => {
-        setShowForm(current => !current)
+    const totalPrice = props.basket ? props.basket.reduce((x, y) => x + parseFloat(y.price), 0).toFixed(2) : 0;
+
+    if (orderCompleted) {
+        return <Redirect to="/orderCompleted" />
+    }
+
+    const sendOrderHandler = () => {
+        let boo = [];
+        const books = props.basket.map(b => boo = [b.title, b.author, b.price]);
+        let currentDate = new Date().toJSON().slice(0, 10);
+
+        const order = {
+            date: currentDate,
+            books: books,
+            price: totalPrice
+        };
+        console.log(order);
+        setOrderCompleted(true);
     };
 
     const handleRemove = (id) => {
         props.removeBook(id)
     };
-
-    const totalPrice = props.basket ? props.basket.reduce((x, y) => x + parseFloat(y.price), 0).toFixed(2) : 0;
 
     return <>
         <h1 className="headerStyle">KOSZYK</h1>
@@ -30,8 +46,7 @@ const Basket = props => {
             </table>
         )}
         <p className="totalprice">Łącznie do zapłaty :<span> {totalPrice} zł</span></p>
-        <Button clicked={showFormHandler}>KUPUJĘ</Button>
-        {showForm && totalPrice && <Form basket={props.basket} />}
+        <Button clicked={sendOrderHandler} disabled={!auth.isLoggedIn}>KUPUJĘ</Button>
     </>
 };
 

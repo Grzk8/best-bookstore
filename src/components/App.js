@@ -6,7 +6,8 @@ import SelfPickup from './MenuInfo/SelfPickup/SelfPickup';
 import Contact from './/MenuInfo/Contact/Contact';
 import Description from './MenuInfo/Categories/Description';
 import Category from "./MenuInfo/Categories/Category";
-import OrderCompleted from './Basket/Form/OrderCompleted';
+import Orders from './MenuInfo/Orders/Orders';
+import OrderCompleted from "./Basket/OrderCompleted";
 import Navigation from './Navigation/Navigation';
 import Basket from './Basket/Basket';
 import Search from './MenuInfo/Search/Search';
@@ -51,9 +52,9 @@ const App = () => {
         </>
     );
 
-    if (token) {
-        auth = null;
-    };
+    // if (token) {
+    //     auth = null;
+    // };
 
     const routes = <>
         <Route exact path='/' render={props => <Main {...props} addBook={addBook} basket={basket} />} />
@@ -67,12 +68,21 @@ const App = () => {
         <Route path='/comic' render={props => <Category {...props} addBook={addBook} basket={basket} category="komiksy" />} />
         <Route path='/thiller' render={props => <Category {...props} addBook={addBook} basket={basket} category="thiller" />} />
         <Route path='/description/:_id' render={props => <Description {...props} basket={basket} />} />
-        <Route path='/orderCompleted' render={props => <OrderCompleted {...props} basket={basket} />} />
+        <Route path='/orders' render={props => <Orders {...props} addBook={addBook} basket={basket} />} />
+        <Route path='/ordercompleted' render={props => <OrderCompleted {...props} addBook={addBook} basket={basket} />} />
         {auth}
     </>
 
     return (
-        <AuthContext.Provider value={{ isLoggedIn: !!token, token: token, userId: userId, login: login, logout: logout }}>
+        <AuthContext.Provider
+            value={{
+                isLoggedIn: !!token,
+                token: token,
+                userId: userId,
+                login: login,
+                logout: logout
+            }}>
+
             <div className="navigation">
                 <HashRouter>
                     <Navigation basket={basket}>
