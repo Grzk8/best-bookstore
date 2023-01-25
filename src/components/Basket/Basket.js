@@ -15,16 +15,42 @@ const Basket = props => {
 
     const sendOrderHandler = () => {
         let boo = [];
-        const books = props.basket.map(b => boo = [b.title, b.author, b.price]);
+        const books = props.basket.map(b => boo = [b.title]);
         let currentDate = new Date().toJSON().slice(0, 10);
 
         const order = {
             date: currentDate,
-            books: books,
-            price: totalPrice
+            books: books.toString(),
+            price: totalPrice,
+            creator: auth.userId
         };
-        console.log(order);
+
+        const sendOrder = async () => {
+            try {
+                const response = await fetch(`http://localhost:8000/api/users/order`, {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        date: order.date,
+                        books: order.books,
+                        price: order.price,
+                        creator: auth.userId
+                    })
+                })
+                if (!response.ok) {
+                    setShowError(true);
+                    throw new Error('Błąd podczas wysyłania zamówienia');
+                }
+                const responseData = await response.json();
+            } catch (err) {
+                console.log(err)
+            }
+        }
+        sendOrder();
         setOrderCompleted(true);
+        props.clearBasket();
     };
 
     const handleRemove = (id) => {

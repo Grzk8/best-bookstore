@@ -45,6 +45,10 @@ const App = () => {
         setBasket(removedFromBasket);
     };
 
+    const clearBasket = () => {
+        setBasket([])
+    };
+
     let auth = (
         <>
             <Route path='/login' render={props => <Login {...props} basket={basket} />} />
@@ -62,7 +66,7 @@ const App = () => {
         <Route path='/selfPickup' render={props => <SelfPickup {...props} basket={basket} />} />
         <Route path='/contact' render={props => <Contact {...props} basket={basket} />} />
         <Route path='/search' render={props => <Search {...props} addBook={addBook} basket={basket} />} />
-        <Route path='/basket' render={props => <Basket {...props} removeBook={removeBook} basket={basket} />} />
+        <Route path='/basket' render={props => <Basket {...props} removeBook={removeBook} clearBasket={clearBasket} basket={basket} />} />
         <Route path='/sf' render={props => <Category {...props} addBook={addBook} basket={basket} category="s-f" />} />
         <Route path='/popularsience' render={props => <Category {...props} addBook={addBook} basket={basket} category="popularnonaukowe" />} />
         <Route path='/comic' render={props => <Category {...props} addBook={addBook} basket={basket} category="komiksy" />} />
