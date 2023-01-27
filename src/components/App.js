@@ -13,6 +13,7 @@ import Basket from './Basket/Basket';
 import Search from './MenuInfo/Search/Search';
 import Login from './Layout/Auth/Login/Login';
 import Signup from './Layout/Auth/Signup/Signup';
+import UpdateData from './MenuInfo/UpdateData/UpdateData';
 import { AuthContext } from "./Layout/Auth/auth-context";
 
 const App = () => {
@@ -56,10 +57,6 @@ const App = () => {
         </>
     );
 
-    // if (token) {
-    //     auth = null;
-    // };
-
     const routes = <>
         <Route exact path='/' render={props => <Main {...props} addBook={addBook} basket={basket} />} />
         <Route path='/aboutUs' render={props => <AboutUs {...props} basket={basket} />} />
@@ -73,6 +70,7 @@ const App = () => {
         <Route path='/thiller' render={props => <Category {...props} addBook={addBook} basket={basket} category="thiller" />} />
         <Route path='/description/:_id' render={props => <Description {...props} basket={basket} />} />
         <Route path='/orders' render={props => <Orders {...props} addBook={addBook} basket={basket} />} />
+        <Route path='/updatedata' render={props => <UpdateData {...props} addBook={addBook} basket={basket} />} />
         <Route path='/ordercompleted' render={props => <OrderCompleted {...props} addBook={addBook} basket={basket} />} />
         {auth}
     </>
