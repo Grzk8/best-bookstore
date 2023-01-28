@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { HashRouter, Route } from 'react-router-dom';
 import Main from './MenuInfo/Main';
 import AboutUs from './MenuInfo/AboutUs/AboutUs';
@@ -33,7 +33,15 @@ const App = () => {
     const logout = useCallback(() => {
         setToken(null);
         setUserId(null);
+        localStorage.removeItem('userData');
     }, []);
+
+    useEffect(() => {
+        const storedData = JSON.parse(localStorage.getItem('userData'));
+        if (storedData && storedData.token) {
+            login(storedData.userId, storedData.token);
+        }
+    }, [login]);
 
     const addBook = (book) => {
         setBasket(basket => [...basket, book]);
