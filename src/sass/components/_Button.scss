@@ -1,8 +1,6 @@
 .btn {
-  position: relative;
+  display: block;
   font-size: 0.75em;
-  margin: 7px;
-  left: 2em;
   background-color: white;
   width: 12em;
   height: 2em;
@@ -10,6 +8,16 @@
   font-weight: bolder;
   cursor: pointer;
   border: 1px solid $secondLogo;
+}
+
+.btn_search {
+  height: 50px;
+  width: 50px;
+  border-color: rgb(146, 146, 146);
+  border-style: inset;
+  border-radius: 20%;
+  background-color: white;
+  cursor: pointer;
 }
 
 .btnSmall {

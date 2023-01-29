@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../Layout/Logo/Logo';
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
-import BasketButton from "../BasketButton/BasketButton";
+import BasketButton from "../../Layout/BasketButton/BasketButton";
+import UserButton from '../../Layout/UserButton/UserButton';
+import Search from "../../Layout/Search/Search"
 import { AuthContext } from '../../Layout/Auth/auth-context';
 
 const header = props => {
@@ -14,7 +16,7 @@ const header = props => {
     if (mobile) {
         fontSize = '2em'
     } else {
-        fontSize = '4em'
+        fontSize = '2em'
     };
 
     let links = (
@@ -35,10 +37,25 @@ const header = props => {
 
     return (
         <div className='header'>
-            <DrawerToggle clicked={props.drawerToggleClicked} />
-            <Logo fontSize={fontSize} />
-            <BasketButton basket={props.basket} totalPrice={props.totalPrice} height='2em' width='4em' />
-            {links}
+            <div className='header_main'>
+                <DrawerToggle clicked={props.drawerToggleClicked} />
+                <div className='header_logo_container'>
+                    <Logo fontSize={fontSize} />
+                </div>
+                <div className='search_desktop_only'>
+                    <Search />
+                </div>
+                <div className='header_buttons_container'>
+                    <div className='header_buttons_item auth'><UserButton /></div>
+                    <div className='header_buttons_item basket'><BasketButton basket={props.basket} totalPrice={props.totalPrice} /></div>
+                </div>
+            </div>
+            <div className='header_menu'>
+                <div className='header_search_container search_mobile_only'>
+                    <Search />
+                </div>
+            </div>
+
         </div>
     );
 };

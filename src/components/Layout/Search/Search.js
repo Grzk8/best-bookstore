@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Book from '../../Layout/Book/Book';
-import Input from '../../Layout/Input/Input';
-import Button from '../../Layout/Button/Button';
+import Book from '../Book/Book';
+import Input from '../Input/Input';
+import Button from '../Button/Button';
 
 const Search = props => {
     const [books, setBooks] = useState();
@@ -38,23 +38,23 @@ const Search = props => {
     }
 
 
-    return <>
-        <h1 className="headerStyle">Szukaj</h1>
-        <form className="tableContainer" onSubmit={handleSubmitForm}>
-            <Input
-                className="input"
-                inputtype="text"
-                name="search"
-                value={searchingValue}
-                label="search"
-                placeholder="tytuł książki lub autor"
-                changed={e => setSearchingValue(e.target.value)}
-            />
-            <Button>Szukaj</Button>
-        </form>
-        {isLoading && <div className="loader">Loading...</div>}
-        {!isLoading && books && <Book data={books} addBook={props.addBook} />}
-    </>
+    return <form className="search" onSubmit={handleSubmitForm}>
+        <Input
+            className="input search_input"
+            inputtype="text"
+            name="search"
+            value={searchingValue}
+            label="search"
+            placeholder="tytuł książki lub autor"
+            changed={e => setSearchingValue(e.target.value)}
+        />
+        {/* <Button>Szukaj</Button> */}
+        <button className='btn_search'><i className="fa fa-search"></i></button>
+    </form>
+
+    { isLoading && <div className="loader">Loading...</div> }
+    { !isLoading && books && <Book data={books} addBook={props.addBook} /> }
+
 };
 
 export default Search;

@@ -10,7 +10,7 @@ import Orders from './MenuInfo/Orders/Orders';
 import OrderCompleted from "./Basket/OrderCompleted";
 import Navigation from './Navigation/Navigation';
 import Basket from './Basket/Basket';
-import Search from './MenuInfo/Search/Search';
+import Search from './Layout/Search/Search';
 import Login from './Layout/Auth/Login/Login';
 import Signup from './Layout/Auth/Signup/Signup';
 import UpdateData from './MenuInfo/UpdateData/UpdateData';

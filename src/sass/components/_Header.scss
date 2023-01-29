@@ -1,8 +1,39 @@
 .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+    max-width: 100%;
+    height: 12em;
+    width: 100vw;
     position: sticky;
+
+    .header_main {
+        height: 75%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .header_logo_container {
+            height: 80%;
+        }
+
+        .header_search_container {
+            height: 80%;
+            display: flex;
+        }
+
+        .header_buttons_container {
+            display: flex;
+            justify-content: space-around;
+            height: 80%;
+        }
+    }
+
+    .header_menu {
+        border: 1px solid blue;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .headerStyle {
@@ -18,6 +49,18 @@
     }
 
     .header .basket {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .search_desktop_only {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .search_mobile_only {
         display: none;
     }
 }

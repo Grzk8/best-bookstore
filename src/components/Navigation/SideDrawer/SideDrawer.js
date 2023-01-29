@@ -2,7 +2,7 @@ import React from 'react';
 import MenuItems from '../MenuItems/MenuItems';
 import Categories from '../MenuItems/Categories/Categories';
 import Backdrop from '../../Layout/Backdrop/Backdrop';
-import BasketButton from '../BasketButton/BasketButton';
+import BasketButton from '../../Layout/BasketButton/BasketButton';
 
 const sideDrawer = (props) => {
     let attachedClasses = ['drawer', 'close'];

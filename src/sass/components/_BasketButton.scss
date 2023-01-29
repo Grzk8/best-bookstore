@@ -1,13 +1,15 @@
 .basket {
-  margin-top: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .basketLogo {
   background-image: url(".././assets/images/basket.png");
   background-size: contain;
-  position: relative;
-  left: 0.5em;
+  width: 100%;
+  height: 50px;
   background-repeat: no-repeat;
+  margin: auto;
 }
 
 .inBasket {
@@ -24,7 +26,6 @@
     background-image: url(".././assets/images/basket.png");
     background-size: contain;
     position: relative;
-    left: 4em;
     background-repeat: no-repeat;
   }
 
