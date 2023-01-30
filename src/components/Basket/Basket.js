@@ -57,22 +57,44 @@ const Basket = props => {
         props.removeBook(id)
     };
 
-    return <>
-        <h1 className="headerStyle">KOSZYK</h1>
-        {props.basket.map(b =>
-            <table className="tableContainer" key={b._id}>
-                <tbody>
-                    <tr>
-                        <td>{b.title}</td>
-                        <td>{b.author}</td>
-                        <td>{b.price}<Button clicked={() => handleRemove(b._id)}>USUŃ Z LISTY</Button></td>
-                    </tr>
-                </tbody>
+    let price = <p className="totalprice">koszyk jest pusty</p>
+    if (props.basket.length > 0) {
+        price = <div>
+            <p className="totalprice">Łącznie do zapłaty :<strong> {totalPrice} zł</strong></p>
+            <div className='right'>
+                <Button clicked={sendOrderHandler} disabled={!auth.isLoggedIn}>KUPUJĘ</Button>
+            </div>
+        </div>
+    }
 
-            </table>
+    return <>
+        <h1 className="headerStyle">koszyk</h1>
+
+
+        {props.basket.map(b =>
+            <div className="basket_">
+                <div className="basket_container">
+                    <div className="basket_container_book">
+                        <div className="basket_container_book_cover">
+                            <img className="basket_container_book_cover-cover" src={b.image} ></img>
+                        </div>
+                        <div className="basket_container_book_desc">
+                            <p className="basket_container_book_desc-title">{b.title}</p>
+                            <p className="basket_container_book_desc-author">{b.author}</p>
+                        </div>
+                    </div>
+                    <div className="basket_container_price">
+                        <p className="basket_container_price-price">Cena:</p>
+                        <p className="basket_container_price-value"><strong>{b.price}</strong> zł</p>
+                    </div>
+                    <div className="basket_container_remove" onClick={() => handleRemove(b._id)}>
+
+                    </div>
+                </div>
+            </div>
         )}
-        <p className="totalprice">Łącznie do zapłaty :<span> {totalPrice} zł</span></p>
-        <Button clicked={sendOrderHandler} disabled={!auth.isLoggedIn}>KUPUJĘ</Button>
+
+        {price}
     </>
 };
 
