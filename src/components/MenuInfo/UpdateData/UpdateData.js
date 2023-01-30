@@ -103,7 +103,7 @@ const UpdateData = () => {
                         throw new Error('Błąd podczas aktualizacji');
                     }
                     response.json();
-                    
+
                     if (!showError && !fetchError && formState.isFormValid) {
                         history.push('/');
                     }
@@ -121,108 +121,130 @@ const UpdateData = () => {
         {isLoading && <div className="loader">Loading...</div>}
         {!isLoading && userData && <div>
             <h1 className="headerStyle">Edycja danych</h1>
-        {showError && !formState.isFormValid && (
-            <div className="form_error">Wypełnij wszystkie pola</div>
-        )}
-        {fetchError && (<div className="form_error">{fetchError}</div>)}
-        <form onSubmit={e => updateSubmitHandler(e)}>
-            <p className="headerStyle">imię</p>
-            <Input
-                className="input"
-                inputtype="input"
-                name="firstName"
-                value={formState.firstName.value}
-                id="firstName"
-                onChange={e => { onInputChange("firstName", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("firstName", e.target.value, dispatch, formState) }}
-            />
-            {formState.firstName.touched && formState.firstName.hasError && (
-                <div className="error">{formState.firstName.error}</div>
+            {showError && !formState.isFormValid && (
+                <div className="form_error">Wypełnij wszystkie pola</div>
             )}
-            <p className="headerStyle">nazwisko</p>
-            <Input
-                className="input"
-                inputtype="input"
-                name="lastName"
-                value={formState.lastName.value}
-                id="lastName"
-                onChange={e => { onInputChange("lastName", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("lastName", e.target.value, dispatch, formState) }}
-            />
-            {formState.lastName.touched && formState.lastName.hasError && (
-                <div className="error">{formState.lastName.error}</div>
-            )}
-            <p className="headerStyle">ulica</p>
-            <Input
-                className="input"
-                inputtype="input"
-                name="street"
-                value={formState.street.value}
-                id="street"
-                onChange={e => { onInputChange("street", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("street", e.target.value, dispatch, formState) }}
-            />
-            {formState.street.touched && formState.street.hasError && (
-                <div className="error">{formState.street.error}</div>
-            )}
-            <p className="headerStyle">nr mieszkania</p>
-            <Input
-                className="input"
-                inputtype="input"
-                name="houseNr"
-                value={formState.houseNr.value}
-                id="houseNr"
-                onChange={e => { onInputChange("houseNr", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("nhouseNr", e.target.value, dispatch, formState) }}
-            />
-            {formState.houseNr.touched && formState.houseNr.hasError && (
-                <div className="error">{formState.houseNr.error}</div>
-            )}
-            <p className="headerStyle">kod pocztowy</p>
-            <Input
-                className="input"
-                inputtype="input"
-                name="postCode"
-                value={formState.postCode.value}
-                id="postCode"
-                onChange={e => { onInputChange("postCode", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("postCode", e.target.value, dispatch, formState) }}
-            />
-            {formState.postCode.touched && formState.postCode.hasError && (
-                <div className="error">{formState.postCode.error}</div>
-            )}
-            <p className="headerStyle">miejscowość</p>
-            <Input
-                className="input"
-                inputtype="input"
-                name="town"
-                value={formState.town.value}
-                id="town"
-                onChange={e => { onInputChange("town", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("town", e.target.value, dispatch, formState) }}
-            />
-            {formState.town.touched && formState.town.hasError && (
-                <div className="error">{formState.town.error}</div>
-            )}
-            <p className="headerStyle">trlefon kontaktowy</p>
-            <Input
-                className="input"
-                inputtype="input"
-                name="phoneNr"
-                value={formState.phoneNr.value}
-                id="phoneNr"
-                onChange={e => { onInputChange("phoneNr", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("phoneNr", e.target.value, dispatch, formState) }}
-            />
-            {formState.phoneNr.touched && formState.phoneNr.hasError && (
-                <div className="error">{formState.phoneNr.error}</div>
-            )}
-            <div className='centered'>
-                <Button className="centered">Edytuj dane</Button>
-            </div>
-        </form>
+            {fetchError && (<div className="form_error">{fetchError}</div>)}
+            <form className='auth_form' onSubmit={e => updateSubmitHandler(e)}>
+
+                <div className="auth_form-element">
+                <p>imię</p>
+                <Input
+                    className="input"
+                    inputtype="input"
+                    name="firstName"
+                    value={formState.firstName.value}
+                    id="firstName"
+                    onChange={e => { onInputChange("firstName", e.target.value, dispatch, formState) }}
+                    onBlur={e => { onFocusOut("firstName", e.target.value, dispatch, formState) }}
+                />
+                {formState.firstName.touched && formState.firstName.hasError && (
+                    <div className="error">{formState.firstName.error}</div>
+                )}
+                </div>
+
+                <div className="auth_form-element">
+                <p>nazwisko</p>
+                <Input
+                    className="input"
+                    inputtype="input"
+                    name="lastName"
+                    value={formState.lastName.value}
+                    id="lastName"
+                    onChange={e => { onInputChange("lastName", e.target.value, dispatch, formState) }}
+                    onBlur={e => { onFocusOut("lastName", e.target.value, dispatch, formState) }}
+                />
+                {formState.lastName.touched && formState.lastName.hasError && (
+                    <div className="error">{formState.lastName.error}</div>
+                )}
+                </div>
+
+                <div className="auth_form-element">
+                <p>ulica</p>
+                <Input
+                    className="input"
+                    inputtype="input"
+                    name="street"
+                    value={formState.street.value}
+                    id="street"
+                    onChange={e => { onInputChange("street", e.target.value, dispatch, formState) }}
+                    onBlur={e => { onFocusOut("street", e.target.value, dispatch, formState) }}
+                />
+                {formState.street.touched && formState.street.hasError && (
+                    <div className="error">{formState.street.error}</div>
+                )}
+                </div>
+
+                <div className="auth_form-element">
+                <p>nr mieszkania</p>
+                <Input
+                    className="input"
+                    inputtype="input"
+                    name="houseNr"
+                    value={formState.houseNr.value}
+                    id="houseNr"
+                    onChange={e => { onInputChange("houseNr", e.target.value, dispatch, formState) }}
+                    onBlur={e => { onFocusOut("nhouseNr", e.target.value, dispatch, formState) }}
+                />
+                {formState.houseNr.touched && formState.houseNr.hasError && (
+                    <div className="error">{formState.houseNr.error}</div>
+                )}
+                </div>
+
+                <div className="auth_form-element">
+                <p>kod pocztowy</p>
+                <Input
+                    className="input"
+                    inputtype="input"
+                    name="postCode"
+                    value={formState.postCode.value}
+                    id="postCode"
+                    onChange={e => { onInputChange("postCode", e.target.value, dispatch, formState) }}
+                    onBlur={e => { onFocusOut("postCode", e.target.value, dispatch, formState) }}
+                />
+                {formState.postCode.touched && formState.postCode.hasError && (
+                    <div className="error">{formState.postCode.error}</div>
+                )}
+                </div>
+
+                <div className="auth_form-element">
+                <p>miejscowość</p>
+                <Input
+                    className="input"
+                    inputtype="input"
+                    name="town"
+                    value={formState.town.value}
+                    id="town"
+                    onChange={e => { onInputChange("town", e.target.value, dispatch, formState) }}
+                    onBlur={e => { onFocusOut("town", e.target.value, dispatch, formState) }}
+                />
+                {formState.town.touched && formState.town.hasError && (
+                    <div className="error">{formState.town.error}</div>
+                )}
+                </div>
+
+                <div className="auth_form-element">
+                <p>trlefon kontaktowy</p>
+                <Input
+                    className="input"
+                    inputtype="input"
+                    name="phoneNr"
+                    value={formState.phoneNr.value}
+                    id="phoneNr"
+                    onChange={e => { onInputChange("phoneNr", e.target.value, dispatch, formState) }}
+                    onBlur={e => { onFocusOut("phoneNr", e.target.value, dispatch, formState) }}
+                />
+                {formState.phoneNr.touched && formState.phoneNr.hasError && (
+                    <div className="error">{formState.phoneNr.error}</div>
+                )}
+                </div>
+
+                <div className='centered'>
+                    <Button className="centered">Edytuj dane</Button>
+                </div>
+            </form>
         </div>
-        } 
+        }
     </>
     );
 };

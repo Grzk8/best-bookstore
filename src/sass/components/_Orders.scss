@@ -1,0 +1,14 @@
+.orders {
+    margin: 6%;
+    width: 60%;
+
+    .orders_order {
+        padding-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .orders {
+        width: 80%;
+    }
+}

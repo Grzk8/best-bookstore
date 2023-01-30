@@ -15,10 +15,10 @@
             height: 80%;
         }
 
-        .header_search_container {
-            height: 80%;
-            display: flex;
+        .search_desktop_only_container {
+            width: 40%;
         }
+
         a{
             color: black;
             display: inline-block;
@@ -36,7 +36,6 @@
     }
 
     .header_menu {
-        border: 1px solid blue;
         width: 100%;
         height: 25%;
         display: flex;
@@ -47,8 +46,6 @@
 .headerStyle {
     text-align: center;
     padding: 1.2em;
-    font-style: italic;
-    color: $secondLogo;
 }
 
 @media screen and (max-width: 900px) {
@@ -62,7 +59,7 @@
 }
 
 @media screen and (max-width: 750px) {
-    .search_desktop_only {
+    .search_desktop_only_container {
         display: none;
     }
 }

@@ -86,8 +86,10 @@ const Login = () => {
         {showError && !formState.isFormValid && (
             <div className="form_error">Wpisz login i hasło</div>
         )}
-        <form onSubmit={e => loginSubmitHandler(e)}>
-            <p className="headerStyle">email</p>
+        <form className='auth_form' onSubmit={e => loginSubmitHandler(e)}>
+
+            <div className="auth_form-element">
+            <p>email</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -100,7 +102,10 @@ const Login = () => {
             {formState.email.touched && formState.email.hasError && (
                 <div className="error">{formState.email.error}</div>
             )}
-            <p className="headerStyle">hasło</p>
+            </div>
+
+            <div className="auth_form-element">
+            <p>hasło</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -114,6 +119,9 @@ const Login = () => {
             {formState.password.touched && formState.password.hasError && (
                 <div className="error">{formState.password.error}</div>
             )}
+            </div>
+            
+            
             <div className='centered'>
                 <Button className="centered">Zaloguj się</Button>
             </div>

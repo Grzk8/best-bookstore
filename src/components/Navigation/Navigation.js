@@ -18,7 +18,7 @@ const Navigation = props => {
     return (
         <div className="container">
             <Header drawerToggleClicked={sideDrawerToggleHandler} basket={props.basket} />
-            <MenuItems />
+
             <SideDrawer open={showSideDrawer}
                 closed={sideDrawerClosedHandler}
                 basket={props.basket} />

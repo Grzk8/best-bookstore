@@ -7,6 +7,7 @@ import UserButton from '../../Layout/UserButton/UserButton';
 import Search from "../../Layout/Search/Search";
 import UserSublist from '../../Layout/User-sublist/User-sublist';
 import { AuthContext } from '../../Layout/Auth/auth-context';
+import MenuItems from '../MenuItems/MenuItems';
 
 const header = props => {
     const auth = useContext(AuthContext);
@@ -44,6 +45,7 @@ const header = props => {
                 </div>
             </div>
             <div className='header_menu'>
+                <MenuItems />
                 <div className='header_search_container search_mobile_only'>
                     <Search />
                 </div>

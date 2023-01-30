@@ -29,7 +29,7 @@ const Orders = () => {
     }, []);
 
     return <>
-        <p className="headerStyle"> Zamówienia </p>
+        <p className="headerStyle"> Moje zamówienia </p>
         {isLoading && <div className="loader">Loading...</div>}
         {!isLoading && orders && <Order orders={orders} />}
     </>

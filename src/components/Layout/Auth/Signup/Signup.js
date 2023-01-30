@@ -103,23 +103,28 @@ const Signup = () => {
             <div className="form_error">Wypełnij wszystkie pola</div>
         )}
         {fetchError && (<div className="form_error">{fetchError}</div>)}
-        <form onSubmit={e => signupSubmitHandler(e)}>
-            <p className="headerStyle">email</p>
-            <Input
-                className="input"
-                inputtype="input"
-                name="email"
-                value={formState.email.value}
-                id="email"
-                onClick={e => clearError(e)}
-                onChange={e => { onInputChange("email", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("email", e.target.value, dispatch, formState) }}
-            />
-            {formState.email.touched && formState.email.hasError && (
-                <div className="error">{formState.email.error}</div>
-            )}
-            {fetchError && (<div className="error">Zaloguj się lub wprowadz inny adres email</div>)}
-            <p className="headerStyle">hasło</p>
+        <form className='auth_form' onSubmit={e => signupSubmitHandler(e)}>
+            
+            <div className="auth_form-element">
+                <p className="">email</p>
+                <Input
+                    className="input"
+                    inputtype="input"
+                    name="email"
+                    value={formState.email.value}
+                    id="email"
+                    onClick={e => clearError(e)}
+                    onChange={e => { onInputChange("email", e.target.value, dispatch, formState) }}
+                    onBlur={e => { onFocusOut("email", e.target.value, dispatch, formState) }}
+                />
+                {formState.email.touched && formState.email.hasError && (
+                    <div className="error">{formState.email.error}</div>
+                )}
+                {fetchError && (<div className="error">Zaloguj się lub wprowadz inny adres email</div>)}
+            </div>
+
+            <div className="auth_form-element">
+            <p>hasło</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -133,7 +138,10 @@ const Signup = () => {
             {formState.password.touched && formState.password.hasError && (
                 <div className="error">{formState.password.error}</div>
             )}
-            <p className="headerStyle">powtórz hasło</p>
+            </div>
+
+            <div className="auth_form-element">
+            <p>powtórz hasło</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -150,8 +158,10 @@ const Signup = () => {
             {formState.passwordRepead.touched && (formState.passwordRepead.value !== formState.password.value) && (
                 <div className="error">Nieprawidłowe hasło</div>
             )}
-            <h2 className="headerStyle">Dane do wysyłki</h2>
-            <p className="headerStyle">imię</p>
+            </div>
+
+            <div className="auth_form-element">
+            <p>imię</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -164,7 +174,10 @@ const Signup = () => {
             {formState.firstName.touched && formState.firstName.hasError && (
                 <div className="error">{formState.firstName.error}</div>
             )}
-            <p className="headerStyle">nazwisko</p>
+            </div>
+
+            <div className="auth_form-element">
+            <p>nazwisko</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -177,7 +190,10 @@ const Signup = () => {
             {formState.lastName.touched && formState.lastName.hasError && (
                 <div className="error">{formState.lastName.error}</div>
             )}
-            <p className="headerStyle">ulica</p>
+            </div>
+
+            <div className="auth_form-element">
+            <p>ulica</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -190,7 +206,10 @@ const Signup = () => {
             {formState.street.touched && formState.street.hasError && (
                 <div className="error">{formState.street.error}</div>
             )}
-            <p className="headerStyle">nr mieszkania</p>
+            </div>
+
+            <div className="auth_form-element">
+            <p>nr mieszkania</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -203,7 +222,10 @@ const Signup = () => {
             {formState.houseNr.touched && formState.houseNr.hasError && (
                 <div className="error">{formState.houseNr.error}</div>
             )}
-            <p className="headerStyle">kod pocztowy</p>
+            </div>
+
+            <div className="auth_form-element">
+            <p>kod pocztowy</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -216,7 +238,10 @@ const Signup = () => {
             {formState.postCode.touched && formState.postCode.hasError && (
                 <div className="error">{formState.postCode.error}</div>
             )}
-            <p className="headerStyle">miejscowość</p>
+            </div>
+
+            <div className="auth_form-element">
+            <p>miejscowość</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -229,7 +254,10 @@ const Signup = () => {
             {formState.town.touched && formState.town.hasError && (
                 <div className="error">{formState.town.error}</div>
             )}
-            <p className="headerStyle">trlefon kontaktowy</p>
+            </div>
+
+            <div className="auth_form-element">
+            <p>telefon</p>
             <Input
                 className="input"
                 inputtype="input"
@@ -242,6 +270,8 @@ const Signup = () => {
             {formState.phoneNr.touched && formState.phoneNr.hasError && (
                 <div className="error">{formState.phoneNr.error}</div>
             )}
+            </div>
+            
             <div className='centered'>
                 <Button className="centered">Załóż konto</Button>
             </div>

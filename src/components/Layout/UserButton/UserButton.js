@@ -4,18 +4,23 @@ import { AuthContext } from '../Auth/auth-context';
 
 const UserButton = props => {
     const auth = useContext(AuthContext);
+    let logged = auth.isLoggedIn;
 
     let button = 'Zaloguj się'
     if (auth.isLoggedIn) {
         button = 'Moje konto'
     }
 
-    return (
+    return (logged ?
+        <div className='user' onClick={props.sublistToggleClicked}>
+            <div className="userLogo" style={{ height: props.height, width: props.width }}></div>
+            <p className="inBasket"> {button} </p>
+        </div> :
         <NavLink to="/login" className='user' activeClassName="active" onClick={props.sublistToggleClicked}>
             <div className="userLogo" style={{ height: props.height, width: props.width }}></div>
             <p className="inBasket"> {button} </p>
         </NavLink>
-    );
+    )
 };
 
 export default UserButton;
