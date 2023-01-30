@@ -11,7 +11,7 @@ const UserButton = props => {
     }
 
     return (
-        <NavLink to="/login" className='user' activeClassName="active" >
+        <NavLink to="/login" className='user' activeClassName="active" onClick={props.sublistToggleClicked}>
             <div className="userLogo" style={{ height: props.height, width: props.width }}></div>
             <p className="inBasket"> {button} </p>
         </NavLink>

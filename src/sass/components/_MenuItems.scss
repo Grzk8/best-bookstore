@@ -1,8 +1,8 @@
 .menuItems {
         background-color: $secondLogo;
         height: 3em;
-        width: 95%;
-        margin: 40px;
+        width: 100%;
+        //margin: 40px;
 
         .menuItem {
                 font-size: 1em;
@@ -38,18 +38,15 @@
                 background-color: $secondLogo;
                 left: 0px;
                 top: 3em;
-
                 z-index: 1;
         }
 
         .dropdown-content a {
                 color: white;
-
                 list-style-type: none;
                 padding: 12px 16px;
                 text-decoration: none;
                 display: block;
-
         }
 }
 

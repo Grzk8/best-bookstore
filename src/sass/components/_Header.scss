@@ -19,12 +19,20 @@
             height: 80%;
             display: flex;
         }
-
+        a{
+            color: black;
+            display: inline-block;
+                list-style: none;
+                text-decoration: none;
+            
+        }
         .header_buttons_container {
             display: flex;
+            position: relative;
             justify-content: space-around;
             height: 80%;
         }
+
     }
 
     .header_menu {
