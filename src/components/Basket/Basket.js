@@ -72,11 +72,11 @@ const Basket = props => {
 
 
         {props.basket.map(b =>
-            <div className="basket_">
+            <div className="basket_" key={b._id}>
                 <div className="basket_container">
                     <div className="basket_container_book">
                         <div className="basket_container_book_cover">
-                            <img className="basket_container_book_cover-cover" src={b.image} ></img>
+                            <img className="basket_container_book_cover-cover" src={b.image}></img>
                         </div>
                         <div className="basket_container_book_desc">
                             <p className="basket_container_book_desc-title">{b.title}</p>

@@ -8,6 +8,7 @@ const Order = props => {
                 <p className='orders_order-i'><strong>Data: </strong>{order.date}</p>
                 <p className='orders_order-i'><strong>Zamówienie: </strong>{order.books}</p>
                 <p className='orders_order-i'><strong>Cena: </strong>{order.price}</p>
+                <hr></hr>
             </div>
         )}
     </div>

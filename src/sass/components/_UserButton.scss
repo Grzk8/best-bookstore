@@ -1,6 +1,11 @@
 .user {
     border: 1px solid rgb(255, 255, 255);
     width: 70px;
+
+    .userLogo-button{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
 }
 
 .userLogo {

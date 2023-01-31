@@ -1,43 +1,53 @@
-.books {
+.books_container {
   padding: 1em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  .books_container_book {
+    margin: 3px;
+    border: 1px solid $bookBorder;
+    background-color: $bookBackground;
+    padding: 0.5em;
+    width: 200px;
+    display: block;
+
+    .books_container_book-title {
+      display: block;
+      color: black;
+      font-size: 1em;
+      text-align: center;
+      margin: 6px;
+    }
+
+    .books_container_book-title:hover {
+      text-decoration: underline;
+    }
+
+    .books_container_book-author {
+      font-size: 0.8em;
+      text-align: center;
+      color: $drawerNavTitle;
+      margin: 6px;
+    }
+
+    .books_container_book-price {
+      font-size: 0.9em;
+      text-align: center;
+      padding-bottom: 15px;
+    }    
+
+    .books_container_book-cover {
+      //position: relative;
+      //left: 2.3em;
+      margin: 0, auto;
+    }
+  }
 }
 
-.book {
-  margin: 3px;
-  border: 1px solid $bookBorder;
-  background-color: $bookBackground;
-  padding: 0.5em;
-  width: 200px;
-  display: block;
-}
 
-.title {
-  display: block;
-  color: black;
-  font-size: 1em;
-  text-align: center;
-  margin: 6px;
-}
 
-.title:hover {
-  text-decoration: underline;
-}
 
-.author {
-  font-size: 0.8em;
-  text-align: center;
-  color: black;
-  margin: 6px;
-}
-
-.cover {
-  //position: relative;
-  //left: 2.3em;
-  margin: 0, auto;
-}
 
 .btn2 {
   left: 30em;

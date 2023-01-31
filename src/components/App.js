@@ -3,7 +3,6 @@ import { HashRouter, Route } from 'react-router-dom';
 import Main from './MenuInfo/Main';
 import AboutUs from './MenuInfo/AboutUs/AboutUs';
 import SelfPickup from './MenuInfo/SelfPickup/SelfPickup';
-import Contact from './/MenuInfo/Contact/Contact';
 import Description from './MenuInfo/Categories/Description';
 import Category from "./MenuInfo/Categories/Category";
 import Orders from './MenuInfo/Orders/Orders';

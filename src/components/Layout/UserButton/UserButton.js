@@ -14,11 +14,11 @@ const UserButton = props => {
     return (logged ?
         <div className='user' onClick={props.sublistToggleClicked} >
             <div className="userLogo" style={{ height: props.height, width: props.width }}></div>
-            <p className="inBasket"> {button} </p>
+            <p className="userLogo-button"> {button} </p>
         </div> :
         <NavLink to="/login" className='user' activeClassName="active" onClick={props.sublistToggleClicked}>
             <div className="userLogo" style={{ height: props.height, width: props.width }}></div>
-            <p className="inBasket"> {button} </p>
+            <p className="userLogo-button"> {button} </p>
         </NavLink>
     )
 };

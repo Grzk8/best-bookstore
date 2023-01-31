@@ -18,7 +18,7 @@ const footer = () => {
             <div className="footerMain_container">
                 <div className="rights">
                     <Logo fontSize={fontSize} />
-                    <p className="bestbookstoreRights">2022 BestBooKStore <br />created by Grzegorz Kaczor</p>
+                    <p className="bestbookstoreRights">2023 BestBooKStore <br />created by Grzegorz Kaczor</p>
                 </div>
                 <div className="media">
                     <div><a className="mediaLogo facebook" href="https://twitter.com"></a></div>
