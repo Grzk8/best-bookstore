@@ -1,6 +1,5 @@
 import React, { useReducer, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-
 import { UPDATE_FORM, onInputChange, onFocusOut, validateInput, formReducer } from '../../../../lib/formUtils';
 import Input from "../../Input/Input";
 import Button from "../../Button/Button";
@@ -78,6 +77,9 @@ const Login = () => {
         };
     }
 
+    let swithToSignup = () => {
+        history.push('/signup');
+    }
     return <>
         {formSubmited && !showError && !fetchError && formState.isFormValid && (
             history.push('/')
@@ -86,47 +88,63 @@ const Login = () => {
         {showError && !formState.isFormValid && (
             <div className="form_error">Wpisz login i hasło</div>
         )}
-        <form className='auth_form' onSubmit={e => loginSubmitHandler(e)}>
 
-            <div className="auth_form-element">
-            <p>email</p>
-            <Input
-                className="input"
-                inputtype="input"
-                name="email"
-                value={formState.email.value}
-                id="email"
-                onChange={e => { onInputChange("email", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("email", e.target.value, dispatch, formState) }}
-            />
-            {formState.email.touched && formState.email.hasError && (
-                <div className="error">{formState.email.error}</div>
-            )}
-            </div>
+        <div className='auth_container'>
+            <div className='auth_container_auth'>
+                <form className='auth_form' onSubmit={e => loginSubmitHandler(e)}>
 
-            <div className="auth_form-element">
-            <p>hasło</p>
-            <Input
-                className="input"
-                inputtype="input"
-                type="password"
-                name="password"
-                value={formState.password.value}
-                id="password"
-                onChange={e => { onInputChange("password", e.target.value, dispatch, formState) }}
-                onBlur={e => { onFocusOut("password", e.target.value, dispatch, formState) }}
-            />
-            {formState.password.touched && formState.password.hasError && (
-                <div className="error">{formState.password.error}</div>
-            )}
-            </div>
-            
-            
-            <div className='centered'>
-                <Button className="centered">Zaloguj się</Button>
-            </div>
+                    <div className="auth_form-element">
+                        <p>email</p>
+                        <Input
+                            className="input"
+                            inputtype="input"
+                            name="email"
+                            value={formState.email.value}
+                            id="email"
+                            onChange={e => { onInputChange("email", e.target.value, dispatch, formState) }}
+                            onBlur={e => { onFocusOut("email", e.target.value, dispatch, formState) }}
+                        />
+                        {formState.email.touched && formState.email.hasError && (
+                            <div className="error">{formState.email.error}</div>
+                        )}
+                    </div>
 
-        </form>
+                    <div className="auth_form-element">
+                        <p>hasło</p>
+                        <Input
+                            className="input"
+                            inputtype="input"
+                            type="password"
+                            name="password"
+                            value={formState.password.value}
+                            id="password"
+                            onChange={e => { onInputChange("password", e.target.value, dispatch, formState) }}
+                            onBlur={e => { onFocusOut("password", e.target.value, dispatch, formState) }}
+                        />
+                        {formState.password.touched && formState.password.hasError && (
+                            <div className="error">{formState.password.error}</div>
+                        )}
+                    </div>
+
+
+                    <div className='centered'>
+                        <Button className="centered">Zaloguj się</Button>
+                    </div>
+
+                </form>
+            </div>
+            <div className='auth_container_switch'>
+                <div className='auth_container_switch_window'>
+                    <p className='auth_container_switch_window-info_bold'>Posiadasz już konto w BestBooKStore ?</p>
+                    <p className='auth_container_switch_window-info'>Jeżeli posiadasz już konto w naszym sklepie, możesz się zalogować.</p>
+                    <p className='auth_container_switch_window-info_bold'>Nie masz jeszcze konta?</p>
+                    <p className='auth_container_switch_window-info'>Załóż konto klienta, aby móc złorzyć zamówienie i mieć dostęp do statusów zamówień i programu rabatowego dla stałych klientów.</p>
+                    <Button clicked={swithToSignup}>Załóż konto</Button>
+                </div>
+            </div>
+        </div>
+
+
     </>
 
 }

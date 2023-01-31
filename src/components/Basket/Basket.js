@@ -93,8 +93,9 @@ const Basket = props => {
                 </div>
             </div>
         )}
-
-        {price}
+        <div className="basket_container basket_container_totalprice">
+            {price}
+        </div>
     </>
 };
 
