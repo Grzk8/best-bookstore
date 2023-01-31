@@ -33,7 +33,7 @@ const header = props => {
                 </div>
                 <div className='header_buttons_container'>
                     <div className='header_buttons_item auth'>
-                        <UserButton sublistToggleClicked={sublistToggleHandler} />
+                        <UserButton sublistToggleClicked={sublistToggleHandler} leave={sublistClosedHandler}/>
                     </div>
                     <div className='header_buttons_item basket'>
                         <BasketButton basket={props.basket} totalPrice={props.totalPrice} />

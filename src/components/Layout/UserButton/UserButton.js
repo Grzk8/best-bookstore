@@ -12,7 +12,7 @@ const UserButton = props => {
     }
 
     return (logged ?
-        <div className='user' onClick={props.sublistToggleClicked}>
+        <div className='user' onClick={props.sublistToggleClicked} >
             <div className="userLogo" style={{ height: props.height, width: props.width }}></div>
             <p className="inBasket"> {button} </p>
         </div> :

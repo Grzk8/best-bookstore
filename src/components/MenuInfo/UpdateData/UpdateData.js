@@ -125,7 +125,7 @@ const UpdateData = () => {
                 <div className="form_error">Wypełnij wszystkie pola</div>
             )}
             {fetchError && (<div className="form_error">{fetchError}</div>)}
-            <form className='auth_form' onSubmit={e => updateSubmitHandler(e)}>
+            <form className='auth_form  auth_update' onSubmit={e => updateSubmitHandler(e)}>
 
                 <div className="auth_form-element">
                 <p>imię</p>

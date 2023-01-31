@@ -135,7 +135,7 @@ const Login = () => {
             </div>
             <div className='auth_container_switch'>
                 <div className='auth_container_switch_window'>
-                    <p className='auth_container_switch_window-info_bold'>Posiadasz już konto w BestBooKStore ?</p>
+                    <p className='auth_container_switch_window-info_bold'>Posiadasz już konto w BestBooKStore?</p>
                     <p className='auth_container_switch_window-info'>Jeżeli posiadasz już konto w naszym sklepie, możesz się zalogować.</p>
                     <p className='auth_container_switch_window-info_bold'>Nie masz jeszcze konta?</p>
                     <p className='auth_container_switch_window-info'>Załóż konto klienta, aby móc złorzyć zamówienie i mieć dostęp do statusów zamówień i programu rabatowego dla stałych klientów.</p>

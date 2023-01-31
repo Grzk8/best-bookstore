@@ -14,6 +14,8 @@ import Search from './Layout/Search/Search';
 import Login from './Layout/Auth/Login/Login';
 import Signup from './Layout/Auth/Signup/Signup';
 import UpdateData from './MenuInfo/UpdateData/UpdateData';
+import Newest from "./MenuInfo/Newest/Newest";
+import Sale from "./MenuInfo/Sale/Sale";
 import { AuthContext } from "./Layout/Auth/auth-context";
 
 const App = () => {
@@ -69,7 +71,6 @@ const App = () => {
         <Route exact path='/' render={props => <Main {...props} addBook={addBook} basket={basket} />} />
         <Route path='/aboutUs' render={props => <AboutUs {...props} basket={basket} />} />
         <Route path='/selfPickup' render={props => <SelfPickup {...props} basket={basket} />} />
-        <Route path='/contact' render={props => <Contact {...props} basket={basket} />} />
         <Route path='/search' render={props => <Search {...props} addBook={addBook} basket={basket} />} />
         <Route path='/basket' render={props => <Basket {...props} removeBook={removeBook} clearBasket={clearBasket} basket={basket} />} />
         <Route path='/sf' render={props => <Category {...props} addBook={addBook} basket={basket} category="s-f" />} />
@@ -80,6 +81,9 @@ const App = () => {
         <Route path='/orders' render={props => <Orders {...props} addBook={addBook} basket={basket} />} />
         <Route path='/updatedata' render={props => <UpdateData {...props} addBook={addBook} basket={basket} />} />
         <Route path='/ordercompleted' render={props => <OrderCompleted {...props} addBook={addBook} basket={basket} />} />
+        <Route path='/newest' render={props => <Newest {...props} addBook={addBook} basket={basket} />} />
+        <Route path='/sale' render={props => <Sale {...props} addBook={addBook} basket={basket} />} />
+
         {auth}
     </>
 
