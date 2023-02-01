@@ -4,7 +4,7 @@ import Logo from '../../Layout/Logo/Logo';
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 import BasketButton from "../../Layout/BasketButton/BasketButton";
 import UserButton from '../../Layout/UserButton/UserButton';
-import Search from "../../Layout/Search/Search";
+import SearchBar from "../../Layout/SearchBar/SearchBar";
 import UserSublist from '../../Layout/User-sublist/User-sublist';
 import { AuthContext } from '../../Layout/Auth/auth-context';
 import MenuItems from '../MenuItems/MenuItems';
@@ -29,25 +29,29 @@ const header = props => {
                     <Logo fontSize='2em' />
                 </div>
                 <div className='search_desktop_only'>
-                    <Search />
+                    <SearchBar
+                        searchingValue={props.searchingValue}
+                        searching={props.searching}
+                        submitSearchForm={props.submitSearchForm}
+                    />
                 </div>
                 <div className='header_buttons_container'>
                     <div className='header_buttons_item auth'>
-                        <UserButton sublistToggleClicked={sublistToggleHandler} leave={sublistClosedHandler}/>
+                        <UserButton sublistToggleClicked={sublistToggleHandler} leave={sublistClosedHandler} />
                     </div>
                     <div className='header_buttons_item basket'>
                         <BasketButton basket={props.basket} totalPrice={props.totalPrice} />
                     </div>
                     <UserSublist
-                            open={showSublist}
-                            closed={sublistClosedHandler}
-                        />
+                        open={showSublist}
+                        closed={sublistClosedHandler}
+                    />
                 </div>
             </div>
             <div className='header_menu'>
                 <MenuItems />
                 <div className='header_search_container search_mobile_only'>
-                    <Search />
+                    <SearchBar searchingValue={props.searchingValue} searching={props.searching} />
                 </div>
             </div>
 

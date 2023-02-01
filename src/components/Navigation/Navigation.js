@@ -17,8 +17,12 @@ const Navigation = props => {
 
     return (
         <div className="container">
-            <Header drawerToggleClicked={sideDrawerToggleHandler} basket={props.basket} />
-
+            <Header
+                drawerToggleClicked={sideDrawerToggleHandler}
+                basket={props.basket}
+                searching={props.searching}
+                submitSearchForm={props.submitSearchForm}
+            />
             <SideDrawer open={showSideDrawer}
                 closed={sideDrawerClosedHandler}
                 basket={props.basket} />

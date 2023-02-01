@@ -9,7 +9,7 @@ import Orders from './MenuInfo/Orders/Orders';
 import OrderCompleted from "./Basket/OrderCompleted";
 import Navigation from './Navigation/Navigation';
 import Basket from './Basket/Basket';
-import Search from './Layout/Search/Search';
+import Search from './MenuInfo/Search/Search';
 import Login from './Layout/Auth/Login/Login';
 import Signup from './Layout/Auth/Signup/Signup';
 import UpdateData from './MenuInfo/UpdateData/UpdateData';
@@ -21,6 +21,8 @@ const App = () => {
     const [token, setToken] = useState(false);
     const [userId, setUserId] = useState(false);
     const [basket, setBasket] = useState([]);
+    const [searchingValue, setSearchingValue] = useState('');
+    const [isSubmmited, setIsSubmitted] = useState(false);
 
     const login = useCallback((uid, token) => {
         setToken(token);
@@ -43,6 +45,14 @@ const App = () => {
             login(storedData.userId, storedData.token);
         }
     }, [login]);
+
+    const searching = (value) => {
+        setSearchingValue(value);
+    };
+
+    const submitSearchForm = () => {
+        setIsSubmitted(true);
+    }
 
     const addBook = (book) => {
         setBasket(basket => [...basket, book]);
@@ -70,7 +80,7 @@ const App = () => {
         <Route exact path='/' render={props => <Main {...props} addBook={addBook} basket={basket} />} />
         <Route path='/aboutUs' render={props => <AboutUs {...props} basket={basket} />} />
         <Route path='/selfPickup' render={props => <SelfPickup {...props} basket={basket} />} />
-        <Route path='/search' render={props => <Search {...props} addBook={addBook} basket={basket} />} />
+        <Route path='/search' render={props => <Search {...props} addBook={addBook} basket={basket} searchingValue={searchingValue} isSubmmited={isSubmmited} submitSearchForm={submitSearchForm}/>} />
         <Route path='/basket' render={props => <Basket {...props} removeBook={removeBook} clearBasket={clearBasket} basket={basket} />} />
         <Route path='/sf' render={props => <Category {...props} addBook={addBook} basket={basket} category="s-f" />} />
         <Route path='/popularsience' render={props => <Category {...props} addBook={addBook} basket={basket} category="popularnonaukowe" />} />
@@ -98,7 +108,7 @@ const App = () => {
 
             <div className="navigation">
                 <HashRouter>
-                    <Navigation basket={basket}>
+                    <Navigation basket={basket} searchingValue={searchingValue} searching={searching} submitSearchForm={submitSearchForm}>
                         {routes}
                     </Navigation>
                 </HashRouter>
