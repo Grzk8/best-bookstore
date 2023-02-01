@@ -51,7 +51,7 @@ const App = () => {
     };
 
     const submitSearchForm = () => {
-        setIsSubmitted(true);
+        setIsSubmitted(prevState => !prevState);
     }
 
     const addBook = (book) => {
@@ -80,7 +80,7 @@ const App = () => {
         <Route exact path='/' render={props => <Main {...props} addBook={addBook} basket={basket} />} />
         <Route path='/aboutUs' render={props => <AboutUs {...props} basket={basket} />} />
         <Route path='/selfPickup' render={props => <SelfPickup {...props} basket={basket} />} />
-        <Route path='/search' render={props => <Search {...props} addBook={addBook} basket={basket} searchingValue={searchingValue} isSubmmited={isSubmmited} submitSearchForm={submitSearchForm}/>} />
+        <Route path='/search' render={props => <Search {...props} addBook={addBook} basket={basket} searchingValue={searchingValue} isSubmmited={isSubmmited} submitSearchForm={submitSearchForm} />} />
         <Route path='/basket' render={props => <Basket {...props} removeBook={removeBook} clearBasket={clearBasket} basket={basket} />} />
         <Route path='/sf' render={props => <Category {...props} addBook={addBook} basket={basket} category="s-f" />} />
         <Route path='/popularsience' render={props => <Category {...props} addBook={addBook} basket={basket} category="popularnonaukowe" />} />
@@ -108,7 +108,12 @@ const App = () => {
 
             <div className="navigation">
                 <HashRouter>
-                    <Navigation basket={basket} searchingValue={searchingValue} searching={searching} submitSearchForm={submitSearchForm}>
+                    <Navigation
+                        basket={basket}
+                        searchingValue={searchingValue}
+                        searching={searching}
+                        submitSearchForm={submitSearchForm}
+                    >
                         {routes}
                     </Navigation>
                 </HashRouter>

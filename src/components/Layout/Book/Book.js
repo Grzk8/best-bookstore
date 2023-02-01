@@ -12,6 +12,7 @@ const Book = props => {
     let newRel = <div className='new'><strong>Nowość</strong></div>;
     props.newBook ? newReleases = newRel : null
 
+
     return <>
         <div className="books_container" >{
             props.data.map(b =>
@@ -20,11 +21,16 @@ const Book = props => {
                     {newReleases}
                     <Link className="books_container_book-title" to={'/description/' + b._id}>{b.title}</Link>
                     <p className="books_container_book-author">{b.author}</p>
-                    <p className="books_container_book-price">Cena: <strong>{b.price}</strong> zł</p>
+                    {b.salePrice ?
+                        <>
+                            <p className="books_container_book-price canceled_price">Cena: <strong>{b.price}</strong> zł</p>
+                            <p className='books_container_book-saleprice'>Cena: <strong>{b.salePrice}</strong> zł</p>
+                        </> :
+                        <p className="books_container_book-price">Cena: <strong>{b.price}</strong> zł</p>}
                     <div className='centered'>
-                    <Button clicked={() => handleClick(b)}>DO KOSZYKA</Button>
+                        <Button clicked={() => handleClick(b)}>DO KOSZYKA</Button>
                     </div>
-                    
+
                 </div>)
         }</div>
     </>

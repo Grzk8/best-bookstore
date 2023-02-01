@@ -1,25 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 import Input from '../Input/Input';
 
 const SearchBar = props => {
-
-    const [issub, setissub] = useState(false);
-
-    const sub = props.submitSearchForm;
-    const set = (val) => {
-        setissub(val => !val)
-    }
-    console.log(issub)
+    let history = useHistory();
 
     const handleSubmitForm = e => {
-        setissub(true)
-        props.submitSearchForm;
+        e.preventDefault();
+        props.submitSearchForm();
+        history.push('/search');
     };
-
+  
     const handleSearchHandle = e => {
         props.searching(e.target.value);
     }
-
 
     return <form className="search" onSubmit={handleSubmitForm}>
         <Input
@@ -31,7 +25,7 @@ const SearchBar = props => {
             placeholder="tytuł książki lub autor"
             onChange={handleSearchHandle}
         />
-        <button className='btn_search' onClick={handleSubmitForm}><i className="fa fa-search"></i></button>
+        <button className='btn_search' ><i className="fa fa-search"></i></button>
     </form>
 };
 

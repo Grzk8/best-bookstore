@@ -35,7 +35,19 @@
       font-size: 0.9em;
       text-align: center;
       padding-bottom: 15px;
-    }    
+    }
+    
+    .books_container_book-saleprice{
+      font-size: 0.9em;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    .canceled_price{
+      text-decoration: line-through;
+      font-size: 0.8em;
+      color: rgb(71, 60, 60);
+    }
 
     .books_container_book-cover {
       //position: relative;
@@ -56,10 +68,11 @@
 .new {
   position: relative;
   bottom: 180px;
+  border-radius: 6%;
   text-align: center;
   color: white;
   width: 70px;
   height: 20px;
   background-color: $primaryColorDark;
-  z-index: 10;
+  z-index: 0;
 }

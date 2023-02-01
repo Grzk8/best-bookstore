@@ -3,18 +3,11 @@ import Book from '../../Layout/Book/Book';
 
 
 const Search = props => {
-    const [books, setBooks] = useState();
-    const [isLoading, setIsLoading] = useState(false);
-    
-    const search = props.searchingValue;
-    const submited = props.isSubmmited;
-    const setSubmited = props.submitSearchForm;
-
-    console.log(search);
-
+     const [books, setBooks] = useState();
+     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        if (!submited) {
+        if (props.isSubmmited) {
             const fetchSearch = async () => {
                 setIsLoading(true);
                 try {
@@ -23,28 +16,27 @@ const Search = props => {
                         headers: {
                             'Content-Type': 'application/json'
                         },
-                        body: JSON.stringify({ searching: search })
+                        body: JSON.stringify({ searching: props.searchingValue })
                     })
                     const responseData = await response.json();
                     setBooks(responseData.search);
-                    //props.unSubmitSearchForm;
                     setIsLoading(false);
+                    props.submitSearchForm()
                 } catch {
                     (err) => console.log(err)
                 }
-                setIsLoading(false);
-               
+                setIsLoading(false); 
             }
             fetchSearch();
         }
-    }, [search, submited]);
+    }, [props.searchingValue, props.isSubmmited, props.submitSearchForm]);
 
 
 
     return <>
-        <h1>szukane</h1>
         {isLoading && <div className="loader">Loading...</div>}
         {!isLoading && books && <Book data={books} addBook={props.addBook} />}
+        {!isLoading && books < 1 && <div>brak wyników</div>}
     </>
 };
 

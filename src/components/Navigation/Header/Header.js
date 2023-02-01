@@ -51,7 +51,11 @@ const header = props => {
             <div className='header_menu'>
                 <MenuItems />
                 <div className='header_search_container search_mobile_only'>
-                    <SearchBar searchingValue={props.searchingValue} searching={props.searching} />
+                    <SearchBar
+                        searchingValue={props.searchingValue}
+                        searching={props.searching}
+                        submitSearchForm={props.submitSearchForm}
+                    />
                 </div>
             </div>
 

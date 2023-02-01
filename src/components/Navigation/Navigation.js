@@ -21,6 +21,7 @@ const Navigation = props => {
                 drawerToggleClicked={sideDrawerToggleHandler}
                 basket={props.basket}
                 searching={props.searching}
+                searchingValue={props.searchingValue}
                 submitSearchForm={props.submitSearchForm}
             />
             <SideDrawer open={showSideDrawer}
