@@ -1,13 +1,21 @@
 .booksImage {
-  width: 40em;
-  height: 40em;
+  width: 100%;
+  height: 100%;
   background-position: center;
-  background-size: cover;
-  background-image: url("../assets/images/books.png");
-  display: flow;
-  left: 40em;
-  right: 40em;
+  background-size: contain;
   margin: 0 auto;
+  backdrop-filter:inherit;
+}
+
+.about-header{
+  font-size: 1.5em;
+  margin: 1.2em;
+  text-align: center;
+}
+
+.about-text {
+  margin: 3%;
+  font-size: 0.9em;
 }
 
 @media screen and (max-width: 900px) {

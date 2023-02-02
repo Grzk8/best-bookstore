@@ -4,8 +4,6 @@ import Categories from './Categories/Categories'
 
 const menuItems = () => {
 
-
-
     return (
         <ul className='menuItems'>
             <div className='menuItem dropdown'>

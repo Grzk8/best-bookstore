@@ -8,17 +8,18 @@ const Book = props => {
         props.addBook(book)
     };
 
-    let newReleases = null;
-    let newRel = <div className='new'><strong>Nowość</strong></div>;
-    props.newBook ? newReleases = newRel : null
-
+    let mark = null;
+    let newRel = <div className='mark'><strong>Nowość</strong></div>
+    let saleBook = <div className='mark'><strong>Promocja</strong></div>
+    props.newBook ? mark = newRel : null;
+    props.sale ? mark = saleBook : null;
 
     return <>
         <div className="books_container" >{
             props.data.map(b =>
                 <div className="books_container_book" key={b._id}>
                     <Link to={'/description/' + b._id} image={b.image}><img className="books_container_book-cover" src={b.image} height="180px" width="180px"></img></Link>
-                    {newReleases}
+                    {mark}
                     <Link className="books_container_book-title" to={'/description/' + b._id}>{b.title}</Link>
                     <p className="books_container_book-author">{b.author}</p>
                     {b.salePrice ?
@@ -31,7 +32,8 @@ const Book = props => {
                         <Button clicked={() => handleClick(b)}>DO KOSZYKA</Button>
                     </div>
 
-                </div>)
+                </div>
+            )
         }</div>
     </>
 };

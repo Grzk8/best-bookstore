@@ -5,7 +5,6 @@ import Input from "../../Input/Input";
 import Button from "../../Button/Button";
 import { AuthContext } from '../auth-context';
 
-
 const Login = () => {
 
     const [formState, dispatch] = useReducer(formReducer, {
@@ -80,11 +79,12 @@ const Login = () => {
     let swithToSignup = () => {
         history.push('/signup');
     }
+
     return <>
         {formSubmited && !showError && !fetchError && formState.isFormValid && (
             history.push('/')
         )}
-        <h1 className="headerStyle">Zaloguj się</h1>
+        <h1 className="headerStyle">zaloguj się</h1>
         {showError && !formState.isFormValid && (
             <div className="form_error">Wpisz login i hasło</div>
         )}
@@ -143,10 +143,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
-
-
     </>
-
-}
+};
 
 export default Login;

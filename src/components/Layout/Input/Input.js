@@ -31,6 +31,6 @@ const input = (props) => {
     return (<>
         {inputElement}
     </>)
-}
+};
 
 export default input;

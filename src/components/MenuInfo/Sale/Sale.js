@@ -6,7 +6,7 @@ const Sale = props => {
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        const fetchNewest = async () => {
+        const fetchSale = async () => {
             setIsLoading(true);
             try {
                 const response = await fetch(`http://localhost:8000/api/items/sale`, {
@@ -23,13 +23,13 @@ const Sale = props => {
             }
             setIsLoading(false);
         }
-        fetchNewest();
+        fetchSale();
     }, []);
 
     return <>
-        <h1 className="headerStyle">Promocje</h1>
+        <h1 className="headerStyle">promocje</h1>
         {isLoading && <div className="loader">Loading...</div>}
-        {!isLoading && books && <Book data={books} addBook={props.addBook} />}
+        {!isLoading && books && <Book data={books} addBook={props.addBook} sale={true} />}
     </>
 };
 

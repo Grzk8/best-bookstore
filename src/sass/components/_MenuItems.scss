@@ -26,7 +26,7 @@
 
                 .dropdown-content a::after {
                         content: '';
-                        
+
                 }
         }
 
@@ -34,7 +34,8 @@
                 position: relative;
                 display: inline-block;
                 padding-left: 30px;
-                list-style: none;;
+                list-style: none;
+                ;
         }
 
         .dropdown-content {

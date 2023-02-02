@@ -29,7 +29,6 @@
 
       .basket_container_book_desc-title {
         font-size: 1em;
-        ;
       }
 
       .basket_container_book_desc-author {
@@ -71,10 +70,14 @@
   border: none;
   display: flex;
   justify-content: end;
-
   .btn{
     margin: 6%;
   }
+}
+
+.basket-warning {
+  margin: 5%;
+  color: $invalidColor;
 }
 
 @media screen and (max-width: 900px) {

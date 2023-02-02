@@ -44,8 +44,9 @@
 }
 
 .headerStyle {
-    text-align: center;
+    margin-left: 8%;
     padding: 1.2em;
+    color: $drawerNavTitle;
 }
 
 @media screen and (max-width: 900px) {

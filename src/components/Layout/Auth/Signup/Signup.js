@@ -102,7 +102,7 @@ const Signup = () => {
     }
 
     return <>
-        <h1 className="headerStyle">Załóż konto</h1>
+        <h1 className="headerStyle">załóż konto</h1>
         {showError && !formState.isFormValid && (
             <div className="form_error">Wypełnij wszystkie pola</div>
         )}
@@ -291,10 +291,7 @@ const Signup = () => {
                 </div>
             </div>
         </div>
-
-
-
     </>
-}
+};
 
 export default Signup;

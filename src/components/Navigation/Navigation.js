@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from './Header/Header'
 import Footer from './Footer/Footer';
 import SideDrawer from './SideDrawer/SideDrawer';
-import MenuItems from './MenuItems/MenuItems'
 
 const Navigation = props => {
     const [showSideDrawer, setShowSideDrawer] = useState(false);

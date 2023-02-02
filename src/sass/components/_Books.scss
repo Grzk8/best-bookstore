@@ -50,8 +50,6 @@
     }
 
     .books_container_book-cover {
-      //position: relative;
-      //left: 2.3em;
       margin: 0, auto;
     }
   }
@@ -65,14 +63,15 @@
   left: 30em;
 }
 
-.new {
+.mark {
   position: relative;
   bottom: 180px;
+  left: 110px;
   border-radius: 6%;
   text-align: center;
   color: white;
-  width: 70px;
+  width: 73px;
   height: 20px;
   background-color: $primaryColorDark;
-  z-index: 0;
+  z-index: 1;
 }

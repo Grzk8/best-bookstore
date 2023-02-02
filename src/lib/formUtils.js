@@ -1,6 +1,5 @@
 export const UPDATE_FORM = "UPDATE_FORM"
 
-
 export const formReducer = (state, action) => {
     switch (action.type) {
         case UPDATE_FORM:

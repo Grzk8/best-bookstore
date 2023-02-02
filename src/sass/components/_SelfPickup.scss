@@ -11,6 +11,17 @@ iframe {
   height: 500px;
 }
 
+.selfPickupInfoStyle {
+  margin: 10% 0% 10% 10%;
+  padding: 1.2em;
+}
+
+.selfPickupMapStyle {
+  text-align: center;
+  margin: 2%;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 900px) {
   iframe {
     width: 300px;

@@ -57,20 +57,24 @@ const Basket = props => {
         props.removeBook(id)
     };
 
+    let notlogged;
+    if (!auth.token) {
+        notlogged = <p className="totalprice basket-warning"> Aby złożyć zamówienie muszisz się zalogować</p>
+    }
+
     let price = <p className="totalprice">koszyk jest pusty</p>
     if (props.basket.length > 0) {
         price = <div>
             <p className="totalprice">Łącznie do zapłaty :<strong> {totalPrice} zł</strong></p>
             <div className='right'>
-                <Button clicked={sendOrderHandler} disabled={!auth.isLoggedIn}>KUPUJĘ</Button>
+                {notlogged}
+                <Button clicked={sendOrderHandler} disabled={!auth.isLoggedIn} >KUPUJĘ</Button>
             </div>
         </div>
     }
 
     return <>
         <h1 className="headerStyle">koszyk</h1>
-
-
         {props.basket.map(b =>
             <div className="basket_" key={b._id}>
                 <div className="basket_container">

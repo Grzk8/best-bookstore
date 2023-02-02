@@ -27,7 +27,7 @@ const Newest = props => {
     }, []);
 
     return <>
-        <h1 className="headerStyle">Nowości</h1>
+        <h1 className="headerStyle">nowości</h1>
         {isLoading && <div className="loader">Loading...</div>}
         {!isLoading && books && <Book data={books} addBook={props.addBook} newBook={true} />}
     </>

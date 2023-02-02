@@ -8,6 +8,7 @@ const SearchBar = props => {
     const handleSubmitForm = e => {
         e.preventDefault();
         props.submitSearchForm();
+
         history.push('/search');
     };
   

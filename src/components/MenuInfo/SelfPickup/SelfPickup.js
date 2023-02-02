@@ -8,9 +8,9 @@ const SelfPickup = () => {
     };
 
     return <>
-        <p className="headerStyle">Księgarnia  oprócz sprzedaży wysyłkowej oferuje również możliwość bezpłatnego odbioru zamówień we własnych Punktach odbioru zamówień: </p>
+        <p className="selfPickupInfoStyle">Księgarnia  oprócz sprzedaży wysyłkowej oferuje również możliwość bezpłatnego odbioru zamówień we własnych Punktach odbioru zamówień: </p>
 
-        <p className="headerStyle">Warszawa ul. Słoneczna 2</p>
+        <p className="selfPickupMapStyle">Warszawa ul. Słoneczna 2</p>
 
         {isLoading && <div className="loader">Loading...</div>}
         <div className="mapouter">
@@ -21,7 +21,7 @@ const SelfPickup = () => {
                 <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
         </div>
 
-        <p className="headerStyle">Kraków ul. Długa 76A</p>
+        <p className="selfPickupMapStyle">Kraków ul. Długa 76A</p>
 
         {isLoading && <div className="loader">Loading...</div>}
         <div className="mapouter">
@@ -32,7 +32,7 @@ const SelfPickup = () => {
                 <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
         </div>
 
-        <p className="headerStyle">Wrocław ul. Piękna 14/58</p>
+        <p className="selfPickupMapStyle">Wrocław ul. Piękna 14/58</p>
 
         {isLoading && <div className="loader">Loading...</div>}
         <div className="mapouter">
@@ -43,7 +43,7 @@ const SelfPickup = () => {
                 <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
         </div>
 
-        <p className="headerStyle">Gdańsk ul. Totuńska 4</p>
+        <p className="selfPickupMapStyle">Gdańsk ul. Totuńska 4</p>
 
         {isLoading && <div className="loader">Loading...</div>}
         <div className="mapouter">
@@ -53,7 +53,7 @@ const SelfPickup = () => {
                     frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" onLoad={hideSpinner}></iframe>
                 <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
         </div>
-    </>;
+    </>
 };
 
 export default SelfPickup;

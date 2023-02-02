@@ -120,7 +120,7 @@ const UpdateData = () => {
     return (<>
         {isLoading && <div className="loader">Loading...</div>}
         {!isLoading && userData && <div>
-            <h1 className="headerStyle">Edycja danych</h1>
+            <h1 className="headerStyle">edycja danych</h1>
             {showError && !formState.isFormValid && (
                 <div className="form_error">Wypełnij wszystkie pola</div>
             )}

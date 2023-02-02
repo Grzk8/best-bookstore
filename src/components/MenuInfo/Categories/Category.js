@@ -28,7 +28,7 @@ const Category = props => {
     }, []);
 
     return <>
-        <h1 className="headerStyle">{props.category.toUpperCase()}</h1>
+        <h1 className="headerStyle">{props.category}</h1>
         {isLoading && <div className="loader">Loading...</div>}
         {!isLoading && books && <Book data={books} addBook={props.addBook} />}
     </>

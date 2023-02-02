@@ -1,16 +1,13 @@
-import React, { useState, useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
 import Logo from '../../Layout/Logo/Logo';
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 import BasketButton from "../../Layout/BasketButton/BasketButton";
 import UserButton from '../../Layout/UserButton/UserButton';
 import SearchBar from "../../Layout/SearchBar/SearchBar";
 import UserSublist from '../../Layout/User-sublist/User-sublist';
-import { AuthContext } from '../../Layout/Auth/auth-context';
 import MenuItems from '../MenuItems/MenuItems';
 
 const header = props => {
-    const auth = useContext(AuthContext);
     const [showSublist, setShowSublist] = useState(false);
 
     const sublistToggleHandler = () => {
@@ -64,30 +61,3 @@ const header = props => {
 };
 
 export default header;
-
-
-    // let fontSize = null;
-    // let crit = "(max-width: 700px)";
-    // let mobile = window.matchMedia(crit).matches
-
-    // if (mobile) {
-    //     fontSize = '2em'
-    // } else {
-    //     fontSize = '2em'
-    // };
-
-    // let links = (
-    //     <>
-    //         <NavLink to="/login" className='auth' activeClassName="active">Zaloguj się</NavLink>
-    //         <NavLink to="/signup" className='auth' activeClassName="active">Załóż konto</NavLink>
-    //     </>
-    // );
-
-    // if (auth.isLoggedIn) {
-    //     links = (
-    //         <>
-    //             <NavLink to="/" className='auth' onClick={auth.logout} activeClassName="active">wyloguj się</NavLink>
-    //             <p> Moje konto</p>
-    //         </>
-    //     );
-    // }
