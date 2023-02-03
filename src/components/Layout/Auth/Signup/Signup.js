@@ -60,7 +60,7 @@ const Signup = () => {
         if (isFormValid) {
             const fetchSignup = async () => {
                 try {
-                    const response = await fetch(`http://localhost:8000/api/users/signup`, {
+                    const response = await fetch(`https://bestbookstore-backend.onrender.com/api/users/signup`, {
                         method: "POST",
                         headers: {
                             'Content-Type': 'application/json'

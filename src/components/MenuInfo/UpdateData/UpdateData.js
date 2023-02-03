@@ -30,7 +30,7 @@ const UpdateData = () => {
             const id = auth.userId;
             setIsLoading(true);
             try {
-                const response = await fetch(`http://localhost:8000/api/users/userdata/${id}`, {
+                const response = await fetch(`https://bestbookstore-backend.onrender.com/api/users/userdata/${id}`, {
                     method: "GET",
                     headers: {
                         'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ const UpdateData = () => {
             const updateData = async () => {
                 const userId = auth.userId
                 try {
-                    const response = await fetch(`http://localhost:8000/api/users/updatedata`, {
+                    const response = await fetch(`https://bestbookstore-backend.onrender.com/api/users/updatedata`, {
                         method: "POST",
                         headers: {
                             'Content-Type': 'application/json'

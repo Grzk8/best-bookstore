@@ -11,7 +11,7 @@ const Search = props => {
                 const fetchSearch = async () => {
                     setIsLoading(true);
                     try {
-                        const response = await fetch(`http://localhost:8000/api/items/search`, {
+                        const response = await fetch(`https://bestbookstore-backend.onrender.com/api/items/search`, {
                             method: "POST",
                             headers: {
                                 'Content-Type': 'application/json'

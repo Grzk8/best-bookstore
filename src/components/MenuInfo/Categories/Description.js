@@ -11,7 +11,7 @@ const Description = props => {
             let res = {}
             setIsLoading(true);
             try {
-                const response = await fetch(`http://localhost:8000/api/items/description/${_id}`, {
+                const response = await fetch(`https://bestbookstore-backend.onrender.com/api/items/description/${_id}`, {
                     method: "GET",
                     headers: {
                         'Content-Type': 'application/json'

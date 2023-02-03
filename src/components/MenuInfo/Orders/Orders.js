@@ -12,7 +12,7 @@ const Orders = () => {
             const id = auth.userId;
             setIsLoading(true);
             try {
-                const response = await fetch(`http://localhost:8000/api/users/order/${id}`, {
+                const response = await fetch(`https://bestbookstore-backend.onrender.com/api/users/order/${id}`, {
                     method: "GET",
                     headers: {
                         'Content-Type': 'application/json'

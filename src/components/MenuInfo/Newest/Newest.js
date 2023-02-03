@@ -9,7 +9,7 @@ const Newest = props => {
         const fetchNewest = async () => {
             setIsLoading(true);
             try {
-                const response = await fetch(`http://localhost:8000/api/items/newest`, {
+                const response = await fetch(`https://bestbookstore-backend.onrender.com/api/items/newest`, {
                     method: "GET",
                     headers: {
                         'Content-Type': 'application/json'

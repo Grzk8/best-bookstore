@@ -27,7 +27,7 @@ const Basket = props => {
 
         const sendOrder = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/api/users/order`, {
+                const response = await fetch(`https://bestbookstore-backend.onrender.com/api/users/order`, {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json'

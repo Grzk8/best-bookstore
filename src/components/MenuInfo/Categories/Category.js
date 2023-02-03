@@ -10,7 +10,7 @@ const Category = props => {
             const category = props.category;
             setIsLoading(true);
             try {
-                const response = await fetch(`http://localhost:8000/api/items/category/${category}`, {
+                const response = await fetch(`https://bestbookstore-backend.onrender.com/api/items/category/${category}`, {
                     method: "GET",
                     headers: {
                         'Content-Type': 'application/json'
